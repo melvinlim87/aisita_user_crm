@@ -22,7 +22,7 @@ const Navbar: React.FC = () => {
               strokeWidth={1.5} 
             />
             <span className={`text-xl font-bold tracking-tight ${META_TEXT_GRADIENT}`}>
-              Decyphers
+              AISITA
             </span>
           </Link>
         </div>
