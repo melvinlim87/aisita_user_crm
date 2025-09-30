@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
             <Link to="/" className="flex items-center space-x-2 group">
               <BarChart2 className={`w-8 h-8 ${META_TEXT_GRADIENT}`} strokeWidth={1.5} />
               <span className={`ml-2 text-xl font-bold ${META_TEXT_GRADIENT}`}>
-                Decyphers
+                AISITA
               </span>
             </Link>
           </div>
@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
         
         <div className="mt-8 pt-8 border-t border-[#3a3a45] text-center">
           <p className="text-sm text-gray-500">
-            © {new Date().getFullYear()} Decyphers. All rights reserved.
+            © {new Date().getFullYear()} AISITA. All rights reserved.
           </p>
         </div>
       </div>

@@ -16,8 +16,8 @@ const Home: React.FC = () => {
     // General
     {
       category: 'General',
-      question: "What is Decyphers?",
-      answer: "Decyphers is an AI-powered financial chart analysis platform that helps traders identify patterns, trends, and trading opportunities using advanced machine learning algorithms."
+      question: "What is AISITA?",
+      answer: "AISITA is an AI-powered financial chart analysis platform that helps traders identify patterns, trends, and trading opportunities using advanced machine learning algorithms."
     },
     {
       category: 'General',
@@ -146,7 +146,7 @@ const Home: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 className={`text-3xl md:text-4xl font-bold mb-4 ${META_TEXT_GRADIENT}`}>
-              How Decyphers Works
+              How AISITA Works
             </h2>
             <p className="text-lg text-gray-300">
               Analyze any financial chart in three simple steps
@@ -399,7 +399,7 @@ const Home: React.FC = () => {
               Frequently Asked Questions
             </h2>
             <p className="text-lg text-gray-300">
-              Everything you need to know about Decyphers
+              Everything you need to know about AISITA
             </p>
           </div>
 

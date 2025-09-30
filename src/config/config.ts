@@ -2,17 +2,17 @@ const IS_PRODUCTION = true;
 
 // Base API URL
 export const API_BASE_URL = IS_PRODUCTION 
-  ? 'https://dev-ai-server.decyphers.com/api'
+  ? 'https://backend.aisita.ai/api'
   : 'http://127.0.0.1:8000/api';
 
 // Chart API URL
 export const CHART_API_URL = IS_PRODUCTION
-  ? 'https://dev-ai-server.decyphers.com/api/chart'
+  ? 'https://backend.aisita.ai/api/chart'
   : 'http://localhost:8888/.netlify/functions/chart-proxy';
 
 // Yahoo Finance API URL
 export const YAHOO_API_URL = IS_PRODUCTION
-  ? 'https://dev-ai-server.decyphers.com/api'
+  ? 'https://backend.aisita.ai/api'
   : 'http://localhost:3005';
 
 // OpenRouter API URL
