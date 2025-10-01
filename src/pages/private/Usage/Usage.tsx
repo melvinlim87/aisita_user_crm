@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { User, Loader2 } from 'lucide-react';
 import { getRequest } from '@/services/apiRequest';
 import { Link } from 'react-router-dom';
@@ -210,15 +210,15 @@ const Usage: React.FC = () => {
       ) : (
         <>
           {/* Usage Summary Section */}
-          <div className="bg-[#1a1a20] rounded-lg shadow-lg p-8 mb-8 border border-[#2d3748]">
-            <h2 className="text-xl font-bold text-white mb-4">{t('DecypherUsageSummary')}</h2>
+          <div className="bg-[#0b0b0e] rounded-lg shadow-lg p-8 mb-8 border border-[#2d3748]">
+            <h2 className="text-xl font-bold text-white mb-4">{t('AISITAUsageSummary')}</h2>
             <p className="text-gray-400 mb-2">
               {t('NextPlanRefreshInDays', { days: userSubscriptionDetails.daysUntilRefresh, date: userSubscriptionDetails.next_billing_date })}
             </p>
           </div>
           
           {/* User Prompt Credits Section */}
-          <div className="bg-[#1a1a20] rounded-lg shadow-lg p-8 mb-8 border border-[#2d3748]">
+          <div className="bg-[#0b0b0e] rounded-lg shadow-lg p-8 mb-8 border border-[#2d3748]">
             <h3 className="text-xl font-bold text-white mb-4">{t('UserPromptCredits')}</h3>
             <div className="flex justify-between mb-2">
               <span className="text-gray-400">{userSubscriptionTokens.subscriptionTokensUsed} / {userSubscriptionTokens.subscriptionTokens} {t('Used')}</span>
@@ -237,7 +237,7 @@ const Usage: React.FC = () => {
           </div>
           
           {/* Add-on Prompt Credits Section */}
-          <div className="bg-[#1a1a20] rounded-lg shadow-lg p-8 mb-8 border border-[#2d3748]">
+          <div className="bg-[#0b0b0e] rounded-lg shadow-lg p-8 mb-8 border border-[#2d3748]">
             <h3 className="text-xl font-bold text-white mb-4">{t('AddonPromptCredits')}</h3>
             <div className="flex justify-between mb-2">
               <span className="text-gray-400">{userSubscriptionTokens.addonTokensUsed} / {userSubscriptionTokens.addonTokens} {t('Used')}</span>
@@ -256,7 +256,7 @@ const Usage: React.FC = () => {
           </div>
 
           {/* Free Tokens Section */}
-          <div className="bg-[#1a1a20] rounded-lg shadow-lg p-8 mb-8 border border-[#2d3748]">
+          <div className="bg-[#0b0b0e] rounded-lg shadow-lg p-8 mb-8 border border-[#2d3748]">
             <h3 className="text-xl font-bold text-white mb-4 flex items-center">
               {t('FreeTokens')}
               <span className="ml-2 px-2 py-1 bg-blue-600 text-xs font-medium rounded-full">{t('BONUS')}</span>
@@ -278,7 +278,7 @@ const Usage: React.FC = () => {
           </div>
 
           {/* Registration Tokens Section */}
-          <div className="bg-[#1a1a20] rounded-lg shadow-lg p-8 mb-8 border border-[#2d3748]">
+          <div className="bg-[#0b0b0e] rounded-lg shadow-lg p-8 mb-8 border border-[#2d3748]">
             <h3 className="text-xl font-bold text-white mb-4 flex items-center">
               {t('RegistrationTokens')}
               <span className="ml-2 px-2 py-1 bg-purple-600 text-xs font-medium rounded-full">{t('WELCOME')}</span>
@@ -301,7 +301,7 @@ const Usage: React.FC = () => {
 
           {/* Referral Tokens Section */}
           {userSubscriptionTokens.referralTokens > 0 && (
-            <div className="bg-[#1a1a20] rounded-lg shadow-lg p-8 mb-8 border border-[#2d3748]">
+            <div className="bg-[#0b0b0e] rounded-lg shadow-lg p-8 mb-8 border border-[#2d3748]">
               <h3 className="text-xl font-bold text-white mb-4 flex items-center">
                 {t('ReferralTokens')}
                 <span className="ml-2 px-2 py-1 bg-yellow-600 text-xs font-medium rounded-full">{t('EARNED')}</span>
@@ -324,7 +324,7 @@ const Usage: React.FC = () => {
           )}
           
           {/* Purchase Section */}
-          {/* <div className="bg-[#1a1a20] rounded-lg shadow-lg p-8 mb-8 border border-[#2d3748]">
+          {/* <div className="bg-[#0b0b0e] rounded-lg shadow-lg p-8 mb-8 border border-[#2d3748]">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between">
               <div className="mb-4 md:mb-0">
                 <h2 className="text-xl font-bold text-white mb-2">{t('NeedMoreCredits')}</h2>
@@ -342,7 +342,7 @@ const Usage: React.FC = () => {
           </div> */}
           
           {/* Referral Section */}
-          {/* <div className="bg-[#1a1a20] rounded-lg shadow-lg p-8 border border-[#2d3748]">
+          {/* <div className="bg-[#0b0b0e] rounded-lg shadow-lg p-8 border border-[#2d3748]">
             <Link to="/referral" className="flex items-center text-gray-400 hover:text-white transition-colors">
               <User size={18} className="mr-2" />
               <span>{t('ReferFriendForCredits')}</span>

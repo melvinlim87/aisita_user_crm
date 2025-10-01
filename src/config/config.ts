@@ -1,4 +1,4 @@
-const IS_PRODUCTION = true;
+const IS_PRODUCTION = false;
 
 // Base API URL
 export const API_BASE_URL = IS_PRODUCTION 
@@ -28,6 +28,6 @@ export const MODELS_API_URL = `${API_BASE_URL}/models`;
 export const MODEL_COST_URL = `${API_BASE_URL}/model-cost`;
 
 // Frontend URL
-export const FRONTEND_URL = 'https://decyphers.com';
+export const FRONTEND_URL = 'https://aisita.ai';
 
 export const APP_ENV = IS_PRODUCTION ? 'production' : 'development';

@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Link } from 'react-router-dom';
 import { BarChart2 } from 'lucide-react';
 import { META_TEXT_GRADIENT } from '../../constants';
@@ -6,7 +6,7 @@ import { FRONTEND_URL } from '@/config';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="py-12 border-t border-[#3a3a45]">
+    <footer className="py-12 border-t border-[#3a2a15]">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center mb-6 md:mb-0">
@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
             <a href={`${FRONTEND_URL}/assets/documents/terms-conditions-refund-policy.pdf`} target="_blank" rel="noopener noreferrer" className="text-sm text-gray-400 hover:text-white transition-colors">
               Terms & Refund Policy
             </a>
-            <a href={`${FRONTEND_URL}/privacy-policy`} className="text-sm text-gray-400 hover:text-white transition-colors">
+            <a href={`privacy-policy`} className="text-sm text-gray-400 hover:text-white transition-colors">
               Privacy Policy
             </a>
             {/* <a href="/assets/documents/terms-conditions-refund-policy.pdf" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-400 hover:text-white transition-colors">
@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
         
-        <div className="mt-8 pt-8 border-t border-[#3a3a45] text-center">
+        <div className="mt-8 pt-8 border-t border-[#3a2a15] text-center">
           <p className="text-sm text-gray-500">
             © {new Date().getFullYear()} AISITA. All rights reserved.
           </p>

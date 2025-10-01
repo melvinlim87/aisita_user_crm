@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { ChevronDown, Search, HelpCircle, BarChart2 } from 'lucide-react';
 //import Footer from '@components/common/Footer';
 import { META_TEXT_GRADIENT } from '@/constants';
@@ -13,8 +13,8 @@ const Faq = () => {
     // General
     {
       category: 'General',
-      question: "What is Decyphers?",
-      answer: "Decyphers is an AI-powered financial chart analysis platform that helps traders identify patterns, trends, and trading opportunities using advanced machine learning algorithms."
+      question: "What is AISITA?",
+      answer: "AISITA is an AI-powered financial chart analysis platform that helps traders identify patterns, trends, and trading opportunities using advanced machine learning algorithms."
     },
     {
       category: 'General',
@@ -100,7 +100,7 @@ const Faq = () => {
   );
 
   return (
-    <div className="min-h-screen bg-[#1a1a20] text-[#e2e8f0]">
+    <div className="min-h-screen bg-[#0b0b0e] text-[#e2e8f0]">
       <div className="container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto text-center mb-12">
           <div className="flex items-center justify-center mb-6">
@@ -110,7 +110,7 @@ const Faq = () => {
             Frequently Asked Questions
           </h1>
           <p className="text-lg text-gray-300">
-            Find answers to common questions about Decyphers
+            Find answers to common questions about AISITA
           </p>
         </div>
 
@@ -122,7 +122,7 @@ const Faq = () => {
               placeholder="Search questions..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-12 pr-4 py-3 bg-[#25252d] border border-[#3a3a45] rounded-lg text-[#e2e8f0] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#94a3b8] focus:border-transparent"
+              className="w-full pl-12 pr-4 py-3 bg-[#15120c] border border-[#3a2a15] rounded-lg text-[#e2e8f0] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#94a3b8] focus:border-transparent"
             />
           </div>
         </div>
@@ -136,7 +136,7 @@ const Faq = () => {
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors
                   ${selectedCategory === category 
                     ? 'bg-[#3a3a45] text-white' 
-                    : 'bg-[#25252d] text-gray-400 hover:bg-[#3a3a45] hover:text-white'
+                    : 'bg-[#15120c] text-gray-400 hover:bg-[#3a3a45] hover:text-white'
                   }`}
               >
                 {category}
@@ -149,7 +149,7 @@ const Faq = () => {
           {filteredFaqs.map((faq, index) => (
             <div
               key={index}
-              className="bg-[#25252d] rounded-lg p-6 glow-border transition-all duration-200 hover:border-[#94a3b8]"
+              className="bg-[#15120c] rounded-lg p-6 glow-border transition-all duration-200 hover:border-[#94a3b8]"
             >
               <div className="flex justify-between items-start">
                 <h3 className="text-lg font-semibold text-[#e2e8f0] mb-3">{faq.question}</h3>

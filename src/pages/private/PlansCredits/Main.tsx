@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+﻿import React, { useEffect } from 'react';
 import { useNavigate, useParams, useLocation } from 'react-router-dom';
 
 // Import tab components
@@ -35,7 +35,7 @@ const Main: React.FC = () => {
         <div className="container mx-auto p-6">
             <div className="mb-8">
                 {/* Navigation Tabs */}
-                <div className="flex border-b border-[#3a3a45]">
+                <div className="flex border-b border-[#3a2a15]">
                     <button 
                         className={`px-6 py-4 font-medium transition-colors duration-200 ${activeTab === 'plans' ? 'text-white border-b-2 border-emerald-500' : 'text-gray-400 hover:text-white'}`}
                         onClick={() => handleTabChange('plans')}

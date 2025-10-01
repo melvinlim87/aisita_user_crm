@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { ChevronLeft, History, Star, ChevronRight, Clock, BarChart2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Card from '@components/common/Card';
@@ -54,7 +54,7 @@ const Sidebar: React.FC = () => {
   return (
     <aside 
       className={`
-        fixed left-0 top-[57px] h-[calc(100vh-57px)] bg-[#1a1a20] border-r border-[#3a3a45]
+        fixed left-0 top-[57px] h-[calc(100vh-57px)] bg-[#0b0b0e] border-r border-[#3a2a15]
         transition-all duration-300 z-30
         ${isCollapsed ? 'w-16' : 'w-64'}
       `}
@@ -63,7 +63,7 @@ const Sidebar: React.FC = () => {
         <div className="flex justify-end p-2">
           <button 
             onClick={toggleSidebar}
-            className="p-1 rounded-md text-gray-400 hover:text-white hover:bg-[#25252d]"
+            className="p-1 rounded-md text-gray-400 hover:text-white hover:bg-[#15120c]"
           >
             {isCollapsed ? <ChevronRight size={18} /> : <ChevronLeft size={18} />}
           </button>
@@ -75,8 +75,8 @@ const Sidebar: React.FC = () => {
               <button
                 className={`flex-1 py-2 px-3 text-xs font-medium rounded-md transition-colors
                   ${activeTab === 'history' 
-                    ? 'bg-[#25252d] text-[#e2e8f0]' 
-                    : 'text-gray-400 hover:bg-[#25252d]/50'
+                    ? 'bg-[#15120c] text-[#e2e8f0]' 
+                    : 'text-gray-400 hover:bg-[#15120c]/50'
                   }`}
                 onClick={() => setActiveTab('history')}
               >
@@ -88,8 +88,8 @@ const Sidebar: React.FC = () => {
               <button
                 className={`flex-1 py-2 px-3 text-xs font-medium rounded-md transition-colors
                   ${activeTab === 'favorites' 
-                    ? 'bg-[#25252d] text-[#e2e8f0]' 
-                    : 'text-gray-400 hover:bg-[#25252d]/50'
+                    ? 'bg-[#15120c] text-[#e2e8f0]' 
+                    : 'text-gray-400 hover:bg-[#15120c]/50'
                   }`}
                 onClick={() => setActiveTab('favorites')}
               >
@@ -107,8 +107,8 @@ const Sidebar: React.FC = () => {
             <button
               className={`w-full p-2 rounded-md flex items-center justify-center
                 ${activeTab === 'history' 
-                  ? 'bg-[#25252d] text-[#e2e8f0]' 
-                  : 'text-gray-400 hover:bg-[#25252d]/50'
+                  ? 'bg-[#15120c] text-[#e2e8f0]' 
+                  : 'text-gray-400 hover:bg-[#15120c]/50'
                 }`}
               onClick={() => setActiveTab('history')}
             >
@@ -117,8 +117,8 @@ const Sidebar: React.FC = () => {
             <button
               className={`w-full p-2 rounded-md flex items-center justify-center
                 ${activeTab === 'favorites' 
-                  ? 'bg-[#25252d] text-[#e2e8f0]' 
-                  : 'text-gray-400 hover:bg-[#25252d]/50'
+                  ? 'bg-[#15120c] text-[#e2e8f0]' 
+                  : 'text-gray-400 hover:bg-[#15120c]/50'
                 }`}
               onClick={() => setActiveTab('favorites')}
             >

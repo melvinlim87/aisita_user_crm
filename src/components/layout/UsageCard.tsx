@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { TerminalSquare, ArrowRight, CheckCircle, Loader2 } from 'lucide-react';
 import { useAuth } from '@/contexts/AuthContext';
@@ -183,7 +183,7 @@ const UsageCard: React.FC = () => {
 
   if (isLoading) {
     return (
-      <div className="block px-4 py-6 bg-gradient-to-r from-[#23263a] to-[#181a23] rounded-lg border border-[#3a3a45] shadow-lg transition-all duration-200 w-full mb-4">
+      <div className="block px-4 py-6 bg-gradient-to-r from-[#23263a] to-[#181a23] rounded-lg border border-[#3a2a15] shadow-lg transition-all duration-200 w-full mb-4">
         <div className="flex items-center justify-center">
           <Loader2 className="w-5 h-5 text-[#63b3ed] animate-spin" />
         </div>
@@ -194,7 +194,7 @@ const UsageCard: React.FC = () => {
   return (
     <Link
       to={isAuthenticated ? "/membership-plan#credits" : "/"}
-      className="block group px-3 py-3 bg-gradient-to-br from-[#23263a] to-[#181a23] rounded-lg border border-[#3a3a45] shadow-lg hover:border-[#63b3ed] hover:shadow-xl transition-all duration-200 w-full mb-4"
+      className="block group px-3 py-3 bg-gradient-to-br from-[#23263a] to-[#181a23] rounded-lg border border-[#3a2a15] shadow-lg hover:border-[#63b3ed] hover:shadow-xl transition-all duration-200 w-full mb-4"
     >
       {/* Card Header */}
       <div className="flex items-center justify-between mb-4">

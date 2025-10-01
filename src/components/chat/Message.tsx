@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Message as MessageType } from '@/types/common/ChatContext';
 import { User, Bot } from 'lucide-react';
 
@@ -15,7 +15,7 @@ const Message: React.FC<MessageProps> = ({ message }) => {
     // This is a simple implementation - in a real app you might use a markdown parser
     
     // Process code blocks
-    let formattedText = content.replace(/```([^`]+)```/g, '<pre class="bg-[#16161c] p-3 rounded-md my-2 overflow-x-auto text-sm"><code>$1</code></pre>');
+    let formattedText = content.replace(/```([^`]+)```/g, '<pre class="bg-[#15120c] p-3 rounded-md my-2 overflow-x-auto text-sm"><code>$1</code></pre>');
     
     // Process bold text
     formattedText = formattedText.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+﻿import React, { useState, useRef } from 'react';
 import { Upload, X, FileUp, Image, AlertCircle, ChevronDown, Clock, BarChart2 } from 'lucide-react';
 import Card from '../common/Card';
 import Button from '../common/Button';
@@ -9,7 +9,7 @@ interface ChartUploadProps {
 }
 
 const IndicatorBadge: React.FC<{ type: string; value: number; signal: string }> = ({ type, value, signal }) => (
-  <div className="flex items-center gap-2 bg-[#25252d] rounded-md px-3 py-1.5 glow-border">
+  <div className="flex items-center gap-2 bg-[#15120c] rounded-md px-3 py-1.5 glow-border">
     <span className="text-sm font-medium">{type}</span>
     <span className={`text-sm ${
       signal === 'bullish' ? 'text-green-400' : 
@@ -126,7 +126,7 @@ const ChartUpload: React.FC<ChartUploadProps> = ({ onUpload }) => {
         <div 
           className={`
             p-6 rounded-lg border-2 border-dashed transition-colors duration-200
-            ${isDragging ? 'border-[#94a3b8] bg-[#25252d]/80' : 'border-[#3a3a45]'}
+            ${isDragging ? 'border-[#94a3b8] bg-[#15120c]/80' : 'border-[#3a2a15]'}
             ${error ? 'border-red-500/70' : ''}
           `}
           onDragOver={handleDragOver}
@@ -185,7 +185,7 @@ const ChartUpload: React.FC<ChartUploadProps> = ({ onUpload }) => {
               <select
                 value={selectedTimeframe}
                 onChange={(e) => setSelectedTimeframe(e.target.value)}
-                className="appearance-none bg-[#25252d] border border-[#3a3a45] rounded-md py-1.5 pl-3 pr-8 text-sm focus:outline-none focus:ring-1 focus:ring-[#94a3b8]"
+                className="appearance-none bg-[#15120c] border border-[#3a2a15] rounded-md py-1.5 pl-3 pr-8 text-sm focus:outline-none focus:ring-1 focus:ring-[#94a3b8]"
               >
                 {CHART_TIMEFRAMES.map((tf) => (
                   <option key={tf} value={tf}>{tf}</option>
@@ -211,7 +211,7 @@ const ChartUpload: React.FC<ChartUploadProps> = ({ onUpload }) => {
             </button>
           </div>
           
-          <div className="rounded-lg overflow-hidden border border-[#3a3a45]">
+          <div className="rounded-lg overflow-hidden border border-[#3a2a15]">
             {previews && previews.map((preview, index) => (
               <img
                 key={'preview' + index} 
@@ -222,7 +222,7 @@ const ChartUpload: React.FC<ChartUploadProps> = ({ onUpload }) => {
             ))}
           </div>
           
-          <div className="mt-4 bg-[#1a1a20] rounded-md p-4 glow-border">
+          <div className="mt-4 bg-[#0b0b0e] rounded-md p-4 glow-border">
             <h4 className="text-sm font-medium mb-3 flex items-center gap-2">
               <BarChart2 className="w-4 h-4" />
               Quick Analysis

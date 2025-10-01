@@ -30,7 +30,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
           <input
             ref={ref}
             className={`
-              bg-[#25252d]/90
+              bg-[#15120c]/90
               border 
               ${error ? 'border-red-500' : 'glow-border'} 
               text-[#e2e8f0] 
@@ -42,9 +42,9 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
               ${icon ? 'pl-10' : ''} 
               focus:outline-none 
               focus:ring-1 
-              focus:ring-[#94a3b8]/50
-              focus:border-[#94a3b8]/50
-              hover:bg-[#25252d]
+              focus:ring-[#d4af37]/40
+              focus:border-[#d4af37]/40
+              hover:bg-[#15120c]
               transition-all duration-300
               ${className}
             `}

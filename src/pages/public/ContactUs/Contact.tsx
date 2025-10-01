@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Mail, Phone, MapPin } from 'lucide-react';
 //import Footer from '@components/common/Footer';
 
@@ -20,8 +20,8 @@ const Contact = () => {
                 <Mail className="w-5 h-5 text-[#94a3b8]" />
                 <div>
                   <p className="text-sm text-gray-400">Email</p>
-                  <a href="mailto:support@decyphers.com" className="text-[#e2e8f0] hover:text-white">
-                    support@decyphers.com
+                  <a href="mailto:support@aista.ai" className="text-[#e2e8f0] hover:text-white">
+                    support@aista.ai
                   </a>
                 </div>
               </div>
@@ -59,7 +59,7 @@ const Contact = () => {
                   type="text"
                   id="name"
                   name="name"
-                  className="w-full px-4 py-2 bg-[#1a1a20] border border-[#3a3a45] rounded-md text-[#e2e8f0] focus:outline-none focus:ring-2 focus:ring-[#94a3b8] focus:border-transparent"
+                  className="w-full px-4 py-2 bg-[#0b0b0e] border border-[#3a2a15] rounded-md text-[#e2e8f0] focus:outline-none focus:ring-2 focus:ring-[#94a3b8] focus:border-transparent"
                   placeholder="Your name"
                 />
               </div>
@@ -71,7 +71,7 @@ const Contact = () => {
                   type="email"
                   id="email"
                   name="email"
-                  className="w-full px-4 py-2 bg-[#1a1a20] border border-[#3a3a45] rounded-md text-[#e2e8f0] focus:outline-none focus:ring-2 focus:ring-[#94a3b8] focus:border-transparent"
+                  className="w-full px-4 py-2 bg-[#0b0b0e] border border-[#3a2a15] rounded-md text-[#e2e8f0] focus:outline-none focus:ring-2 focus:ring-[#94a3b8] focus:border-transparent"
                   placeholder="your@email.com"
                 />
               </div>
@@ -83,7 +83,7 @@ const Contact = () => {
                   id="message"
                   name="message"
                   rows={4}
-                  className="w-full px-4 py-2 bg-[#1a1a20] border border-[#3a3a45] rounded-md text-[#e2e8f0] focus:outline-none focus:ring-2 focus:ring-[#94a3b8] focus:border-transparent"
+                  className="w-full px-4 py-2 bg-[#0b0b0e] border border-[#3a2a15] rounded-md text-[#e2e8f0] focus:outline-none focus:ring-2 focus:ring-[#94a3b8] focus:border-transparent"
                   placeholder="Your message..."
                 />
               </div>

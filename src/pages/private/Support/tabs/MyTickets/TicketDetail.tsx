@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+﻿import React, { useState, useEffect } from "react";
 import { ArrowLeft, Send, Clock, AlertCircle } from "lucide-react";
 import { getRequest, postRequest } from "@/services/apiRequest";
 
@@ -134,7 +134,7 @@ const TicketDetail: React.FC<TicketDetailProps> = ({ ticketId, onBack }) => {
               user: {
                 id: 2,
                 name: "Support Team",
-                email: "support@decyphers.com"
+                email: "support@aisita.ai"
               }
             },
             {
@@ -255,7 +255,7 @@ const TicketDetail: React.FC<TicketDetailProps> = ({ ticketId, onBack }) => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto bg-[#1a1a20] border border-[#3a3a45] rounded-xl p-6 shadow-lg">
+    <div className="max-w-4xl mx-auto bg-[#0b0b0e] border border-[#3a2a15] rounded-xl p-6 shadow-lg">
       {/* Back button and header */}
       <div className="flex items-center mb-6">
         <button 
@@ -284,7 +284,7 @@ const TicketDetail: React.FC<TicketDetailProps> = ({ ticketId, onBack }) => {
       {/* Ticket details */}
       {!isLoading && ticket && (
         <>
-          <div className="mb-6 border border-[#3a3a45] rounded-lg p-4 bg-[#252530]">
+          <div className="mb-6 border border-[#3a2a15] rounded-lg p-4 bg-[#252530]">
             <div className="flex items-center justify-between mb-4">
               <h2 className="text-xl font-semibold text-white">{ticket.subject}</h2>
               {getStatusBadge(ticket.status)}
@@ -319,7 +319,7 @@ const TicketDetail: React.FC<TicketDetailProps> = ({ ticketId, onBack }) => {
             <h2 className="text-lg font-semibold text-white mb-4">Conversation</h2>
             
             {replies.length === 0 ? (
-              <div className="text-center py-6 bg-[#252530] rounded-lg border border-[#3a3a45]">
+              <div className="text-center py-6 bg-[#252530] rounded-lg border border-[#3a2a15]">
                 <Clock className="w-8 h-8 text-gray-500 mx-auto mb-2" />
                 <p className="text-gray-400">No replies yet</p>
               </div>
@@ -330,7 +330,7 @@ const TicketDetail: React.FC<TicketDetailProps> = ({ ticketId, onBack }) => {
                     key={reply.id}
                     className={`p-4 rounded-lg ${
                       reply.user_id !== ticket?.user_id 
-                        ? "bg-[#2a2a35] border border-[#3a3a45] ml-4 mr-0" 
+                        ? "bg-[#2a2a35] border border-[#3a2a15] ml-4 mr-0" 
                         : "bg-[#1e3a8a] border border-[#2563eb]/30 ml-0 mr-4"
                     }`}
                   >
@@ -349,11 +349,11 @@ const TicketDetail: React.FC<TicketDetailProps> = ({ ticketId, onBack }) => {
           
           {/* Reply form */}
           {ticket.status !== 'closed' && (
-            <div className="border border-[#3a3a45] rounded-lg p-4 bg-[#252530]">
+            <div className="border border-[#3a2a15] rounded-lg p-4 bg-[#252530]">
               <h3 className="text-sm font-medium text-gray-400 mb-2">Add Reply</h3>
               <div className="flex flex-col space-y-3">
                 <textarea
-                  className="w-full bg-[#1a1a25] border border-[#3a3a45] rounded-lg p-3 text-white resize-none focus:ring-blue-500 focus:border-blue-500"
+                  className="w-full bg-[#1a1a25] border border-[#3a2a15] rounded-lg p-3 text-white resize-none focus:ring-blue-500 focus:border-blue-500"
                   rows={4}
                   placeholder="Type your reply here..."
                   value={newReply}

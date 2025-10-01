@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { getRequest, postRequest } from '@/services/apiRequest';
 import { Loader2, AlertCircle, CheckCircle, X } from 'lucide-react';
 import { useNavigate, Link } from 'react-router-dom';
@@ -173,7 +173,7 @@ const PlanManagement: React.FC = () => {
       {/* Cancel Confirmation Modal */}
       {showCancelModal && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-          <div className="bg-[#1a1a20] rounded-lg shadow-xl border border-[#2d3748] max-w-md w-full p-6 relative">
+          <div className="bg-[#0b0b0e] rounded-lg shadow-xl border border-[#2d3748] max-w-md w-full p-6 relative">
             <button 
               onClick={closeCancelModal}
               className="absolute top-4 right-4 text-gray-400 hover:text-white"
@@ -256,7 +256,7 @@ const PlanManagement: React.FC = () => {
         <>
           
           {/* Manage your plan section */}
-          <div className="bg-[#1a1a20] rounded-lg shadow-lg p-8 mb-8 border border-[#2d3748]">
+          <div className="bg-[#0b0b0e] rounded-lg shadow-lg p-8 mb-8 border border-[#2d3748]">
             <h2 className="text-xl font-bold text-white mb-4">{t('ManageYourPlan')}</h2>
             <p className="text-gray-400 mb-6">
               {t('YourAccountCurrentlyOn')} <span className="px-2 py-0.5 bg-[#2d3748] text-blue-400 text-xs font-medium rounded-full">
@@ -274,7 +274,7 @@ const PlanManagement: React.FC = () => {
           </div>
           
           {/* Cancel your plan section */}
-          <div className="bg-[#1a1a20] rounded-lg shadow-lg p-8 mb-8 border border-[#2d3748]">
+          <div className="bg-[#0b0b0e] rounded-lg shadow-lg p-8 mb-8 border border-[#2d3748]">
             <h2 className="text-xl font-bold text-white mb-4">{t('CancelYourPlan')}</h2>
             <p className="text-gray-400 mb-6">
               {t('CancelPlanKeepAccessUntil', { date: formatDate(userSubscription.next_billing_date) })}
@@ -291,7 +291,7 @@ const PlanManagement: React.FC = () => {
           </div>
         </>
       ) : (
-        <div className="bg-[#1a1a20] rounded-lg shadow-lg p-8 mb-8 border border-[#2d3748]">
+        <div className="bg-[#0b0b0e] rounded-lg shadow-lg p-8 mb-8 border border-[#2d3748]">
           <p className="text-gray-400">{t('NoActiveSubscriptionFound')}</p>
           <div className="flex justify-end mt-4">
             <button 

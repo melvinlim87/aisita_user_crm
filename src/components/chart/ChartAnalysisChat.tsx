@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+﻿import React, { useState, useRef, useEffect } from 'react';
 import { Send, RefreshCw } from 'lucide-react';
 import { postRequest } from '@/services/apiRequest';
 import { META_TEXT_GRADIENT } from '@/constants';
@@ -164,7 +164,7 @@ const ChartAnalysisChat: React.FC<ChartAnalysisChatProps> = ({
   };
 
   return (
-    <div className="bg-[#1a1a20] rounded-lg border border-[#3a3a45] p-4">
+    <div className="bg-[#0b0b0e] rounded-lg border border-[#3a2a15] p-4">
       <div className="flex justify-between items-center mb-4">
         <h3 className={`font-semibold ${META_TEXT_GRADIENT}`}>{t('ChatDiscussion')}</h3>
         <button 
@@ -178,7 +178,7 @@ const ChartAnalysisChat: React.FC<ChartAnalysisChatProps> = ({
       </div>
       
       {/* Messages container */}
-      <div className="h-[250px] overflow-y-auto mb-4 bg-[#25252d] rounded-lg p-3">
+      <div className="h-[250px] overflow-y-auto mb-4 bg-[#15120c] rounded-lg p-3">
         {messages.length === 0 ? (
           <div className="text-gray-400 text-center py-4">
             {t('AskQuestionsAboutAnalysis')}
@@ -218,7 +218,7 @@ const ChartAnalysisChat: React.FC<ChartAnalysisChatProps> = ({
       </div>
       
       {/* Input area */}
-      <div className="flex items-center bg-[#25252d] rounded-lg overflow-hidden">
+      <div className="flex items-center bg-[#15120c] rounded-lg overflow-hidden">
         <textarea
           ref={inputRef}
           value={inputValue}
@@ -243,145 +243,145 @@ const ChartAnalysisChat: React.FC<ChartAnalysisChatProps> = ({
       </div>
 
       {/* Chart Discussion Buttons Section */}
-      <div className="mt-4 border-t border-[#3a3a45] pt-4">
+      <div className="mt-4 border-t border-[#3a2a15] pt-4">
         <h3 className="text-sm font-medium text-white mb-3">✅ {t('ChartDiscussionButtons')}</h3>
         <div className="flex flex-wrap gap-2">
           <button
             onClick={() => setInputValue(t('Btn_BuyTradeNow'))}
-            className="px-3 py-2 bg-[#25252d] hover:bg-[#2d2d36] text-white text-xs rounded-md transition-colors flex items-center"
+            className="px-3 py-2 bg-[#15120c] hover:bg-[#2d2d36] text-white text-xs rounded-md transition-colors flex items-center"
           >
             🟢 {t('Btn_BuyTradeNow')}
           </button>
           
           <button
             onClick={() => setInputValue(t('Btn_WaitRetestSupport'))}
-            className="px-3 py-2 bg-[#25252d] hover:bg-[#2d2d36] text-white text-xs rounded-md transition-colors flex items-center"
+            className="px-3 py-2 bg-[#15120c] hover:bg-[#2d2d36] text-white text-xs rounded-md transition-colors flex items-center"
           >
             📉 {t('Btn_WaitRetestSupport')}
           </button>
           
           <button
             onClick={() => setInputValue(t('Btn_CloseIfBreaksBelow'))}
-            className="px-3 py-2 bg-[#25252d] hover:bg-[#2d2d36] text-white text-xs rounded-md transition-colors flex items-center"
+            className="px-3 py-2 bg-[#15120c] hover:bg-[#2d2d36] text-white text-xs rounded-md transition-colors flex items-center"
           >
             ⚠️ {t('Btn_CloseIfBreaksBelow')}
           </button>
           
           <button
             onClick={() => setInputValue(t('Btn_WhenSetTP'))}
-            className="px-3 py-2 bg-[#25252d] hover:bg-[#2d2d36] text-white text-xs rounded-md transition-colors flex items-center"
+            className="px-3 py-2 bg-[#15120c] hover:bg-[#2d2d36] text-white text-xs rounded-md transition-colors flex items-center"
           >
             🎯 {t('Btn_WhenSetTP')}
           </button>
           
           <button
             onClick={() => setInputValue(t('Btn_TightenOrWidenSL'))}
-            className="px-3 py-2 bg-[#25252d] hover:bg-[#2d2d36] text-white text-xs rounded-md transition-colors flex items-center"
+            className="px-3 py-2 bg-[#15120c] hover:bg-[#2d2d36] text-white text-xs rounded-md transition-colors flex items-center"
           >
             🛑 {t('Btn_TightenOrWidenSL')}
           </button>
           
           <button
             onClick={() => setInputValue(t('Btn_TrustBuySignalWithoutConf'))}
-            className="px-3 py-2 bg-[#25252d] hover:bg-[#2d2d36] text-white text-xs rounded-md transition-colors flex items-center"
+            className="px-3 py-2 bg-[#15120c] hover:bg-[#2d2d36] text-white text-xs rounded-md transition-colors flex items-center"
           >
             📊 {t('Btn_TrustBuySignalWithoutConf')}
           </button>
           
           <button
             onClick={() => setInputValue(t('Btn_FollowRiskReward'))}
-            className="px-3 py-2 bg-[#25252d] hover:bg-[#2d2d36] text-white text-xs rounded-md transition-colors flex items-center"
+            className="px-3 py-2 bg-[#15120c] hover:bg-[#2d2d36] text-white text-xs rounded-md transition-colors flex items-center"
           >
             💬 {t('Btn_FollowRiskReward')}
           </button>
           
           <button
             onClick={() => setInputValue(t('Btn_StrongReversalOrPullback'))}
-            className="px-3 py-2 bg-[#25252d] hover:bg-[#2d2d36] text-white text-xs rounded-md transition-colors flex items-center"
+            className="px-3 py-2 bg-[#15120c] hover:bg-[#2d2d36] text-white text-xs rounded-md transition-colors flex items-center"
           >
             🔍 {t('Btn_StrongReversalOrPullback')}
           </button>
           
           <button
             onClick={() => setInputValue(t('Btn_WhichTimeframe'))}
-            className="px-3 py-2 bg-[#25252d] hover:bg-[#2d2d36] text-white text-xs rounded-md transition-colors flex items-center"
+            className="px-3 py-2 bg-[#15120c] hover:bg-[#2d2d36] text-white text-xs rounded-md transition-colors flex items-center"
           >
             🧭 {t('Btn_WhichTimeframe')}
           </button>
           
           <button
             onClick={() => setInputValue(t('Btn_WaitMoreBullish'))}
-            className="px-3 py-2 bg-[#25252d] hover:bg-[#2d2d36] text-white text-xs rounded-md transition-colors flex items-center"
+            className="px-3 py-2 bg-[#15120c] hover:bg-[#2d2d36] text-white text-xs rounded-md transition-colors flex items-center"
           >
             📈 {t('Btn_WaitMoreBullish')}
           </button>
           
           <button
             onClick={() => setInputValue(t('Btn_SellTradeNow'))}
-            className="px-3 py-2 bg-[#25252d] hover:bg-[#2d2d36] text-white text-xs rounded-md transition-colors flex items-center"
+            className="px-3 py-2 bg-[#15120c] hover:bg-[#2d2d36] text-white text-xs rounded-md transition-colors flex items-center"
           >
             📉 {t('Btn_SellTradeNow')}
           </button>
           
           <button
             onClick={() => setInputValue(t('Btn_WaitRetestResistance'))}
-            className="px-3 py-2 bg-[#25252d] hover:bg-[#2d2d36] text-white text-xs rounded-md transition-colors flex items-center"
+            className="px-3 py-2 bg-[#15120c] hover:bg-[#2d2d36] text-white text-xs rounded-md transition-colors flex items-center"
           >
             🔄 {t('Btn_WaitRetestResistance')}
           </button>
           
           <button
             onClick={() => setInputValue(t('Btn_CloseIfBreaksAbove'))}
-            className="px-3 py-2 bg-[#25252d] hover:bg-[#2d2d36] text-white text-xs rounded-md transition-colors flex items-center"
+            className="px-3 py-2 bg-[#15120c] hover:bg-[#2d2d36] text-white text-xs rounded-md transition-colors flex items-center"
           >
             ⚠️ {t('Btn_CloseIfBreaksAbove')}
           </button>
           
           <button
             onClick={() => setInputValue(t('Btn_WaitMoreBearish'))}
-            className="px-3 py-2 bg-[#25252d] hover:bg-[#2d2d36] text-white text-xs rounded-md transition-colors flex items-center"
+            className="px-3 py-2 bg-[#15120c] hover:bg-[#2d2d36] text-white text-xs rounded-md transition-colors flex items-center"
           >
             📉 {t('Btn_WaitMoreBearish')}
           </button>
           
           <button
             onClick={() => setInputValue(t('Btn_SpotChartPatterns'))}
-            className="px-3 py-2 bg-[#25252d] hover:bg-[#2d2d36] text-white text-xs rounded-md transition-colors flex items-center"
+            className="px-3 py-2 bg-[#15120c] hover:bg-[#2d2d36] text-white text-xs rounded-md transition-colors flex items-center"
           >
             📊 {t('Btn_SpotChartPatterns')}
           </button>
           
           <button
             onClick={() => setInputValue(t('Btn_WhatIndicatorsSuggest'))}
-            className="px-3 py-2 bg-[#25252d] hover:bg-[#2d2d36] text-white text-xs rounded-md transition-colors flex items-center"
+            className="px-3 py-2 bg-[#15120c] hover:bg-[#2d2d36] text-white text-xs rounded-md transition-colors flex items-center"
           >
             📈 {t('Btn_WhatIndicatorsSuggest')}
           </button>
           
           <button
             onClick={() => setInputValue(t('Btn_AnyDivergence'))}
-            className="px-3 py-2 bg-[#25252d] hover:bg-[#2d2d36] text-white text-xs rounded-md transition-colors flex items-center"
+            className="px-3 py-2 bg-[#15120c] hover:bg-[#2d2d36] text-white text-xs rounded-md transition-colors flex items-center"
           >
             🔍 {t('Btn_AnyDivergence')}
           </button>
           
           <button
             onClick={() => setInputValue(t('Btn_CompareStructureVsAnalysis'))}
-            className="px-3 py-2 bg-[#25252d] hover:bg-[#2d2d36] text-white text-xs rounded-md transition-colors flex items-center"
+            className="px-3 py-2 bg-[#15120c] hover:bg-[#2d2d36] text-white text-xs rounded-md transition-colors flex items-center"
           >
             ⚖️ {t('Btn_CompareStructureVsAnalysis')}
           </button>
           
           <button
             onClick={() => setInputValue(t('Btn_AnyNewsEvents'))}
-            className="px-3 py-2 bg-[#25252d] hover:bg-[#2d2d36] text-white text-xs rounded-md transition-colors flex items-center"
+            className="px-3 py-2 bg-[#15120c] hover:bg-[#2d2d36] text-white text-xs rounded-md transition-colors flex items-center"
           >
             📰 {t('Btn_AnyNewsEvents')}
           </button>
           
           <button
             onClick={() => setInputValue(t('Btn_WouldYouSuggestTrading'))}
-            className="px-3 py-2 bg-[#25252d] hover:bg-[#2d2d36] text-white text-xs rounded-md transition-colors flex items-center"
+            className="px-3 py-2 bg-[#15120c] hover:bg-[#2d2d36] text-white text-xs rounded-md transition-colors flex items-center"
           >
             💡 {t('Btn_WouldYouSuggestTrading')}
           </button>

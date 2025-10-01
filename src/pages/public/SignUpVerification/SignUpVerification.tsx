@@ -108,7 +108,7 @@ const SignUpVerification: React.FC = () => {
               <BarChart2 className="w-8 h-8 text-[#94a3b8]" />
             </div>
             <h1 className={`text-2xl font-bold mb-2 ${META_TEXT_GRADIENT}`}>
-              Decypher AI
+              AISITA AI
             </h1>
             <p className="text-gray-400">Account Verification</p>
           </div>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+﻿import React, { useEffect, useState } from 'react';
 import { BarChart2, Clock, ArrowRight, ImageOff } from 'lucide-react';
 import { format } from 'date-fns';
 import { Link } from 'react-router-dom';
@@ -42,7 +42,7 @@ const Dashboard: React.FC = () => {
   return (
     <div className="container mx-auto p-6">
       {/* Welcome Section */}
-      <div className="bg-[#1a1a20] rounded-lg border border-[#3a3a45] p-8 mb-6">
+      <div className="bg-[#0b0b0e] rounded-lg border border-[#3a2a15] p-8 mb-6">
         <h1 className="text-3xl font-bold text-white mb-4">{t("Dashboard")}</h1>
         <p className="text-gray-400">
           {t("DashboardDescription")}
@@ -50,7 +50,7 @@ const Dashboard: React.FC = () => {
       </div>
       
       {/* Recent Analysis Section */}
-      <div className="bg-[#1a1a20] rounded-lg border border-[#3a3a45] p-8">
+      <div className="bg-[#0b0b0e] rounded-lg border border-[#3a2a15] p-8">
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center">
             <Clock className="w-5 h-5 text-[#63b3ed] mr-2" />
@@ -73,9 +73,9 @@ const Dashboard: React.FC = () => {
                 to={`/chart-analysis/${analysis.id}`} 
                 key={analysis.id} 
                 className="block">
-                <div className="flex items-center justify-between p-4 bg-[#25252d] rounded-lg border border-[#3a3a45] hover:border-[#4a5568] hover:bg-[#2d2d36] transition-all duration-200 cursor-pointer">
+                <div className="flex items-center justify-between p-4 bg-[#15120c] rounded-lg border border-[#3a2a15] hover:border-[#4a5568] hover:bg-[#2d2d36] transition-all duration-200 cursor-pointer">
                   <div className="flex items-center">
-                    <div className="p-2 bg-[#1a1a20] rounded-md mr-4">
+                    <div className="p-2 bg-[#0b0b0e] rounded-md mr-4">
                       {/* Show image if exists and is a valid URL, else placeholder icon */}
                       {analysis.chart_urls && 
                        analysis.chart_urls.length > 0 && 
@@ -104,7 +104,7 @@ const Dashboard: React.FC = () => {
                     </div>
                   </div>
                   <div>
-                    <span className="text-xs px-2 py-1 bg-[#1a1a20] rounded-full text-gray-400">{t(analysis.type)}</span>
+                    <span className="text-xs px-2 py-1 bg-[#0b0b0e] rounded-full text-gray-400">{t(analysis.type)}</span>
                   </div>
                 </div>
               </Link>

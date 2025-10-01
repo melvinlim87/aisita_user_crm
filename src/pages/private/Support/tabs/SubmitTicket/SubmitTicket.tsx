@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+﻿import React, { useState } from "react";
 import { Upload, CheckCircle } from "lucide-react";
 import { postRequest } from "@/services/apiRequest";
 import { useTranslation } from 'react-i18next';
@@ -96,7 +96,7 @@ const SubmitTicket: React.FC = () => {
     };
     
     return (
-        <div className="max-w-4xl mx-auto bg-[#1a1a20] border border-[#3a3a45] rounded-xl p-6 shadow-lg">
+        <div className="max-w-4xl mx-auto bg-[#0b0b0e] border border-[#3a2a15] rounded-xl p-6 shadow-lg">
             <h1 className="text-2xl font-bold text-white mb-6">{t('SubmitSupportTicket')}</h1>
             
             {submitSuccess ? (
@@ -119,7 +119,7 @@ const SubmitTicket: React.FC = () => {
                             value={formData.subject}
                             onChange={handleChange}
                             placeholder={t('SubjectPlaceholder')}
-                            className="w-full bg-[#252530] border border-[#3a3a45] rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                            className="w-full bg-[#252530] border border-[#3a2a15] rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                         />
                         {errors.subject && (
                             <p className="mt-2 text-sm text-red-500">{errors.subject}</p>
@@ -136,7 +136,7 @@ const SubmitTicket: React.FC = () => {
                             onChange={handleChange}
                             rows={6}
                             placeholder={t('DescriptionPlaceholder')}
-                            className="w-full bg-[#252530] border border-[#3a3a45] rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+                            className="w-full bg-[#252530] border border-[#3a2a15] rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
                         ></textarea>
                         {errors.description && (
                             <p className="mt-2 text-sm text-red-500">{errors.description}</p>
@@ -151,7 +151,7 @@ const SubmitTicket: React.FC = () => {
                             name="priority"
                             value={formData.priority}
                             onChange={handleChange}
-                            className="w-full bg-[#252530] border border-[#3a3a45] rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent appearance-none"
+                            className="w-full bg-[#252530] border border-[#3a2a15] rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent appearance-none"
                             style={{ backgroundImage: "url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23FFFFFF%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E')", backgroundRepeat: "no-repeat", backgroundPosition: "right 1rem center", backgroundSize: "0.65rem auto" }}
                         >
                             <option value="low">{t('PriorityLow')}</option>

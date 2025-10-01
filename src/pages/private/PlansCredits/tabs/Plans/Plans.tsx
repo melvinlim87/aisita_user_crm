@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { Check, X, Loader2 } from 'lucide-react';
 import { Plan } from '@/types/pages/Plans';
 import { getRequest, postRequest } from '@/services/apiRequest';
@@ -295,7 +295,7 @@ const Plans: React.FC = () => {
                 </p>
                 
                 <div className="flex items-center justify-center mt-8 mb-2">
-                    <div className="bg-[#1a1a20] border border-[#3a3a45] rounded-full p-1 flex items-center shadow-lg">
+                    <div className="bg-[#0b0b0e] border border-[#3a2a15] rounded-full p-1 flex items-center shadow-lg">
                         <span 
                             className={`px-4 py-2 text-sm rounded-full transition-all duration-300 cursor-pointer ${!isYearly ? 'bg-gradient-to-r from-blue-600 to-emerald-600 text-white font-medium shadow-md' : 'text-gray-400 hover:text-white'}`}
                             onClick={() => setIsYearly(false)}
@@ -316,7 +316,7 @@ const Plans: React.FC = () => {
             {/* Payment Processing Modal */}
             {isUpgrading && (
                 <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
-                    <div className="bg-[#1a1a20] border border-[#3a3a45] rounded-xl p-6 max-w-md w-full">
+                    <div className="bg-[#0b0b0e] border border-[#3a2a15] rounded-xl p-6 max-w-md w-full">
                         {!upgradeError ? (
                             <div className="flex flex-col items-center">
                                 <Loader2 className="h-12 w-12 animate-spin text-emerald-500 mb-4" />
@@ -352,7 +352,7 @@ const Plans: React.FC = () => {
 
             {successMessage && (
                 <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
-                    <div className="bg-[#1a1a20] p-6 rounded-lg shadow-lg">
+                    <div className="bg-[#0b0b0e] p-6 rounded-lg shadow-lg">
                         <div className="flex flex-col items-center">
                             <div className="bg-red-500/20 p-3 rounded-full mb-4">
                                 <Check className="h-8 w-8 text-emerald-500" />
@@ -375,7 +375,7 @@ const Plans: React.FC = () => {
             {/* Confirm Plan Change Modal */}
             {showConfirm && confirmPlan && (
                 <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
-                    <div className="bg-[#1a1a20] border border-[#3a3a45] rounded-xl p-6 max-w-md w-full">
+                    <div className="bg-[#0b0b0e] border border-[#3a2a15] rounded-xl p-6 max-w-md w-full">
                         <h3 className="text-xl font-bold text-white mb-2">{t('ConfirmPlanChange')}</h3>
                         <p className="text-gray-300">{t('ConfirmChangeToPlan', { name: confirmPlan.name })}</p>
                         <div className="mt-6 flex justify-end gap-3">
@@ -427,7 +427,7 @@ const Plans: React.FC = () => {
                 {plans.map((plan) => (
                     <div 
                         key={plan.id}
-                        className={`relative rounded-xl overflow-hidden border ${plan.isCurrentPlan ? 'border-blue-500 border-2' : plan.popular ? 'border-emerald-500' : 'border-[#3a3a45]'} bg-[#1a1a20] shadow-lg flex flex-col`}
+                        className={`relative rounded-xl overflow-hidden border ${plan.isCurrentPlan ? 'border-blue-500 border-2' : plan.popular ? 'border-emerald-500' : 'border-[#3a2a15]'} bg-[#0b0b0e] shadow-lg flex flex-col`}
                     >
                         {plan.isCurrentPlan ? (
                             <div className="absolute top-0 right-0">
@@ -442,7 +442,7 @@ const Plans: React.FC = () => {
                                 </div>
                             </div>
                         )}
-                        <div className={`p-6 border-b border-[#3a3a45]`}>
+                        <div className={`p-6 border-b border-[#3a2a15]`}>
                             <h3 className="text-xl font-bold text-white mb-1">{t(plan.name)}</h3>
                             <div className="flex items-baseline mb-2">
                                 <span className="text-3xl font-extrabold text-white">
@@ -474,7 +474,7 @@ const Plans: React.FC = () => {
                             </ul>
                         </div>
 
-                        <div className="p-6 border-t border-[#3a3a45] relative">
+                        <div className="p-6 border-t border-[#3a2a15] relative">
                             <button
                                 disabled={plan.isCurrentPlan}
                                 onClick={() => { setConfirmPlan(plan); setShowConfirm(true); }}

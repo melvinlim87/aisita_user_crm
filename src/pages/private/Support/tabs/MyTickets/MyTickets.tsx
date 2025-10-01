@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+﻿import React, { useState, useEffect } from "react";
 import { Clock, AlertCircle, ChevronDown, Search } from "lucide-react";
 import { getRequest } from "@/services/apiRequest";
 import TicketDetail from "./TicketDetail";
@@ -144,7 +144,7 @@ const MyTickets: React.FC = () => {
             {selectedTicketId ? (
                 <TicketDetail ticketId={selectedTicketId} onBack={goBackToList} />
             ) : (
-                <div className="max-w-4xl mx-auto bg-[#1a1a20] border border-[#3a3a45] rounded-xl p-6 shadow-lg">
+                <div className="max-w-4xl mx-auto bg-[#0b0b0e] border border-[#3a2a15] rounded-xl p-6 shadow-lg">
                     <h1 className="text-2xl font-bold text-white mb-6">{t("MySupportTickets")}</h1>
             
             {/* Search and Filter */}
@@ -155,7 +155,7 @@ const MyTickets: React.FC = () => {
                     </div>
                     <input
                         type="text"
-                        className="bg-[#252530] border border-[#3a3a45] text-white text-sm rounded-lg block w-full pl-10 p-2.5 focus:ring-blue-500 focus:border-blue-500"
+                        className="bg-[#252530] border border-[#3a2a15] text-white text-sm rounded-lg block w-full pl-10 p-2.5 focus:ring-blue-500 focus:border-blue-500"
                         placeholder={t("SearchTicketsPlaceholder")}
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
@@ -164,7 +164,7 @@ const MyTickets: React.FC = () => {
                 
                 <div className="w-full md:w-48">
                     <select
-                        className="bg-[#252530] border border-[#3a3a45] text-white text-sm rounded-lg block w-full p-2.5 focus:ring-blue-500 focus:border-blue-500"
+                        className="bg-[#252530] border border-[#3a2a15] text-white text-sm rounded-lg block w-full p-2.5 focus:ring-blue-500 focus:border-blue-500"
                         value={statusFilter}
                         onChange={(e) => setStatusFilter(e.target.value)}
                     >
@@ -212,7 +212,7 @@ const MyTickets: React.FC = () => {
                     {filteredTickets.map(ticket => (
                         <div 
                             key={ticket.id} 
-                            className="border border-[#3a3a45] rounded-lg overflow-hidden bg-[#252530]"
+                            className="border border-[#3a2a15] rounded-lg overflow-hidden bg-[#252530]"
                         >
                             {/* Ticket Header - Now clickable to view details */}
                             <div 

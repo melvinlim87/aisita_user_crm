@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+﻿import React, { useState, useRef, useEffect } from 'react';
 import { getRequest, postRequest } from '@/services/apiRequest';
 import { Send, ChevronRight, Sparkles, RefreshCw, Zap } from 'lucide-react';
 import { useChat } from '@contexts/ChatContext';
@@ -235,9 +235,9 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({ externalModels }) => {
   return (
     <Card 
       variant="elevated" 
-      className="flex flex-col h-full border border-[#3a3a45] rounded-lg overflow-hidden"
+      className="flex flex-col h-full border border-[#3a2a15] rounded-lg overflow-hidden"
     >
-      <div className="px-6 py-4 border-b border-[#3a3a45] bg-[#1a1a20]">
+      <div className="px-6 py-4 border-b border-[#3a2a15] bg-[#0b0b0e]">
         <div className="flex justify-between items-center">
           <div>
             <h2 className={`text-lg font-semibold ${META_TEXT_GRADIENT}`}>
@@ -258,7 +258,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({ externalModels }) => {
         </div>
       </div>
       
-      <div className="h-[500px] overflow-y-auto p-4 bg-[#25252d] scrollbar-thin">
+      <div className="h-[500px] overflow-y-auto p-4 bg-[#15120c] scrollbar-thin">
         {currentConversation?.messages.length === 0 ? (
           <div className="flex flex-col items-center justify-center h-full text-center px-4 py-10">
             <div className="w-16 h-16 rounded-full bg-[#3a3a45] flex items-center justify-center mb-4">
@@ -279,7 +279,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({ externalModels }) => {
                   className={`px-3 py-1.5 rounded-md text-sm transition-colors ${
                     selectedCategory === category
                       ? 'bg-[#3a3a45] text-white'
-                      : 'text-gray-400 hover:bg-[#25252d]'
+                      : 'text-gray-400 hover:bg-[#15120c]'
                   }`}
                 >
                   {category}
@@ -321,7 +321,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({ externalModels }) => {
                   <div 
                     className={`inline-block max-w-[100%] rounded-lg p-3 ${message.sender === 'user' 
                       ? 'bg-blue-600 text-white' 
-                      : 'bg-[#1a1a20] text-white border border-[#3a3a45]'}`}
+                      : 'bg-[#0b0b0e] text-white border border-[#3a2a15]'}`}
                   >
                     <div className="whitespace-pre-wrap text-sm">{message.content}</div>
                   </div>
@@ -338,7 +338,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({ externalModels }) => {
             {tempLoadingMessage && (
               <div className="mb-4 text-left">
                 <div className="relative">
-                  <div className="inline-block max-w-[85%] rounded-lg p-3 bg-[#1a1a20] text-white border border-[#3a3a45]">
+                  <div className="inline-block max-w-[85%] rounded-lg p-3 bg-[#0b0b0e] text-white border border-[#3a2a15]">
                     <div className="whitespace-pre-wrap text-sm italic">
                       Thinking
                       <span className="inline-block animate-bounce mx-0.5">.</span>
@@ -359,7 +359,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({ externalModels }) => {
       </div>
       
       {/* Input Area */}
-      <div className="p-3 bg-[#1a1a20] border-t border-[#3a3a45]">
+      <div className="p-3 bg-[#0b0b0e] border-t border-[#3a2a15]">
         <div className="flex flex-col gap-2 mb-3">
           <div className="flex items-center justify-between text-sm text-gray-400">
             <span>AI Model</span>
@@ -370,7 +370,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({ externalModels }) => {
           <select
             value={selectedModel || ''}
             onChange={(e) => setSelectedModel?.(e.target.value)}
-            className="w-full bg-[#25252d] border border-[#3a3a45] rounded-md py-2 px-3 text-[#e2e8f0] text-sm focus:outline-none focus:ring-1 focus:ring-blue-400 focus:border-blue-400"
+            className="w-full bg-[#15120c] border border-[#3a2a15] rounded-md py-2 px-3 text-[#e2e8f0] text-sm focus:outline-none focus:ring-1 focus:ring-blue-400 focus:border-blue-400"
             disabled={isLoadingModels}
           >
             {isLoadingModels ? (
@@ -407,7 +407,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({ externalModels }) => {
         <div className="flex">
           <textarea
             ref={inputRef}
-            className="flex-grow bg-[#25252d] text-white text-sm rounded-l-lg px-4 py-2 outline-none resize-none border border-[#3a3a45] focus:border-blue-400"
+            className="flex-grow bg-[#15120c] text-white text-sm rounded-l-lg px-4 py-2 outline-none resize-none border border-[#3a2a15] focus:border-blue-400"
             placeholder={chartUploaded ? "Ask about the chart..." : "Upload a chart first to start chatting"}
             rows={2}
             value={inputValue}

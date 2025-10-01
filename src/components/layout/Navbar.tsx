@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { BarChart2, LogOut, User, Settings, HelpCircle, Mail, DollarSign, Users, Info, Coins, ChevronDown, Check } from 'lucide-react';
+import { LogOut, User, Settings, HelpCircle, Mail, DollarSign, Users, Info, Coins, ChevronDown, Check } from 'lucide-react';
 import { getRequest } from '@/services/apiRequest';
 import { useAuth } from '../../contexts/AuthContext';
 import { useTokenBalance } from '../../contexts/TokenBalanceContext';
 import Button from '../common/Button';
-import { META_TEXT_GRADIENT } from '../../constants';
+// import { META_TEXT_GRADIENT } from '../../constants';
 import { FRONTEND_URL } from '@/config';
 import { useTranslation } from "react-i18next";
 
@@ -76,64 +76,38 @@ const Navbar: React.FC = () => {
         setShowLangDropdown(false);
       }
     };
-    
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[#1a1a20]/95 backdrop-blur-lg border-b border-[#3a3a45]">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#0b0b0e]/95 backdrop-blur-lg border-b border-[#3a2a15]">
       <div className="flex items-center justify-between px-2 h-16 w-full max-w-[1400px] mx-auto sm:justify-between portrait:justify-center">
         <div className="flex items-center flex-shrink-0 sm:justify-start portrait:justify-center w-full sm:w-auto portrait:w-full">
-          <Link 
-            to="/" 
-            className="flex items-center space-x-1 group"
-          >
-            {/* <BarChart2 
-              className={`w-6 h-6 ${META_TEXT_GRADIENT}`} 
-              strokeWidth={1.5} 
-            /> */}
-            <img src="/assets/images/logo/decyphers-logo.png" alt="Decyphers" className="w-full max-h-16 bg-transparent sm:mx-0 portrait:mx-auto" />
-            {/* <span className={`text-lg font-bold tracking-tight ${META_TEXT_GRADIENT}`}>
-              Decyphers
-            </span> */}
+          <Link to="/" className="flex items-center space-x-1 group">
+            <img src="/assets/images/logo/decyphers-logo.png" alt="AISITA" className="w-full max-h-16 bg-transparent sm:mx-0 portrait:mx-auto" />
           </Link>
         </div>
 
         {!isAuthenticated && (
         <nav className="hidden md:flex items-center justify-center flex-1 space-x-8 px-8">
-          <a 
-            href={`${FRONTEND_URL}/pricing`}
-            className="flex items-center text-[#e2e8f0] hover:text-white transition-colors text-sm font-medium whitespace-nowrap"
-          >
+          <a href={`${FRONTEND_URL}/pricing`} className="flex items-center text-[#f5f5f5] hover:text-[#f2c14e] transition-colors text-sm font-medium whitespace-nowrap">
             <DollarSign className="w-4 h-4 mr-1.5" />
             {t('Pricing')}
           </a>
-          <a 
-            href={`${FRONTEND_URL}/partners`} 
-            className="flex items-center text-[#e2e8f0] hover:text-white transition-colors text-sm font-medium"
-          >
+          <a href={`${FRONTEND_URL}/partners`} className="flex items-center text-[#f5f5f5] hover:text-[#f2c14e] transition-colors text-sm font-medium">
             <Users className="w-4 h-4 mr-1.5" />
             {t('Partners')}
           </a>
-          <a 
-            href={`${FRONTEND_URL}/about`} 
-            className="flex items-center text-[#e2e8f0] hover:text-white transition-colors text-sm font-medium"
-          >
+          <a href={`${FRONTEND_URL}/about`} className="flex items-center text-[#f5f5f5] hover:text-[#f2c14e] transition-colors text-sm font-medium">
             <Info className="w-4 h-4 mr-1.5" />
             {t('AboutUs')}
           </a>
-          <a 
-            href={`${FRONTEND_URL}/faq`}
-            className="flex items-center text-[#e2e8f0] hover:text-white transition-colors text-sm font-medium"
-          >
+          <a href={`${FRONTEND_URL}/faq`} className="flex items-center text-[#f5f5f5] hover:text-[#f2c14e] transition-colors text-sm font-medium">
             <HelpCircle className="w-4 h-4 mr-1.5" />
             {t('FAQ')}
           </a>
-          <a 
-            href={`${FRONTEND_URL}/contact`}
-            className="flex items-center text-[#e2e8f0] hover:text-white transition-colors text-sm font-medium"
-          >
+          <a href={`${FRONTEND_URL}/contact`} className="flex items-center text-[#f5f5f5] hover:text-[#f2c14e] transition-colors text-sm font-medium">
             <Mail className="w-4 h-4 mr-1.5" />
             {t('ContactUs')}
           </a>
@@ -142,33 +116,18 @@ const Navbar: React.FC = () => {
         {isAuthenticated && <div className="flex-1"></div>}
         
         <div className="hidden md:flex items-center lg:flex portrait:hidden">
-          {/* Language Selector */}
           <div className="relative mr-4 language-selector">
-            <button
-              onClick={toggleLangDropdown}
-              className="flex items-center text-[#e2e8f0] hover:text-white transition-colors text-sm font-medium px-3 py-1 rounded-md hover:bg-[#25252d]"
-            >
+            <button onClick={toggleLangDropdown} className="flex items-center text-[#f5f5f5] hover:text-[#f2c14e] transition-colors text-sm font-medium px-3 py-1 rounded-md hover:bg-[#15120c]">
               <span className="uppercase">{t(currentLang)}</span>
               <ChevronDown className="w-4 h-4 ml-1" />
             </button>
-            
             {showLangDropdown && (
-              <div className="absolute right-0 mt-2 w-32 bg-[#25252d] rounded-md shadow-lg border border-[#3a3a45] overflow-hidden z-50">
-                <button
-                  onClick={() => changeLanguage('en')}
-                  className={`w-full text-left px-4 py-2 text-sm flex items-center justify-between ${
-                    currentLang === 'en' ? 'text-white bg-[#3a3a45]' : 'text-[#e2e8f0] hover:bg-[#3a3a45]'
-                  }`}
-                >
+              <div className="absolute right-0 mt-2 w-32 bg-[#15120c] rounded-md shadow-lg border border-[#3a2a15] overflow-hidden z-50">
+                <button onClick={() => changeLanguage('en')} className={`w-full text-left px-4 py-2 text-sm flex items-center justify-between ${currentLang === 'en' ? 'text-[#0b0b0e] bg-[#d4af37]' : 'text-[#f5f5f5] hover:bg-[#1e1a12]'}`}>
                   <span>{t('en')}</span>
                   {currentLang === 'en' && <Check className="w-4 h-4" />}
                 </button>
-                <button
-                  onClick={() => changeLanguage('ch')}
-                  className={`w-full text-left px-4 py-2 text-sm flex items-center justify-between ${
-                    currentLang === 'ch' ? 'text-white bg-[#3a3a45]' : 'text-[#e2e8f0] hover:bg-[#3a3a45]'
-                  }`}
-                >
+                <button onClick={() => changeLanguage('ch')} className={`w-full text-left px-4 py-2 text-sm flex items-center justify-between ${currentLang === 'ch' ? 'text-[#0b0b0e] bg-[#d4af37]' : 'text-[#f5f5f5] hover:bg-[#1e1a12]'}`}>
                   <span>{t('ch')}</span>
                   {currentLang === 'ch' && <Check className="w-4 h-4" />}
                 </button>
@@ -178,85 +137,45 @@ const Navbar: React.FC = () => {
           
           {isAuthenticated ? (
             <div className="flex items-center space-x-2">
-              {/* Token Balance Display */}
-              <div className="flex items-center px-3 py-1 bg-[#25252d] rounded-md border border-[#3a3a45]">
-                <Coins className="w-4 h-4 text-[#10b981] mr-1.5" />
-                <span className="text-xs text-[#e2e8f0] mr-1">{t('Available')}</span>
-                <span className="text-xs font-medium text-[#10b981]">
-                  {isLoadingTokens ? '...' : tokenBalance.toLocaleString()}
-                </span>
+              <div className="flex items-center px-3 py-1 bg-[#15120c] rounded-md border border-[#3a2a15]">
+                <Coins className="w-4 h-4 text-[#d4af37] mr-1.5" />
+                <span className="text-xs text-[#f5f5f5] mr-1">{t('Available')}</span>
+                <span className="text-xs font-medium text-[#d4af37]">{isLoadingTokens ? '...' : tokenBalance.toLocaleString()}</span>
               </div>
               
-              <Button 
-                variant="text" 
-                size="sm"
-                icon={<Settings className="w-4 h-4" />}
-                onClick={() => navigate('/settings')}
-                className="px-2"
-              >
+              <Button variant="text" size="sm" icon={<Settings className="w-4 h-4" />} onClick={() => navigate('/settings')} className="px-2">
                 <span className="hidden sm:inline">{t('Settings')}</span>
               </Button>
               
               <div className="relative group">
-                <button 
-                  className="flex items-center space-x-1"
-                  aria-label="User menu"
-                >
-                  <div className="w-7 h-7 rounded-full overflow-hidden border-2 border-[#94a3b8] shadow-inner">
+                <button className="flex items-center space-x-1" aria-label="User menu">
+                  <div className="w-7 h-7 rounded-full overflow-hidden border-2 border-[#d4af37] shadow-inner">
                     {user?.profile_picture_url ? (
-                      <img 
-                        src={user.profile_picture_url} 
-                        alt={user.name || 'User'} 
-                        className="w-full h-full object-cover"
-                        onError={(e: React.SyntheticEvent<HTMLImageElement>) => {
-                          // Fallback to initials if image fails to load
-                          const target = e.currentTarget as HTMLImageElement;
-                          target.style.display = 'none';
-                          
-                          // Find the sibling element and show it
-                          const sibling = target.nextElementSibling as HTMLDivElement;
-                          if (sibling) {
-                            sibling.style.display = 'flex';
-                          }
-                        }}
-                      />
+                      <img src={user.profile_picture_url} alt={user.name || 'User'} className="w-full h-full object-cover" onError={(e: React.SyntheticEvent<HTMLImageElement>) => {
+                        const target = e.currentTarget as HTMLImageElement;
+                        target.style.display = 'none';
+                        const sibling = target.nextElementSibling as HTMLDivElement;
+                        if (sibling) sibling.style.display = 'flex';
+                      }} />
                     ) : null}
-                    <div 
-                      className={`w-full h-full bg-gradient-to-br from-[#cbd5e1] to-[#94a3b8] flex items-center justify-center text-gray-900 text-xs font-bold ${user?.profile_picture_url ? 'hidden' : ''}`}
-                    >
+                    <div className={`w-full h-full bg-gradient-to-br from-[#d4af37] to-[#b8860b] flex items-center justify-center text-gray-900 text-xs font-bold ${user?.profile_picture_url ? 'hidden' : ''}`}>
                       {user?.name?.charAt(0).toUpperCase() || 'U'}
                     </div>
                   </div>
-                  <span className="text-[#e2e8f0] text-xs hidden md:block max-w-[80px] truncate">
-                    {user?.name}
-                  </span>
+                  <span className="text-[#f5f5f5] text-xs hidden md:block max-w-[80px] truncate">{user?.name}</span>
                 </button>
                 
                 <div className="absolute right-0 mt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-in-out">
-                  <div className="bg-[#25252d] rounded-md shadow-lg border border-[#3a3a45] py-1 overflow-hidden">
-                    {/* Add Credits Link */}
-                    <Link 
-                      className="w-full text-left px-4 py-2 text-sm text-[#e2e8f0] hover:bg-[#3a3a45] flex items-center space-x-2 border-b border-[#3a3a45]"
-                      to="/membership-plan/credits"
-                    >
-                      <DollarSign className="w-4 h-4 text-[#10b981]" />
+                  <div className="bg-[#15120c] rounded-md shadow-lg border border-[#3a2a15] py-1 overflow-hidden">
+                    <Link className="w-full text-left px-4 py-2 text-sm text-[#f5f5f5] hover:bg-[#1e1a12] flex items-center space-x-2 border-b border-[#3a2a15]" to="/membership-plan/credits">
+                      <DollarSign className="w-4 h-4 text-[#d4af37]" />
                       <span>{t('AddCredits')}</span>
                     </Link>
-                    
-                    <Link 
-                      className="w-full text-left px-4 py-2 text-sm text-[#e2e8f0] hover:bg-[#3a3a45] flex items-center space-x-2"
-                      to="/profile"
-                    >
+                    <Link className="w-full text-left px-4 py-2 text-sm text-[#f5f5f5] hover:bg-[#1e1a12] flex items-center space-x-2" to="/profile">
                       <User className="w-4 h-4" />
                       <span>{t('Profile')}</span>
                     </Link>
-                    <button 
-                      className="w-full text-left px-4 py-2 text-sm text-[#e2e8f0] hover:bg-[#3a3a45] flex items-center space-x-2"
-                      onClick={() => {
-                        logout();
-                        navigate('/');
-                      }}
-                    >
+                    <button className="w-full text-left px-4 py-2 text-sm text-[#f5f5f5] hover:bg-[#1e1a12] flex items-center space-x-2" onClick={() => { logout(); navigate('/'); }}>
                       <LogOut className="w-4 h-4" />
                       <span>{t('Logout')}</span>
                     </button>
@@ -266,22 +185,8 @@ const Navbar: React.FC = () => {
             </div>
           ) : (
             <div className="flex items-center space-x-1">
-              <Button 
-                variant="secondary" 
-                size="sm"
-                onClick={() => window.location.href = 'https://ai.decyphers.com'}
-                className="px-2 py-1 text-xs"
-              >
-                {t('Login')}
-              </Button>
-              <Button 
-                variant="primary" 
-                size="sm"
-                onClick={() => window.location.href = 'https://ai.decyphers.com/signup'}
-                className="px-2 py-1 text-xs"
-              >
-                {t('SignUp')}
-              </Button>
+              <Button variant="secondary" size="sm" onClick={() => window.location.href = 'https://user.aisita.ai'} className="px-2 py-1 text-xs">{t('Login')}</Button>
+              <Button variant="primary" size="sm" onClick={() => window.location.href = 'https://user.aisita.ai/signup'} className="px-2 py-1 text-xs">{t('SignUp')}</Button>
             </div>
           )}
         </div>

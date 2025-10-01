@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { BarChart2, Upload, MessageSquare, Zap, LineChart, TrendingUp, ShieldCheck, BarChartHorizontal, Bot, Mail, Phone, MapPin, ChevronDown, Search } from 'lucide-react';
 import Button from '@components/common/Button';
@@ -93,7 +93,7 @@ const Home: React.FC = () => {
   );
 
   return (
-    <div className="min-h-screen bg-[#1a1a20] text-[#e2e8f0]">
+    <div className="min-h-screen bg-[#0b0b0e] text-[#e2e8f0]">
       {/* Hero Section */}
       <section className="relative pt-20 pb-32 overflow-hidden">
         <div className="absolute inset-0 z-0">
@@ -217,7 +217,7 @@ const Home: React.FC = () => {
                 description: "Interact with the AI through a chat interface to ask specific questions and get detailed analysis."
               }
             ].map((step, index) => (
-              <div key={index} className="bg-[#25252d]/90 rounded-lg p-6 glow-border">
+              <div key={index} className="bg-[#15120c]/90 rounded-lg p-6 glow-border">
                 <div className="h-32 flex items-center justify-center mb-6 mx-auto">
                   {step.vector}
                 </div>
@@ -278,7 +278,7 @@ const Home: React.FC = () => {
                     alt={feature.title}
                     className="w-full h-full object-cover opacity-20"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#25252d] via-[#25252d]/90 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#15120c] via-[#15120c]/90 to-transparent" />
                 </div>
                 <div className="relative p-6">
                   <div className="flex items-start">
@@ -318,7 +318,7 @@ const Home: React.FC = () => {
                   alt="AI Expert Advisor"
                   className="w-full h-full object-cover opacity-20"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#25252d] via-[#25252d]/90 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#15120c] via-[#15120c]/90 to-transparent" />
               </div>
               <div className="relative p-8">
                 <div className="flex flex-col items-center text-center md:text-left md:items-start">
@@ -356,7 +356,7 @@ const Home: React.FC = () => {
                   alt="Chart Analysis"
                   className="w-full h-full object-cover opacity-20"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#25252d] via-[#25252d]/90 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#15120c] via-[#15120c]/90 to-transparent" />
               </div>
               <div className="relative p-8">
                 <div className="flex flex-col items-center text-center md:text-left md:items-start">
@@ -411,7 +411,7 @@ const Home: React.FC = () => {
                 placeholder="Search questions..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-3 bg-[#25252d] border border-[#3a3a45] rounded-lg text-[#e2e8f0] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#94a3b8] focus:border-transparent"
+                className="w-full pl-12 pr-4 py-3 bg-[#15120c] border border-[#3a2a15] rounded-lg text-[#e2e8f0] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#94a3b8] focus:border-transparent"
               />
             </div>
           </div>
@@ -425,7 +425,7 @@ const Home: React.FC = () => {
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors
                     ${selectedCategory === category 
                       ? 'bg-[#3a3a45] text-white' 
-                      : 'bg-[#25252d] text-gray-400 hover:bg-[#3a3a45] hover:text-white'
+                      : 'bg-[#15120c] text-gray-400 hover:bg-[#3a3a45] hover:text-white'
                     }`}
                 >
                   {category}
@@ -438,7 +438,7 @@ const Home: React.FC = () => {
             {filteredFaqs.map((faq, index) => (
               <div
                 key={index}
-                className="bg-[#25252d] rounded-lg p-6 glow-border transition-all duration-200 hover:border-[#94a3b8]"
+                className="bg-[#15120c] rounded-lg p-6 glow-border transition-all duration-200 hover:border-[#94a3b8]"
               >
                 <div className="flex justify-between items-start">
                   <h3 className="text-lg font-semibold text-[#e2e8f0] mb-3">{faq.question}</h3>
@@ -461,11 +461,11 @@ const Home: React.FC = () => {
       {/* CTA Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto rounded-2xl bg-[#25252d] overflow-hidden glow-border">
+          <div className="max-w-4xl mx-auto rounded-2xl bg-[#15120c] overflow-hidden glow-border">
             <div className="relative p-8 md:p-12">
               <div className="absolute inset-0 z-0">
                 <div className="absolute inset-0 opacity-10 bg-[url('https://images.pexels.com/photos/6772076/pexels-photo-6772076.jpeg')] bg-cover bg-center"></div>
-                <div className="absolute inset-0 bg-gradient-to-br from-transparent via-[#25252d]/80 to-[#25252d]"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-transparent via-[#15120c]/80 to-[#15120c]"></div>
               </div>
               
               <div className="relative z-10 text-center">
@@ -511,15 +511,15 @@ const Home: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <div className="bg-[#25252d] rounded-lg p-8 glow-border">
+            <div className="bg-[#15120c] rounded-lg p-8 glow-border">
               <h3 className="text-xl font-semibold mb-6">Contact Information</h3>
               <div className="space-y-4">
                 <div className="flex items-center space-x-4">
                   <Mail className="w-5 h-5 text-[#94a3b8]" />
                   <div>
                     <p className="text-sm text-gray-400">Email</p>
-                    <a href="mailto:support@decyphers.com" className="text-[#e2e8f0] hover:text-white">
-                      support@decyphers.com
+                    <a href="mailto:support@aisita.ai" className="text-[#e2e8f0] hover:text-white">
+                      support@aisita.ai
                     </a>
                   </div>
                 </div>
@@ -545,28 +545,28 @@ const Home: React.FC = () => {
               </div>
             </div>
             
-            <div className="bg-[#25252d] rounded-lg p-8 glow-border">
+            <div className="bg-[#15120c] rounded-lg p-8 glow-border">
               <h3 className="text-xl font-semibold mb-6">Send us a Message</h3>
               <form className="space-y-4">
                 <div>
                   <input
                     type="text"
                     placeholder="Your name"
-                    className="w-full px-4 py-2 bg-[#1a1a20] border border-[#3a3a45] rounded-md text-[#e2e8f0] placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#94a3b8] focus:border-transparent"
+                    className="w-full px-4 py-2 bg-[#0b0b0e] border border-[#3a2a15] rounded-md text-[#e2e8f0] placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#94a3b8] focus:border-transparent"
                   />
                 </div>
                 <div>
                   <input
                     type="email"
                     placeholder="Your email"
-                    className="w-full px-4 py-2 bg-[#1a1a20] border border-[#3a3a45] rounded-md text-[#e2e8f0] placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#94a3b8] focus:border-transparent"
+                    className="w-full px-4 py-2 bg-[#0b0b0e] border border-[#3a2a15] rounded-md text-[#e2e8f0] placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#94a3b8] focus:border-transparent"
                   />
                 </div>
                 <div>
                   <textarea
                     rows={4}
                     placeholder="Your message"
-                    className="w-full px-4 py-2 bg-[#1a1a20] border border-[#3a3a45] rounded-md text-[#e2e8f0] placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#94a3b8] focus:border-transparent resize-none"
+                    className="w-full px-4 py-2 bg-[#0b0b0e] border border-[#3a2a15] rounded-md text-[#e2e8f0] placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#94a3b8] focus:border-transparent resize-none"
                   />
                 </div>
                 <Button
@@ -582,7 +582,7 @@ const Home: React.FC = () => {
       </section>
       
       {/* Footer */}
-      <footer className="py-12 border-t border-[#3a3a45]">
+      <footer className="py-12 border-t border-[#3a2a15]">
         <div className="container mx-auto px-4">
         </div>
       </footer>

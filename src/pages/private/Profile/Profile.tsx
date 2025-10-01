@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { BarChart2, Calendar, Loader2 } from 'lucide-react';
 import { getRequest } from '@/services/apiRequest';
 import { useTranslation } from 'react-i18next';
@@ -111,7 +111,7 @@ const Profile: React.FC = () => {
     return (
         <div className="container mx-auto px-4 py-8">
             {/* Profile Header Section */}
-            <div className="bg-[#1a1a20] rounded-lg shadow-lg p-8 mb-8 border border-[#2d3748]">
+            <div className="bg-[#0b0b0e] rounded-lg shadow-lg p-8 mb-8 border border-[#2d3748]">
                 {loading ? (
                     <div className="flex justify-center items-center py-8">
                         <Loader2 className="w-8 h-8 text-blue-500 animate-spin" />
@@ -149,7 +149,7 @@ const Profile: React.FC = () => {
 
                         
                         {/* Streak Info */}
-                        {/* <div className="bg-[#25252d] rounded-lg px-4 py-2 shadow-md border border-[#3a3a45]">
+                        {/* <div className="bg-[#15120c] rounded-lg px-4 py-2 shadow-md border border-[#3a2a15]">
                             <div className="text-center">
                                 <p className="text-sm font-medium text-gray-300">
                                     2 day streak <span className="text-gray-500">(record 23)</span>
@@ -164,7 +164,7 @@ const Profile: React.FC = () => {
             <div className="mb-8">
                 <div className="flex justify-between items-center mb-4">
                     <h2 className="text-xl font-bold text-white">{t('AccountActivityComingSoon')}</h2>
-                    {/* <div className="bg-[#25252d] px-4 py-1 rounded-full text-sm text-gray-400">
+                    {/* <div className="bg-[#15120c] px-4 py-1 rounded-full text-sm text-gray-400">
                         {activityData.dateRange}
                     </div> */}
                 </div>
@@ -172,31 +172,31 @@ const Profile: React.FC = () => {
                 
                 {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     Code Written Stat
-                    <div className="bg-[#1a1a20] rounded-lg p-6 border border-[#2d3748] shadow-lg">
+                    <div className="bg-[#0b0b0e] rounded-lg p-6 border border-[#2d3748] shadow-lg">
                         <h3 className="text-sm text-gray-400 mb-2">% AI analysis accuracy rate</h3>
                         <div className="text-4xl font-bold text-white">{activityData.analysisStats.accuracyRate}%</div>
                     </div>
                     
                     Total Lines Stat
-                    <div className="bg-[#1a1a20] rounded-lg p-6 border border-[#2d3748] shadow-lg md:col-span-2">
+                    <div className="bg-[#0b0b0e] rounded-lg p-6 border border-[#2d3748] shadow-lg md:col-span-2">
                         <div className="flex justify-between items-center mb-2">
                             <h3 className="text-sm text-gray-400">Total chart analyses processed</h3>
                             <div className="flex">
                                 <button className="px-3 py-1 bg-blue-600 text-white text-xs font-medium rounded-l-md">CASCADE</button>
-                                <button className="px-3 py-1 bg-[#25252d] text-gray-400 text-xs font-medium rounded-r-md">TAB</button>
+                                <button className="px-3 py-1 bg-[#15120c] text-gray-400 text-xs font-medium rounded-r-md">TAB</button>
                             </div>
                         </div>
                         <div className="text-4xl font-bold text-white mb-4">{activityData.analysisStats.totalAnalyses.toLocaleString()}</div>
                         
                         Chart Placeholder
-                        <div className="h-32 bg-[#25252d] rounded-md flex items-center justify-center">
+                        <div className="h-32 bg-[#15120c] rounded-md flex items-center justify-center">
                             <BarChart2 className="w-8 h-8 text-blue-500" />
                             <span className="ml-2 text-blue-400">Analysis History Chart</span>
                         </div>
                     </div>
                     
                     Conversations Stat
-                    <div className="bg-[#1a1a20] rounded-lg p-6 border border-[#2d3748] shadow-lg">
+                    <div className="bg-[#0b0b0e] rounded-lg p-6 border border-[#2d3748] shadow-lg">
                         <h3 className="text-sm text-gray-400 mb-2">Total AI chat sessions</h3>
                         <div className="text-4xl font-bold text-white">{activityData.analysisStats.conversations}</div>
                     </div>
@@ -206,7 +206,7 @@ const Profile: React.FC = () => {
             {/* Usage History Section */}
             {/* <div className="mb-8">
                 <h2 className="text-xl font-bold text-white mb-4">Chart Analysis History</h2>
-                <div className="bg-[#1a1a20] rounded-lg p-6 border border-[#2d3748] shadow-lg">
+                <div className="bg-[#0b0b0e] rounded-lg p-6 border border-[#2d3748] shadow-lg">
                     <div className="flex items-center justify-center text-gray-400 py-8">
                         <Calendar className="w-6 h-6 mr-2" />
                         <span>Your recent chart analyses will appear here</span>

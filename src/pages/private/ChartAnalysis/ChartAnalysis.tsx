@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect, useRef } from 'react';
+﻿import React, { useState, useCallback, useEffect, useRef } from 'react';
 import ChartUpload from '@components/chart/ChartUpload';
 import ChatInterface from '@components/chat/ChatInterface';
 import { Upload, X } from 'lucide-react';
@@ -358,7 +358,7 @@ const ChartAnalysisContent: React.FC = () => {
       {/* Loading overlay for history */}
       {isLoadingHistory && (
         <div className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center">
-          <div className="bg-[#1a1a20] p-6 rounded-lg shadow-lg border border-[#3a3a45] max-w-md w-full">
+          <div className="bg-[#0b0b0e] p-6 rounded-lg shadow-lg border border-[#3a2a15] max-w-md w-full">
             <div className="flex flex-col items-center">
               <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-white mb-4"></div>
               <p className="text-xl font-semibold text-white">Loading analysis history...</p>
@@ -368,7 +368,7 @@ const ChartAnalysisContent: React.FC = () => {
       )}
       
       {/* Header Section */}
-      <div className="bg-[#1a1a20] rounded-lg border border-[#3a3a45] p-6 mb-6">
+      <div className="bg-[#0b0b0e] rounded-lg border border-[#3a2a15] p-6 mb-6">
         <h1 className={`text-2xl font-bold ${META_TEXT_GRADIENT} mb-2`}>
           Chart Analysis
         </h1>
@@ -380,11 +380,11 @@ const ChartAnalysisContent: React.FC = () => {
       {/* Main Content */}
       <div className="flex flex-col md:flex-row gap-6">
         {/* Left Panel (60%) - Chart Section */}
-        <div className="w-full md:w-3/5 bg-[#1a1a20] p-6 rounded-lg border border-[#3a3a45]">
+        <div className="w-full md:w-3/5 bg-[#0b0b0e] p-6 rounded-lg border border-[#3a2a15]">
           <div className="h-full flex flex-col">
             {chartPreview ? (
               <div className="flex-1 flex flex-col">
-                <div className="bg-[#25252d] p-4 rounded-lg border border-[#3a3a45] mb-4 relative">
+                <div className="bg-[#15120c] p-4 rounded-lg border border-[#3a2a15] mb-4 relative">
                   {isAnalyzing && (
                     <div className="absolute inset-0 bg-black/50 flex items-center justify-center rounded-lg z-50">
                       <div className="flex flex-col items-center">
@@ -424,7 +424,7 @@ const ChartAnalysisContent: React.FC = () => {
         </div>
           
         {/* Right Panel (40%) - Chat Interface */}
-        <div className="w-full md:w-2/5 bg-[#1a1a20] rounded-lg border border-[#3a3a45] h-[600px] md:h-auto overflow-hidden">
+        <div className="w-full md:w-2/5 bg-[#0b0b0e] rounded-lg border border-[#3a2a15] h-[600px] md:h-auto overflow-hidden">
           <div className="relative">
             {isLoadingModels && (
               <div className="absolute top-0 right-0 bg-yellow-500 text-black text-xs px-2 py-1 rounded-bl-md z-10">

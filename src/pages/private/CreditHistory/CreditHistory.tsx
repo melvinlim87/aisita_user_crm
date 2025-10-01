@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { Loader2, Download, ArrowUpDown, Info, X } from 'lucide-react';
 import { getRequest, postRequest } from '@/services/apiRequest';
 import { useTranslation } from 'react-i18next';
@@ -187,7 +187,7 @@ const CreditHistory: React.FC = () => {
             {/* Payment Verification Modal */}
             {isVerifying && (
                 <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
-                    <div className="bg-[#1a1a20] border border-[#3a3a45] rounded-xl p-6 max-w-md w-full">
+                    <div className="bg-[#0b0b0e] border border-[#3a2a15] rounded-xl p-6 max-w-md w-full">
                         {!verificationError ? (
                             <div className="flex flex-col items-center">
                                 <Loader2 className="h-12 w-12 animate-spin text-emerald-500 mb-4" />
@@ -231,7 +231,7 @@ const CreditHistory: React.FC = () => {
                     </button>
                 </div>
             ) : transactions.length === 0 ? (
-                <div className="bg-[#1a1a20] border border-[#3a3a45] rounded-lg p-8 text-center">
+                <div className="bg-[#0b0b0e] border border-[#3a2a15] rounded-lg p-8 text-center">
                     <div className="bg-blue-500/20 p-3 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                         <Info className="h-8 w-8 text-blue-400" />
                     </div>
@@ -239,11 +239,11 @@ const CreditHistory: React.FC = () => {
                     <p className="text-gray-400 max-w-md mx-auto">{t('NoTransactionHistoryDesc')}</p>
                 </div>
             ) : (
-                <div className="bg-[#1a1a20] border border-[#3a3a45] rounded-lg overflow-hidden">
+                <div className="bg-[#0b0b0e] border border-[#3a2a15] rounded-lg overflow-hidden">
                     <div className="overflow-x-auto">
                         <table className="w-full">
                             <thead>
-                                <tr className="bg-[#25252d]">
+                                <tr className="bg-[#15120c]">
                                     <th className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">
                                         <button className="flex items-center focus:outline-none">
                                             {t('Description')}
@@ -269,7 +269,7 @@ const CreditHistory: React.FC = () => {
                             </thead>
                             <tbody className="divide-y divide-[#3a3a45]">
                                 {transactions.map((transaction) => (
-                                    <tr key={transaction.id} className="hover:bg-[#25252d]">
+                                    <tr key={transaction.id} className="hover:bg-[#15120c]">
                                         <td className="px-6 py-4 whitespace-nowrap">
                                             <div className="text-sm text-white">{getTransactionDescription(transaction)}</div>
                                             <div className="text-xs text-gray-400">{t('IDLabel')}: {transaction.session_id}</div>

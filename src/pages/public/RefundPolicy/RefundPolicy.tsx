@@ -8,7 +8,7 @@ const RefundPolicy: React.FC = () => {
                 <h1 className="text-3xl font-bold mb-8 text-center bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">Return and Refund Policy</h1>
                 
                 <p className="mb-6 text-gray-300">
-                    Welcome to Decyphers AI. This Return and Refund Policy outlines the terms under which purchases are made and accepted on our platform. 
+                    Welcome to AISITA AI. This Return and Refund Policy outlines the terms under which purchases are made and accepted on our platform. 
                     By placing an order, you agree to the terms outlined below.
                 </p>
 
@@ -19,11 +19,11 @@ const RefundPolicy: React.FC = () => {
                     <p className="mb-4 text-gray-300">Capitalized Terms used in this policy have the meanings defined below:</p>
                     
                     <div className="space-y-3 pl-4 text-gray-300">
-                        <p><strong>Company:</strong> Refers to Decyphers AI Pte Ltd, located at 76 Playfair Road #08-01, Singapore 367996. Referred to as "the Company", "We", "Us", or "Our".</p>
+                        <p><strong>Company:</strong> Refers to AISITA AI Pte Ltd, located at 76 Playfair Road #08-01, Singapore 367996. Referred to as "the Company", "We", "Us", or "Our".</p>
                         <p><strong>Goods:</strong> The digital products and services offered for sale on our website.</p>
                         <p><strong>Orders:</strong> A request submitted by You to purchase Goods from Us.</p>
                         <p><strong>Service:</strong> Refers to our website platform and related services.</p>
-                        <p><strong>Website:</strong> The official site of Decyphers AI — https://decyphers.com</p>
+                        <p><strong>Website:</strong> The official site of AISITA AI — https://aisita.ai</p>
                         <p><strong>You:</strong> The individual or legal entity accessing or using our Service.</p>
                     </div>
                 </section>
@@ -36,7 +36,7 @@ const RefundPolicy: React.FC = () => {
                     <div className="mb-4">
                         <h3 className="text-xl font-medium mb-2 text-white">1. General</h3>
                         <p className="text-gray-300 pl-4">
-                            All purchases made through Decyphers.com are final and non-refundable. By purchasing from us, 
+                            All purchases made through aisita.ai are final and non-refundable. By purchasing from us, 
                             you agree to waive any right to refunds due to the digital nature of our products.
                         </p>
                     </div>
@@ -79,7 +79,7 @@ const RefundPolicy: React.FC = () => {
                     </p>
                     <p className="flex items-center text-gray-300 mb-2">
                         <Mail className="w-5 h-5 mr-2 text-blue-400" />
-                        <span>Email: <a href="mailto:support@decyphers.com" className="text-blue-400 hover:underline">support@decyphers.com</a></span>
+                        <span>Email: <a href="mailto:support@aisita.ai" className="text-blue-400 hover:underline">support@aisita.ai</a></span>
                     </p>
                     <p className="text-gray-300">
                         We value your feedback and strive to continuously improve our products and services.
@@ -107,13 +107,13 @@ const RefundPolicy: React.FC = () => {
                     <div className="space-y-3">
                         <p className="flex items-center text-gray-300">
                             <Mail className="w-5 h-5 mr-2 text-blue-400" />
-                            <span>Email: <a href="mailto:support@decyphers.com" className="text-blue-400 hover:underline">support@decyphers.com</a></span>
+                            <span>Email: <a href="mailto:support@aisita.ai" className="text-blue-400 hover:underline">support@aisita.ai</a></span>
                         </p>
                         <div className="flex text-gray-300">
                             <MapPin className="w-5 h-5 mr-2 text-blue-400 flex-shrink-0 mt-1" />
                             <div>
                                 <p>Mailing Address:</p>
-                                <p>Decyphers AI Pte Ltd</p>
+                                <p>AISITA AI Pte Ltd</p>
                                 <p>76 Playfair Road #08-01</p>
                                 <p>Singapore 367996</p>
                             </div>

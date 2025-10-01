@@ -16,9 +16,9 @@ const Card: React.FC<CardProps> = ({
   const baseStyles = 'rounded-lg overflow-hidden backdrop-blur-sm';
   
   const variantStyles = {
-    default: 'bg-[#25252d]/90 glow-border hover:bg-[#25252d]',
-    elevated: 'bg-[#25252d]/90 shadow-lg shadow-black/30 glow-border hover:bg-[#25252d]',
-    bordered: 'bg-[#25252d]/90 glow-border hover:bg-[#25252d]'
+    default: 'bg-[#15120c]/90 glow-border hover:bg-[#15120c]',
+    elevated: 'bg-[#15120c]/90 shadow-lg shadow-black/30 glow-border hover:bg-[#15120c]',
+    bordered: 'bg-[#15120c]/90 glow-border hover:bg-[#15120c]'
   };
 
   const allStyles = `${baseStyles} ${variantStyles[variant]} ${className} ${onClick ? 'cursor-pointer' : ''} transition-all duration-300`;

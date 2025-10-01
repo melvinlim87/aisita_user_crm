@@ -1,4 +1,4 @@
-// =====================================================
+﻿// =====================================================
 // FILE: src/components/ScheduleAnalysis.tsx  
 // Schedule Analysis Component
 // =====================================================
@@ -600,7 +600,7 @@ const ScheduleAnalysis: React.FC = () => {
   return (
     <div className="container mx-auto p-6">
       {/* Header Section */}
-      <div className="bg-[#1a1a20] rounded-lg border border-[#3a3a45] p-6 mb-6">
+      <div className="bg-[#0b0b0e] rounded-lg border border-[#3a2a15] p-6 mb-6">
         <h1 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-emerald-400 mb-2">
           {t('ScheduleAnalysis_Title')}
         </h1>
@@ -609,7 +609,7 @@ const ScheduleAnalysis: React.FC = () => {
       {/* Main Content - 60/40 Split */}
       <div className="flex flex-col md:flex-row gap-6">
         {/* Left Section - 60% */}
-        <div className="w-full md:w-3/5 bg-[#1a1a20] p-6 rounded-lg border border-[#3a3a45]">
+        <div className="w-full md:w-3/5 bg-[#0b0b0e] p-6 rounded-lg border border-[#3a2a15]">
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center">
               <CandlestickChart className="w-5 h-5 text-blue-400 mr-2" />
@@ -629,7 +629,7 @@ const ScheduleAnalysis: React.FC = () => {
                 >
                   <button
                     type="button"
-                    className="w-full bg-[#25252d] text-white text-sm rounded px-3 py-2 border border-[#3a3a45] focus:border-blue-400 outline-none text-left flex items-center justify-between"
+                    className="w-full bg-[#15120c] text-white text-sm rounded px-3 py-2 border border-[#3a2a15] focus:border-blue-400 outline-none text-left flex items-center justify-between"
                     onClick={() => setIsExchangeOpen(!isExchangeOpen)}
                     aria-haspopup="listbox"
                     aria-expanded={isExchangeOpen}
@@ -641,15 +641,15 @@ const ScheduleAnalysis: React.FC = () => {
                   </button>
 
                   {isExchangeOpen && (
-                    <div className="absolute z-20 mt-1 w-full bg-[#1f1f27] border border-[#3a3a45] rounded shadow-lg">
-                      <div className="p-2 border-b border-[#3a3a45]">
+                    <div className="absolute z-20 mt-1 w-full bg-[#1f1f27] border border-[#3a2a15] rounded shadow-lg">
+                      <div className="p-2 border-b border-[#3a2a15]">
                         <input
                           autoFocus
                           type="text"
                           placeholder={t('SearchExchangesPlaceholder')}
                           value={exchangeSearch}
                           onChange={(e) => setExchangeSearch(e.target.value)}
-                          className="w-full bg-[#25252d] text-white text-sm rounded px-3 py-2 border border-[#3a3a45] focus:border-blue-400 outline-none"
+                          className="w-full bg-[#15120c] text-white text-sm rounded px-3 py-2 border border-[#3a2a15] focus:border-blue-400 outline-none"
                         />
                       </div>
                       <ul role="listbox" className="max-h-48 overflow-auto py-1">
@@ -690,7 +690,7 @@ const ScheduleAnalysis: React.FC = () => {
                 >
                   <button
                     type="button"
-                    className={`w-full bg-[#25252d] text-white text-sm rounded px-3 py-2 border border-[#3a3a45] focus:border-blue-400 outline-none text-left flex items-center justify-between ${!popularExchange ? 'opacity-50 cursor-not-allowed' : ''}`}
+                    className={`w-full bg-[#15120c] text-white text-sm rounded px-3 py-2 border border-[#3a2a15] focus:border-blue-400 outline-none text-left flex items-center justify-between ${!popularExchange ? 'opacity-50 cursor-not-allowed' : ''}`}
                     onClick={() => {
                       if (!popularExchange) return;
                       setIsSymbolOpen(!isSymbolOpen)
@@ -710,15 +710,15 @@ const ScheduleAnalysis: React.FC = () => {
                   </button>
 
                   {isSymbolOpen && popularExchange && (
-                    <div className="absolute z-20 mt-1 w-full bg-[#1f1f27] border border-[#3a3a45] rounded shadow-lg">
-                      <div className="p-2 border-b border-[#3a3a45]">
+                    <div className="absolute z-20 mt-1 w-full bg-[#1f1f27] border border-[#3a2a15] rounded shadow-lg">
+                      <div className="p-2 border-b border-[#3a2a15]">
                         <input
                           autoFocus
                           type="text"
                           placeholder={t('SearchSymbolsPlaceholder')}
                           value={symbolSearchLocal}
                           onChange={(e) => setSymbolSearchLocal(e.target.value)}
-                          className="w-full bg-[#25252d] text-white text-sm rounded px-3 py-2 border border-[#3a3a45] focus:border-blue-400 outline-none"
+                          className="w-full bg-[#15120c] text-white text-sm rounded px-3 py-2 border border-[#3a2a15] focus:border-blue-400 outline-none"
                         />
                       </div>
                       <ul role="listbox" className="max-h-48 overflow-auto py-1">
@@ -760,7 +760,7 @@ const ScheduleAnalysis: React.FC = () => {
                     type="button"
                     id="interval"
                     name="interval"
-                    className="w-full bg-[#25252d] text-white text-sm rounded px-3 py-2 border border-[#3a3a45] focus:border-blue-400 outline-none text-left flex items-center justify-between"
+                    className="w-full bg-[#15120c] text-white text-sm rounded px-3 py-2 border border-[#3a2a15] focus:border-blue-400 outline-none text-left flex items-center justify-between"
                     onClick={() => setIsIntervalOpen(!isIntervalOpen)}
                     aria-haspopup="listbox"
                     aria-expanded={isIntervalOpen}
@@ -774,7 +774,7 @@ const ScheduleAnalysis: React.FC = () => {
                   </button>
 
                   {isIntervalOpen && (
-                    <div className="absolute z-20 mt-1 w-full bg-[#1f1f27] border border-[#3a3a45] rounded shadow-lg" onBlur={() => setTimeout(() => setIsIntervalOpen(false), 100)}>
+                    <div className="absolute z-20 mt-1 w-full bg-[#1f1f27] border border-[#3a2a15] rounded shadow-lg" onBlur={() => setTimeout(() => setIsIntervalOpen(false), 100)}>
                       <ul role="listbox" aria-multiselectable className="max-h-48 overflow-auto py-1">
                         {chartIntervals.map((i) => {
                           const active = selectedIntervals.includes(i);
@@ -808,7 +808,7 @@ const ScheduleAnalysis: React.FC = () => {
                 <select 
                   id="style" 
                   name="style" 
-                  className="bg-[#25252d] text-white text-sm rounded px-3 py-2 border border-[#3a3a45] focus:border-blue-400 outline-none" 
+                  className="bg-[#15120c] text-white text-sm rounded px-3 py-2 border border-[#3a2a15] focus:border-blue-400 outline-none" 
                   value={formData.style} 
                   onChange={handleInputChange}
                 >
@@ -823,7 +823,7 @@ const ScheduleAnalysis: React.FC = () => {
                 <select 
                   id="theme" 
                   name="theme" 
-                  className="bg-[#25252d] text-white text-sm rounded px-3 py-2 border border-[#3a3a45] focus:border-blue-400 outline-none" 
+                  className="bg-[#15120c] text-white text-sm rounded px-3 py-2 border border-[#3a2a15] focus:border-blue-400 outline-none" 
                   value={formData.theme} 
                   onChange={handleInputChange}
                 >
@@ -839,7 +839,7 @@ const ScheduleAnalysis: React.FC = () => {
                   name="width" 
                   type="number" 
                   min={100} 
-                  className="bg-[#25252d] text-white text-sm rounded px-3 py-2 border border-[#3a3a45] focus:border-blue-400 outline-none" 
+                  className="bg-[#15120c] text-white text-sm rounded px-3 py-2 border border-[#3a2a15] focus:border-blue-400 outline-none" 
                   value={formData.width} 
                   onChange={handleInputChange} 
                 />
@@ -852,7 +852,7 @@ const ScheduleAnalysis: React.FC = () => {
                   name="height" 
                   type="number" 
                   min={100} 
-                  className="bg-[#25252d] text-white text-sm rounded px-3 py-2 border border-[#3a3a45] focus:border-blue-400 outline-none" 
+                  className="bg-[#15120c] text-white text-sm rounded px-3 py-2 border border-[#3a2a15] focus:border-blue-400 outline-none" 
                   value={formData.height} 
                   onChange={handleInputChange} 
                 />
@@ -860,14 +860,14 @@ const ScheduleAnalysis: React.FC = () => {
 
               {/* Schedule time */}
               <div className="flex flex-col md:col-span-2">
-                <hr className="border-[#3a3a45] my-4"/>
+                <hr className="border-[#3a2a15] my-4"/>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="flex flex-col">
                     <label htmlFor="scheduleMinute" className="text-xs text-gray-300 mb-1">{t('Minute')}</label>
                     <select
                       id="scheduleMinute"
                       aria-label="Minute"
-                      className="bg-[#25252d] text-white text-sm rounded px-3 py-2 border border-[#3a3a45] focus:border-blue-400 outline-none"
+                      className="bg-[#15120c] text-white text-sm rounded px-3 py-2 border border-[#3a2a15] focus:border-blue-400 outline-none"
                       value={scheduleMinute}
                       onChange={(e) => setScheduleMinute(e.target.value)}
                     >
@@ -883,7 +883,7 @@ const ScheduleAnalysis: React.FC = () => {
                     <select
                       id="scheduleHour"
                       aria-label="Hour"
-                      className="bg-[#25252d] text-white text-sm rounded px-3 py-2 border border-[#3a3a45] focus:border-blue-400 outline-none"
+                      className="bg-[#15120c] text-white text-sm rounded px-3 py-2 border border-[#3a2a15] focus:border-blue-400 outline-none"
                       value={scheduleHour}
                       onChange={(e) => setScheduleHour(e.target.value)}
                     >
@@ -899,7 +899,7 @@ const ScheduleAnalysis: React.FC = () => {
                     <select
                       id="scheduleFrequency"
                       aria-label="Frequency"
-                      className="bg-[#25252d] text-white text-sm rounded px-3 py-2 border border-[#3a3a45] focus:border-blue-400 outline-none"
+                      className="bg-[#15120c] text-white text-sm rounded px-3 py-2 border border-[#3a2a15] focus:border-blue-400 outline-none"
                       value={scheduleFrequency}
                       onChange={(e) => setScheduleFrequency(e.target.value as any)}
                     >
@@ -914,7 +914,7 @@ const ScheduleAnalysis: React.FC = () => {
                       <select
                         id="scheduleWeeklyDOW"
                         aria-label="Day of week"
-                        className="bg-[#25252d] text-white text-sm rounded px-3 py-2 border border-[#3a3a45] focus:border-blue-400 outline-none"
+                        className="bg-[#15120c] text-white text-sm rounded px-3 py-2 border border-[#3a2a15] focus:border-blue-400 outline-none"
                         value={weeklyDayOfWeek}
                         onChange={(e) => setWeeklyDayOfWeek(e.target.value)}
                       >
@@ -934,7 +934,7 @@ const ScheduleAnalysis: React.FC = () => {
                       <select
                         id="scheduleMonthlyDOM"
                         aria-label="Day of month"
-                        className="bg-[#25252d] text-white text-sm rounded px-3 py-2 border border-[#3a3a45] focus:border-blue-400 outline-none"
+                        className="bg-[#15120c] text-white text-sm rounded px-3 py-2 border border-[#3a2a15] focus:border-blue-400 outline-none"
                         value={monthlyDayOfMonth}
                         onChange={(e) => setMonthlyDayOfMonth(e.target.value)}
                       >
@@ -956,7 +956,7 @@ const ScheduleAnalysis: React.FC = () => {
                     type="button"
                     onClick={addCurrentInterval}
                     disabled={!canAddMoreIntervals}
-                    className="bg-[#1a1a20] hover:bg-blue-600 disabled:opacity-50 text-white text-xs py-1 px-2 rounded border border-[#3a3a45]"
+                    className="bg-[#0b0b0e] hover:bg-blue-600 disabled:opacity-50 text-white text-xs py-1 px-2 rounded border border-[#3a2a15]"
                   >
                     {t('AddCurrentInterval')}
                   </button>
@@ -965,7 +965,7 @@ const ScheduleAnalysis: React.FC = () => {
                   {selectedIntervals.map(iv => (
                     <span
                       key={iv}
-                      className="inline-flex items-center gap-1 bg-[#25252d] text-white text-xs px-2 py-1 rounded border border-[#3a3a45]"
+                      className="inline-flex items-center gap-1 bg-[#15120c] text-white text-xs px-2 py-1 rounded border border-[#3a2a15]"
                     >
                       {iv}
                       <button
@@ -982,7 +982,7 @@ const ScheduleAnalysis: React.FC = () => {
               </div>
 
               {/* Technical Indicators Section */}
-              <div className="col-span-2 border-t border-[#3a3a45] pt-4">
+              <div className="col-span-2 border-t border-[#3a2a15] pt-4">
                 <div className="flex items-center justify-between mb-3">
                   <h3 className="text-white font-medium flex items-center">
                     <TrendingUp className="w-4 h-4 mr-2 text-emerald-400"/>
@@ -1009,7 +1009,7 @@ const ScheduleAnalysis: React.FC = () => {
                       const inTextEntries = entries.filter(([k, v]) => /^in_\d+$/.test(k) && typeof v === 'string');
                       const smoothingEntries = entries.filter(([k, v]) => k.toLowerCase().includes('smoothingline'));
                       return (
-                        <div key={study.id} className="bg-[#25252d] border border-[#3a3a45] rounded p-3">
+                        <div key={study.id} className="bg-[#15120c] border border-[#3a2a15] rounded p-3">
                           <div className="flex items-center justify-between mb-2">
                             <span className="text-white text-sm font-medium">{study.name}</span>
                             <button
@@ -1042,7 +1042,7 @@ const ScheduleAnalysis: React.FC = () => {
                                       step={step}
                                       value={Number(study.input?.[k] ?? v)}
                                       onChange={(e) => updateStudyInput(study.id, k, Number(e.target.value))}
-                                      className="w-full border border-[#3a3a45] rounded px-3 py-2 bg-[#25252d] text-white"
+                                      className="w-full border border-[#3a2a15] rounded px-3 py-2 bg-[#15120c] text-white"
                                     />
                                   </div>
                                 );
@@ -1056,7 +1056,7 @@ const ScheduleAnalysis: React.FC = () => {
                                   </label>
                                   <select
                                     id={`study-${study.id}-${k}`}
-                                    className="bg-[#25252d] text-white text-sm rounded px-3 py-2 border border-[#3a3a45] focus:border-blue-400 outline-none"
+                                    className="bg-[#15120c] text-white text-sm rounded px-3 py-2 border border-[#3a2a15] focus:border-blue-400 outline-none"
                                     value={String(study.input?.[k] ?? v)}
                                     onChange={(e) => updateStudyInput(study.id, k, e.target.value)}
                                   >
@@ -1075,7 +1075,7 @@ const ScheduleAnalysis: React.FC = () => {
                                   </label>
                                   <select
                                     id={`study-${study.id}-${k}`}
-                                    className="bg-[#25252d] text-white text-sm rounded px-3 py-2 border border-[#3a3a45] focus:border-blue-400 outline-none"
+                                    className="bg-[#15120c] text-white text-sm rounded px-3 py-2 border border-[#3a2a15] focus:border-blue-400 outline-none"
                                     value={String(study.input?.[k] ?? v)}
                                     onChange={(e) => updateStudyInput(study.id, k, e.target.value)}
                                   >
@@ -1095,7 +1095,7 @@ const ScheduleAnalysis: React.FC = () => {
 
                 {/* Studies Panel */}
                 {showStudiesPanel && (
-                  <div className="bg-[#25252d] border border-[#3a3a45] rounded-lg p-3 mb-3">
+                  <div className="bg-[#15120c] border border-[#3a2a15] rounded-lg p-3 mb-3">
                     {/* Indicator search */}
                     <div className="mb-3">
                       <input
@@ -1103,7 +1103,7 @@ const ScheduleAnalysis: React.FC = () => {
                         placeholder={t('FilterIndicatorsPlaceholder')}
                         value={studySearch}
                         onChange={(e) => setStudySearch(e.target.value)}
-                        className="w-full bg-[#1f1f27] text-white text-sm rounded px-3 py-2 border border-[#3a3a45] focus:border-blue-400 outline-none"
+                        className="w-full bg-[#1f1f27] text-white text-sm rounded px-3 py-2 border border-[#3a2a15] focus:border-blue-400 outline-none"
                       />
                     </div>
                     <h4 className="text-white text-sm font-medium mb-2">{t('PopularIndicators')}:</h4>
@@ -1113,7 +1113,7 @@ const ScheduleAnalysis: React.FC = () => {
                           key={preset}
                           type="button"
                           onClick={() => addStudy(preset)}
-                          className="bg-[#1a1a20] hover:bg-blue-600 text-white text-xs py-1 px-2 rounded border border-[#3a3a45]"
+                          className="bg-[#0b0b0e] hover:bg-blue-600 text-white text-xs py-1 px-2 rounded border border-[#3a2a15]"
                         >
                           {preset}
                         </button>
@@ -1127,7 +1127,7 @@ const ScheduleAnalysis: React.FC = () => {
                           key={indicator}
                           type="button"
                           onClick={() => addStudy(indicator)}
-                          className="bg-[#1a1a20] hover:bg-blue-600 text-white text-xs py-1 px-2 rounded border border-[#3a3a45] text-left"
+                          className="bg-[#0b0b0e] hover:bg-blue-600 text-white text-xs py-1 px-2 rounded border border-[#3a2a15] text-left"
                         >
                           {indicator}
                         </button>
@@ -1187,7 +1187,7 @@ const ScheduleAnalysis: React.FC = () => {
                 <ImageIcon className="w-4 h-4 mr-2 text-emerald-400"/>
                 {t('Scheduling')}
               </h3>
-              <div className="flex flex-col bg-[#25252d] border border-[#3a3a45] rounded-lg p-4">
+              <div className="flex flex-col bg-[#15120c] border border-[#3a2a15] rounded-lg p-4">
                 <span className="text-gray-400 text-sm">{t('Schedule_Note')}</span>
               </div>
             </div>
@@ -1197,7 +1197,7 @@ const ScheduleAnalysis: React.FC = () => {
           <div className="w-full md:w-2/5 space-y-6">
             {/* History Panel (same width as guide) */}
             {schedules && schedules.length > 0 && (
-              <div className="bg-[#1a1a20] rounded-lg border border-[#3a3a45] p-6">
+              <div className="bg-[#0b0b0e] rounded-lg border border-[#3a2a15] p-6">
                 <div className="flex items-center justify-between mb-4">
                   <h2 className="text-xl font-semibold text-white">{t('History')}</h2>
                   <span className="text-xs text-gray-400">{schedules.length} {t('Total')}</span>
@@ -1209,7 +1209,7 @@ const ScheduleAnalysis: React.FC = () => {
                     .map((s) => (
                     <div
                       key={s.id}
-                      className="text-left bg-[#25252d] border border-[#3a3a45] rounded p-3 transition-colors hover:bg-[#2d2d39]"
+                      className="text-left bg-[#15120c] border border-[#3a2a15] rounded p-3 transition-colors hover:bg-[#2d2d39]"
                     >
                       <div className="flex items-start justify-between gap-3">
                         <div className="flex-1 cursor-pointer" onClick={() => navigate(`/schedule-analysis/${s.id}`)}>
@@ -1228,14 +1228,14 @@ const ScheduleAnalysis: React.FC = () => {
                           <div className="flex items-center gap-2">
                             <button
                               type="button"
-                              className="text-xs px-2 py-1 rounded border border-[#3a3a45] text-blue-300 hover:bg-[#1f273a]"
+                              className="text-xs px-2 py-1 rounded border border-[#3a2a15] text-blue-300 hover:bg-[#1f273a]"
                               onClick={() => navigate(`/schedule-analysis/${s.id}`)}
                             >
                               {t('Edit')}
                             </button>
                             <button
                               type="button"
-                              className="text-xs px-2 py-1 rounded border border-[#3a3a45] text-red-300 hover:bg-[#3a1f1f]"
+                              className="text-xs px-2 py-1 rounded border border-[#3a2a15] text-red-300 hover:bg-[#3a1f1f]"
                               onClick={() => { setScheduleToDelete(s); setShowDeleteModal(true); }}
                             >
                               {t('Delete')}
@@ -1249,11 +1249,11 @@ const ScheduleAnalysis: React.FC = () => {
               </div>
             )}
             {/* Guide Panel */}
-            <div className="bg-[#1a1a20] rounded-lg border border-[#3a3a45] p-6">
+            <div className="bg-[#0b0b0e] rounded-lg border border-[#3a2a15] p-6">
               <div className="flex items-center justify-between mb-4">
                 <h2 className="text-xl font-semibold text-white">{t('Guide')}</h2>
               </div>
-              <div className="h-[600px] bg-[#25252d] rounded-lg p-4 overflow-auto">
+              <div className="h-[600px] bg-[#15120c] rounded-lg p-4 overflow-auto">
                 <div className="text-white space-y-4">
                   <div>
                     <h3 className="text-base font-medium mb-2 text-blue-400">{t('SymbolSelection')}:</h3>
@@ -1288,7 +1288,7 @@ const ScheduleAnalysis: React.FC = () => {
                   <div>
                     <h4 className="text-blue-400 font-medium mb-2 text-base">{t('PopularExamples')}:</h4>
                     <div className="space-y-3">
-                      <div className="bg-[#1a1a20] p-3 rounded border border-[#3a3a45]">
+                      <div className="bg-[#0b0b0e] p-3 rounded border border-[#3a2a15]">
                         <div className="text-yellow-400 text-sm font-medium mb-1">{t('BitcoinAnalysis')}:</div>
                         <pre className="text-xs text-gray-300">{`Symbol: BINANCE:BTCUSDT
                           Interval: 4h
@@ -1296,7 +1296,7 @@ const ScheduleAnalysis: React.FC = () => {
                           Indicators: Volume, MACD, RSI`}</pre>
                       </div>
 
-                      <div className="bg-[#1a1a20] p-3 rounded border border-[#3a3a45]">
+                      <div className="bg-[#0b0b0e] p-3 rounded border border-[#3a2a15]">
                         <div className="text-yellow-400 text-sm font-medium mb-1">{t('StockTrading')}:</div>
                         <pre className="text-xs text-gray-300">{`Symbol: NASDAQ:AAPL
                           Interval: 1D
@@ -1304,7 +1304,7 @@ const ScheduleAnalysis: React.FC = () => {
                           Indicators: Bollinger Bands, MA 50`}</pre>
                       </div>
 
-                      <div className="bg-[#1a1a20] p-3 rounded border border-[#3a3a45]">
+                      <div className="bg-[#0b0b0e] p-3 rounded border border-[#3a2a15]">
                         <div className="text-yellow-400 text-sm font-medium mb-1">{t('ForexAnalysis')}:</div>
                         <pre className="text-xs text-gray-300">{`Symbol: FX:EURUSD
                           Interval: 1h
@@ -1352,14 +1352,14 @@ const ScheduleAnalysis: React.FC = () => {
       {/* Delete Confirm Modal */}
       {showDeleteModal && scheduleToDelete && (
         <div className="fixed inset-0 z-40 flex items-center justify-center bg-black/60">
-          <div className="bg-[#1a1a20] border border-[#3a3a45] rounded-lg p-6 w-full max-w-sm">
+          <div className="bg-[#0b0b0e] border border-[#3a2a15] rounded-lg p-6 w-full max-w-sm">
             <h3 className="text-white text-lg font-semibold mb-2">{t('DeleteSchedule')}</h3>
             <p className="text-gray-300 text-sm">{t('DeleteSchedule_Confirm')}</p>
             <p className="text-gray-400 text-xs mt-1 break-all">{scheduleToDelete.command || `Task #${scheduleToDelete.id}`}</p>
             <div className="flex justify-end gap-2 mt-4">
               <button
                 type="button"
-                className="px-3 py-1.5 text-sm rounded border border-[#3a3a45] text-gray-300 hover:bg-[#2a2a34]"
+                className="px-3 py-1.5 text-sm rounded border border-[#3a2a15] text-gray-300 hover:bg-[#2a2a34]"
                 onClick={() => { if (!deleting) { setShowDeleteModal(false); setScheduleToDelete(null); } }}
                 disabled={deleting}
               >

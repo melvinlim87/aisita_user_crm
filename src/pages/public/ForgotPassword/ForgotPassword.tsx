@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { BarChart2, Mail } from 'lucide-react';
 import Input from '@components/common/Input';
@@ -47,13 +47,13 @@ const ForgotPassword: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#1a1a20] flex items-center justify-center p-4">
+    <div className="min-h-screen bg-[#0b0b0e] flex items-center justify-center p-4">
       <div className="w-full max-w-md">
         <div className="text-center mb-6">
           <Link to="/" className="inline-flex items-center justify-center">
             <BarChart2 className={`w-10 h-10 ${META_TEXT_GRADIENT}`} />
           </Link>
-          <Link to="https://decyphers.com" className="inline-flex items-center justify-center">
+          <Link to="https://aisita.ai" className="inline-flex items-center justify-center">
             <img src="/assets/images/logo/decyphers-logo.png" alt="Decyphers" className="w-full bg-transparent" />
           </Link>
           <p className="text-gray-400 mt-1">{t('ForgotPasswordTagline')}</p>

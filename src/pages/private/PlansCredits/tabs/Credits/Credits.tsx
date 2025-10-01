@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { CreditCard, History, PieChart, Loader2, X } from 'lucide-react';
 import { getRequest, postRequest } from '@/services/apiRequest';
 import { useTranslation } from 'react-i18next';
@@ -192,7 +192,7 @@ const Credits: React.FC = () => {
             {/* Purchase Processing Modal */}
             {isPurchasing && (
                 <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
-                    <div className="bg-[#1a1a20] border border-[#3a3a45] rounded-xl p-6 max-w-md w-full">
+                    <div className="bg-[#0b0b0e] border border-[#3a2a15] rounded-xl p-6 max-w-md w-full">
                         {!purchaseError ? (
                             <div className="flex flex-col items-center">
                                 <Loader2 className="h-12 w-12 animate-spin text-emerald-500 mb-4" />
@@ -239,7 +239,7 @@ const Credits: React.FC = () => {
                             className={`relative p-4 border rounded-xl cursor-pointer transition-all ${
                                 selectedOption === index 
                                     ? 'border-emerald-500 bg-emerald-500/10' 
-                                    : 'border-[#3a3a45] bg-[#1a1a20] hover:border-gray-500'
+                                    : 'border-[#3a2a15] bg-[#0b0b0e] hover:border-gray-500'
                             }`}
                             onClick={() => setSelectedOption(index)}
                         >
@@ -284,7 +284,7 @@ const Credits: React.FC = () => {
             {/* Usage and History Section */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {/* Usage Breakdown */}
-                <div className="bg-[#1a1a20] border border-[#3a3a45] rounded-xl overflow-hidden shadow-lg p-6">
+                <div className="bg-[#0b0b0e] border border-[#3a2a15] rounded-xl overflow-hidden shadow-lg p-6">
                     <div className="flex items-center mb-4">
                         <PieChart className="w-5 h-5 text-emerald-500 mr-2" />
                         <h2 className="text-lg font-bold text-white">{t('UsageBreakdownTitle')}</h2>
@@ -308,7 +308,7 @@ const Credits: React.FC = () => {
                 </div>
                 
                 {/* Credit History */}
-                <div className="bg-[#1a1a20] border border-[#3a3a45] rounded-xl overflow-hidden shadow-lg p-6">
+                <div className="bg-[#0b0b0e] border border-[#3a2a15] rounded-xl overflow-hidden shadow-lg p-6">
                     <div className="flex items-center mb-4">
                         <History className="w-5 h-5 text-emerald-500 mr-2" />
                         <h2 className="text-lg font-bold text-white">{t('CreditHistory')}</h2>
@@ -316,7 +316,7 @@ const Credits: React.FC = () => {
                     <div className="overflow-x-auto">
                         <table className="w-full">
                             <thead>
-                                <tr className="border-b border-[#3a3a45]">
+                                <tr className="border-b border-[#3a2a15]">
                                     <th className="text-left py-2 text-xs font-medium text-gray-400">{t('Date')}</th>
                                     <th className="text-left py-2 text-xs font-medium text-gray-400">{t('Description')}</th>
                                     <th className="text-right py-2 text-xs font-medium text-gray-400">{t('CreditsLabel')}</th>
@@ -324,7 +324,7 @@ const Credits: React.FC = () => {
                             </thead>
                             <tbody>
                                 {creditHistory.map((item, index) => (
-                                    <tr key={index} className="border-b border-[#3a3a45] last:border-b-0">
+                                    <tr key={index} className="border-b border-[#3a2a15] last:border-b-0">
                                         <td className="py-3 text-sm text-gray-400">
                                             {new Date(item.created_at).toLocaleDateString()}
                                         </td>

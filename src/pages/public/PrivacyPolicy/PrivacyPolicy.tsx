@@ -7,14 +7,14 @@ const PrivacyPolicy: React.FC = () => {
             <div className="bg-[#2f3654] rounded-xl p-8 shadow-lg">
                 <h1 className="text-3xl font-bold mb-8 text-center bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">Privacy Policy & PDPA</h1>
                 <p className="text-gray-300 mb-4 text-center">Last updated: 10th October, 2023</p>
-                <p className="text-gray-300 mb-8 text-center">Company: Decyphers AI Pte Ltd</p>
+                <p className="text-gray-300 mb-8 text-center">Company: AISITA AI Pte Ltd</p>
                 
                 <section className="mb-8">
                     <h2 className="text-2xl font-semibold mb-4 text-blue-400">
                         <span className="mr-2">📝</span> DATA PROTECTION NOTICE
                     </h2>
                     <p className="mb-6 text-gray-300">
-                        This Data Protection Notice ("Notice") sets out the basis which Decyphers AI Pte Ltd ("we", "us", or "our") may collect, use, disclose or otherwise process personal data of our customers in accordance with the Personal Data Protection Act ("PDPA"). This Notice applies to personal data in our possession or under our control, including personal data in the possession of organisations which we have engaged to collect, use, disclose or process personal data for our purposes.
+                        This Data Protection Notice ("Notice") sets out the basis which AISITA AI Pte Ltd ("we", "us", or "our") may collect, use, disclose or otherwise process personal data of our customers in accordance with the Personal Data Protection Act ("PDPA"). This Notice applies to personal data in our possession or under our control, including personal data in the possession of organisations which we have engaged to collect, use, disclose or process personal data for our purposes.
                     </p>
                 </section>
 
@@ -146,7 +146,7 @@ const PrivacyPolicy: React.FC = () => {
                     <div className="space-y-3">
                         <p className="flex items-center text-gray-300">
                             <Mail className="w-5 h-5 mr-2 text-blue-400" />
-                            <span>Email: <a href="mailto:support@decyphers.com" className="text-blue-400 hover:underline">support@decyphers.com</a></span>
+                            <span>Email: <a href="mailto:support@aisita.ai" className="text-blue-400 hover:underline">support@aisita.ai</a></span>
                         </p>
                         <div className="flex text-gray-300">
                             <MapPin className="w-5 h-5 mr-2 text-blue-400 flex-shrink-0 mt-1" />
@@ -290,13 +290,13 @@ const PrivacyPolicy: React.FC = () => {
                     <div className="space-y-3">
                         <p className="flex items-center text-gray-300">
                             <Mail className="w-5 h-5 mr-2 text-blue-400" />
-                            <span>Email: <a href="mailto:support@decyphers.com" className="text-blue-400 hover:underline">support@decyphers.com</a></span>
+                            <span>Email: <a href="mailto:support@aisita.ai" className="text-blue-400 hover:underline">support@aisita.ai</a></span>
                         </p>
                         <div className="flex text-gray-300">
                             <MapPin className="w-5 h-5 mr-2 text-blue-400 flex-shrink-0 mt-1" />
                             <div>
                                 <p>Address: 76 Playfair Road #08-01, Singapore 367996</p>
-                                <p>Company: Decyphers AI Pte Ltd</p>
+                                <p>Company: AISITA AI Pte Ltd</p>
                             </div>
                         </div>
                     </div>

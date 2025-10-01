@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { BarChart2, Mail, Lock, User } from 'lucide-react';
 import { useAuth } from '@contexts/AuthContext';
@@ -299,7 +299,7 @@ const Signup: React.FC = () => {
               <input
                 id="terms"
                 type="checkbox"
-                className="h-4 w-4 rounded bg-[#25252d] border-[#3a3a45] text-[#94a3b8] focus:ring-[#94a3b8] focus:ring-offset-[#1a1a20]"
+                className="h-4 w-4 rounded bg-[#15120c] border-[#3a2a15] text-[#94a3b8] focus:ring-[#94a3b8] focus:ring-offset-[#1a1a20]"
                 required
               />
               <label htmlFor="terms" className="ml-2 text-sm text-gray-400">

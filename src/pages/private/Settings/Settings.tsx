@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { getRequest, putRequest, postRequest } from '@/services/apiRequest';
 import { saveAuthData } from '@/hooks/useAuth';
 import Cookies from 'js-cookie';
@@ -454,13 +454,13 @@ const Settings: React.FC = () => {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <div className="bg-[#1a1a20] rounded-lg shadow-lg p-8 mb-8 border border-[#2d3748]">
+      <div className="bg-[#15120c] rounded-lg shadow-lg p-8 mb-8 border border-[#3a2a15]">
         <h1 className="text-2xl font-medium mb-8 text-white pb-2 border-b border-[#2d3748]">{t('ProfileInformation')}</h1>
 
         {/* Profile Image Upload Modal */}
         {isImageModalOpen && (
           <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4">
-            <div className="bg-[#1a1a20] rounded-lg shadow-xl border border-[#2d3748] w-full max-w-md">
+            <div className="bg-[#15120c] rounded-lg shadow-xl border border-[#3a2a15] w-full max-w-md">
               <div className="p-6">
                 <h3 className="text-xl font-medium text-white mb-4">{t('UpdateProfilePicture')}</h3>
                 
@@ -500,7 +500,7 @@ const Settings: React.FC = () => {
                 <div className="flex justify-end gap-3">
                   <button 
                     onClick={closeImageUploadModal}
-                    className="px-4 py-2 bg-transparent border border-[#3a4a61] text-gray-300 rounded-md hover:bg-[#2d3748] transition-colors"
+                    className="px-4 py-2 bg-transparent border border-[#3a2a15] text-gray-300 rounded-md hover:bg-[#1e1a12] transition-colors"
                   >
                     {t('Cancel')}
                   </button>
@@ -581,7 +581,7 @@ const Settings: React.FC = () => {
                   </span>
                 </div>
                 
-                <div className="w-full bg-[#1a1a20] rounded-full h-2 mb-3">
+                <div className="w-full bg-[#15120c] rounded-full h-2 mb-3">
                   <div 
                     className={`h-2 rounded-full transition-all duration-300 ${
                       profileCompletionStatus.isComplete ? 'bg-green-500' : 'bg-yellow-500'
@@ -595,7 +595,7 @@ const Settings: React.FC = () => {
                     <p className="mb-2">{t('CompleteProfileUnlock')}</p>
                     <div className="flex flex-wrap gap-2">
                       {profileCompletionStatus.missingFields.map((field, index) => (
-                        <span key={index} className="px-2 py-1 bg-[#1a1a20] text-yellow-400 rounded text-xs border border-yellow-800/30">
+                        <span key={index} className="px-2 py-1 bg-[#0b0b0e] text-yellow-400 rounded text-xs border border-yellow-800/30">
                           {field}
                         </span>
                       ))}
@@ -696,8 +696,8 @@ const Settings: React.FC = () => {
                     disabled={!isEditing}
                     className={`w-full px-3 py-2 border border-[#2d3748] rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 ${
                       isEditing 
-                        ? 'bg-[#25252d] text-gray-200' 
-                        : 'bg-[#1a1a20] text-gray-400 cursor-not-allowed'
+                        ? 'bg-[#15120c] text-gray-200' 
+                        : 'bg-[#0b0b0e] text-gray-400 cursor-not-allowed'
                     }`}
                   />
                 </div>
@@ -709,7 +709,7 @@ const Settings: React.FC = () => {
                     type="email" 
                     value={editableProfile.email || ''} 
                     disabled
-                    className="w-full px-3 py-2 bg-[#1a1a20] border border-[#2d3748] rounded-md text-gray-400 cursor-not-allowed"
+                    className="w-full px-3 py-2 bg-[#0b0b0e] border border-[#2d3748] rounded-md text-gray-400 cursor-not-allowed"
                   />
                 </div>
 
@@ -724,8 +724,8 @@ const Settings: React.FC = () => {
                     placeholder={t('PhonePlaceholder')}
                     className={`w-full px-3 py-2 border border-[#2d3748] rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 ${
                       isEditing 
-                        ? 'bg-[#25252d] text-gray-200' 
-                        : 'bg-[#1a1a20] text-gray-400 cursor-not-allowed'
+                        ? 'bg-[#15120c] text-gray-200' 
+                        : 'bg-[#0b0b0e] text-gray-400 cursor-not-allowed'
                     }`}
                   />
                 </div>
@@ -739,8 +739,8 @@ const Settings: React.FC = () => {
                     disabled={!isEditing}
                     className={`w-full px-3 py-2 border border-[#2d3748] rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 ${
                       isEditing 
-                        ? 'bg-[#25252d] text-gray-200' 
-                        : 'bg-[#1a1a20] text-gray-400 cursor-not-allowed'
+                        ? 'bg-[#15120c] text-gray-200' 
+                        : 'bg-[#0b0b0e] text-gray-400 cursor-not-allowed'
                     }`}
                   >
                     <option value="">{t('SelectGender')}</option>
@@ -761,8 +761,8 @@ const Settings: React.FC = () => {
                     disabled={!isEditing}
                     className={`w-full px-3 py-2 border border-[#2d3748] rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 ${
                       isEditing 
-                        ? 'bg-[#25252d] text-gray-200' 
-                        : 'bg-[#1a1a20] text-gray-400 cursor-not-allowed'
+                        ? 'bg-[#15120c] text-gray-200' 
+                        : 'bg-[#0b0b0e] text-gray-400 cursor-not-allowed'
                     }`}
                   />
                 </div>
@@ -778,8 +778,8 @@ const Settings: React.FC = () => {
                     placeholder={t('StreetPlaceholder')}
                     className={`w-full px-3 py-2 border border-[#2d3748] rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 ${
                       isEditing 
-                        ? 'bg-[#25252d] text-gray-200' 
-                        : 'bg-[#1a1a20] text-gray-400 cursor-not-allowed'
+                        ? 'bg-[#15120c] text-gray-200' 
+                        : 'bg-[#0b0b0e] text-gray-400 cursor-not-allowed'
                     }`}
                   />
                 </div>
@@ -794,8 +794,8 @@ const Settings: React.FC = () => {
                     disabled={!isEditing}
                     className={`w-full px-3 py-2 border border-[#2d3748] rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 ${
                       isEditing 
-                        ? 'bg-[#25252d] text-gray-200' 
-                        : 'bg-[#1a1a20] text-gray-400 cursor-not-allowed'
+                        ? 'bg-[#15120c] text-gray-200' 
+                        : 'bg-[#0b0b0e] text-gray-400 cursor-not-allowed'
                     }`}
                   />
                 </div>
@@ -810,8 +810,8 @@ const Settings: React.FC = () => {
                     disabled={!isEditing}
                     className={`w-full px-3 py-2 border border-[#2d3748] rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 ${
                       isEditing 
-                        ? 'bg-[#25252d] text-gray-200' 
-                        : 'bg-[#1a1a20] text-gray-400 cursor-not-allowed'
+                        ? 'bg-[#15120c] text-gray-200' 
+                        : 'bg-[#0b0b0e] text-gray-400 cursor-not-allowed'
                     }`}
                   />
                 </div>
@@ -826,8 +826,8 @@ const Settings: React.FC = () => {
                     disabled={!isEditing}
                     className={`w-full px-3 py-2 border border-[#2d3748] rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 ${
                       isEditing 
-                        ? 'bg-[#25252d] text-gray-200' 
-                        : 'bg-[#1a1a20] text-gray-400 cursor-not-allowed'
+                        ? 'bg-[#15120c] text-gray-200' 
+                        : 'bg-[#0b0b0e] text-gray-400 cursor-not-allowed'
                     }`}
                   />
                 </div>
@@ -842,8 +842,8 @@ const Settings: React.FC = () => {
                     disabled={!isEditing}
                     className={`w-full px-3 py-2 border border-[#2d3748] rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 ${
                       isEditing 
-                        ? 'bg-[#25252d] text-gray-200' 
-                        : 'bg-[#1a1a20] text-gray-400 cursor-not-allowed'
+                        ? 'bg-[#15120c] text-gray-200' 
+                        : 'bg-[#0b0b0e] text-gray-400 cursor-not-allowed'
                     }`}
                   />
                 </div>
@@ -876,7 +876,7 @@ const Settings: React.FC = () => {
       </div>
       
       {/* Notifications Card */}
-      {/* <div className="bg-[#1a1a20] rounded-lg shadow-lg p-8 mb-8 border border-[#2d3748]">
+      {/* <div className="bg-[#0b0b0e] rounded-lg shadow-lg p-8 mb-8 border border-[#2d3748]">
         <h1 className="text-2xl font-medium mb-8 text-white pb-2 border-b border-[#2d3748]">Notifications</h1>
         
         <div className="flex justify-between items-center py-4">
@@ -897,7 +897,7 @@ const Settings: React.FC = () => {
       </div> */}
       
       {/* Messaging Integration Card */}
-      <div className="bg-[#1a1a20] rounded-lg shadow-lg p-8 mb-8 border border-[#2d3748]">
+      <div className="bg-[#0b0b0e] rounded-lg shadow-lg p-8 mb-8 border border-[#2d3748]">
         <div className="flex items-center justify-between mb-8 border-b border-[#2d3748] pb-2">
           <h1 className="text-2xl font-medium text-white">{t('AppsIntegration')}</h1>
           <div className="flex items-center bg-blue-900/30 px-3 py-1 rounded-md border border-blue-500/30">
@@ -959,7 +959,7 @@ const Settings: React.FC = () => {
       </div>
       
       {/* Change Password Card (append-only) */}
-      <div className="bg-[#1a1a20] rounded-lg shadow-lg p-8 mb-8 border border-[#2d3748]">
+      <div className="bg-[#0b0b0e] rounded-lg shadow-lg p-8 mb-8 border border-[#2d3748]">
         <h1 className="text-2xl font-medium mb-8 text-white pb-2 border-b border-[#2d3748]">{t('ChangePassword')}</h1>
 
         {changePasswordSuccess && (
@@ -992,7 +992,7 @@ const Settings: React.FC = () => {
               type="password"
               value={currentPassword}
               onChange={(e) => setCurrentPassword(e.target.value)}
-              className="w-full px-3 py-2 border border-[#2d3748] rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 bg-[#25252d] text-gray-200"
+              className="w-full px-3 py-2 border border-[#2d3748] rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 bg-[#15120c] text-gray-200"
               placeholder={t("EnterCurrentPassword")}
               autoComplete="current-password"
             />
@@ -1003,7 +1003,7 @@ const Settings: React.FC = () => {
               type="password"
               value={newPassword}
               onChange={(e) => setNewPassword(e.target.value)}
-              className="w-full px-3 py-2 border border-[#2d3748] rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 bg-[#25252d] text-gray-200"
+              className="w-full px-3 py-2 border border-[#2d3748] rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 bg-[#15120c] text-gray-200"
               placeholder={t("EnterNewPassword")}
               autoComplete="new-password"
             />
@@ -1027,7 +1027,7 @@ const Settings: React.FC = () => {
       </div>
       
       {/* Privacy Card */}
-      {/* <div className="bg-[#1a1a20] rounded-lg shadow-lg p-8 mb-8 border border-[#2d3748]">
+      {/* <div className="bg-[#0b0b0e] rounded-lg shadow-lg p-8 mb-8 border border-[#2d3748]">
         <h1 className="text-2xl font-medium mb-8 text-white pb-2 border-b border-[#2d3748]">Privacy</h1>
         
         <div className="flex justify-between items-center py-4">
@@ -1055,7 +1055,7 @@ const Settings: React.FC = () => {
       </div> */}
       
       {/* Delete Account Card */}
-      {/* <div className="bg-[#1a1a20] rounded-lg shadow-lg p-8 mb-8 border border-[#2d3748]">
+      {/* <div className="bg-[#0b0b0e] rounded-lg shadow-lg p-8 mb-8 border border-[#2d3748]">
         <h1 className="text-2xl font-medium mb-8 text-white pb-2 border-b border-[#2d3748]">Delete account</h1>
         
         <div className="flex justify-between items-center py-4">
@@ -1071,7 +1071,7 @@ const Settings: React.FC = () => {
       {/* Telegram Verification Modal */}
       {showTelegramModal && (
         <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-2 sm:p-4">
-          <div className="bg-[#1a1a20] border border-[#3a3a45] rounded-xl w-full max-w-4xl max-h-[95vh] overflow-y-auto relative">
+          <div className="bg-[#0b0b0e] border border-[#3a2a15] rounded-xl w-full max-w-4xl max-h-[95vh] overflow-y-auto relative">
             {/* Close button */}
             <button 
               onClick={() => {
@@ -1137,7 +1137,7 @@ const Settings: React.FC = () => {
                     />
                     
                     <a
-                      href="https://t.me/DecyphersAI_bot"
+                      href="https://t.me/AISITAAI_bot"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-full py-3 px-4 bg-[#26A5E4] hover:bg-[#1e96d3] text-white rounded-md transition-colors flex justify-center items-center font-medium"
@@ -1173,7 +1173,7 @@ const Settings: React.FC = () => {
                           type="text"
                           value={telegramCode}
                           onChange={(e) => setTelegramCode(e.target.value.replace(/[^0-9]/g, '').slice(0, 6))}
-                          className="block w-full px-4 py-3 rounded-md bg-[#252530] border border-[#3a3a45] text-white focus:ring-blue-500 focus:border-blue-500 text-center tracking-widest text-xl"
+                          className="block w-full px-4 py-3 rounded-md bg-[#252530] border border-[#3a2a15] text-white focus:ring-blue-500 focus:border-blue-500 text-center tracking-widest text-xl"
                           placeholder="000000"
                           maxLength={6}
                         />

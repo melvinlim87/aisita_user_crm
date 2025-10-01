@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+﻿import React, { useState, useEffect, useRef } from 'react';
 import { Code, Send, ChevronDown } from 'lucide-react';
 import { getRequest, postRequest } from '@/services/apiRequest';
 import { Message, Model } from '@/types/pages/EAGenerator';
@@ -195,7 +195,7 @@ const AIEducator: React.FC = () => {
     return (
         <div className="container mx-auto p-6">
             {/* Header Section */}
-            <div className="bg-[#1a1a20] rounded-lg border border-[#3a3a45] p-6 mb-6">
+            <div className="bg-[#0b0b0e] rounded-lg border border-[#3a2a15] p-6 mb-6">
                 <h1 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-emerald-400 mb-2">
                     {t('AIEducator_Title')}
                 </h1>
@@ -207,7 +207,7 @@ const AIEducator: React.FC = () => {
             {/* Main Content - 60/40 Split */}
             <div className="flex flex-col md:flex-row gap-6">
                 {/* Left Section - 60% */}
-                <div className="w-full md:w-3/5 bg-[#1a1a20] p-6 rounded-lg border border-[#3a3a45]">
+                <div className="w-full md:w-3/5 bg-[#0b0b0e] p-6 rounded-lg border border-[#3a2a15]">
                     <div className="flex items-center justify-between mb-4">
                         <div className="flex items-center">
                             <Code className="w-5 h-5 text-blue-400 mr-2" />
@@ -219,7 +219,7 @@ const AIEducator: React.FC = () => {
                             {/* <span className="text-white text-xs mr-2 font-medium">Model:</span>
                             <div className="relative w-48">
                                 <div 
-                                    className="flex items-center justify-between bg-[#25252d] text-white text-xs rounded px-3 py-1.5 border border-[#3a3a45] cursor-pointer"
+                                    className="flex items-center justify-between bg-[#15120c] text-white text-xs rounded px-3 py-1.5 border border-[#3a2a15] cursor-pointer"
                                     onClick={() => setIsModelDropdownOpen(!isModelDropdownOpen)}
                                 >
                                     <div className="flex items-center truncate mr-2">
@@ -235,7 +235,7 @@ const AIEducator: React.FC = () => {
                                     <div>
                                         <div className="fixed inset-0 z-40" onClick={() => setIsModelDropdownOpen(false)}></div>
                                         <div 
-                                            className="absolute top-full right-0 w-64 mt-1 bg-[#25252d] border border-[#3a3a45] rounded shadow-lg max-h-48 overflow-y-auto z-50"
+                                            className="absolute top-full right-0 w-64 mt-1 bg-[#15120c] border border-[#3a2a15] rounded shadow-lg max-h-48 overflow-y-auto z-50"
                                             onClick={(e) => e.stopPropagation()}
                                         >
                                             {isLoadingModels ? (
@@ -265,9 +265,9 @@ const AIEducator: React.FC = () => {
                             </div> */}
                         </div>
                     </div>
-                    <div className="flex flex-col h-[600px] border border-[#3a3a45] rounded-lg overflow-hidden">
+                    <div className="flex flex-col h-[600px] border border-[#3a2a15] rounded-lg overflow-hidden">
                         {/* Chat Messages */}
-                        <div ref={messagesContainerRef} className="flex-grow overflow-y-auto p-4 bg-[#25252d]">
+                        <div ref={messagesContainerRef} className="flex-grow overflow-y-auto p-4 bg-[#15120c]">
                             {messages.map((msg) => (
                                 <div 
                                     key={msg.id} 
@@ -277,7 +277,7 @@ const AIEducator: React.FC = () => {
                                         <div 
                                             className={`inline-block max-w-[100%] rounded-lg p-3 ${msg.sender === 'user' 
                                                 ? 'bg-blue-600 text-white' 
-                                                : 'bg-[#1a1a20] text-white border border-[#3a3a45]'}`}
+                                                : 'bg-[#0b0b0e] text-white border border-[#3a2a15]'}`}
                                         >
                                             {msg.isLoading ? (
                                                 <div className="whitespace-pre-wrap text-sm italic">
@@ -301,11 +301,11 @@ const AIEducator: React.FC = () => {
                         </div>
                         
                         {/* Input Area */}
-                        <div className="p-3 bg-[#1a1a20] border-t border-[#3a3a45]">
+                        <div className="p-3 bg-[#0b0b0e] border-t border-[#3a2a15]">
                             {/* Message Input */}
                             <div className="flex">
                                 <textarea
-                                    className="flex-grow bg-[#25252d] text-white text-sm rounded-l-lg px-4 py-2 outline-none resize-none border border-[#3a3a45] focus:border-blue-400"
+                                    className="flex-grow bg-[#15120c] text-white text-sm rounded-l-lg px-4 py-2 outline-none resize-none border border-[#3a2a15] focus:border-blue-400"
                                     placeholder={t('AIEducator_TextareaPlaceholder')}
                                     rows={2}
                                     value={message}
@@ -329,7 +329,7 @@ const AIEducator: React.FC = () => {
                 </div>
                 
                 {/* Right Section - 40% */}
-                <div className="w-full md:w-2/5 bg-[#1a1a20] rounded-lg border border-[#3a3a45] p-6">
+                <div className="w-full md:w-2/5 bg-[#0b0b0e] rounded-lg border border-[#3a2a15] p-6">
                     <div className="flex items-center justify-between mb-4">
                         <h2 className="text-xl font-semibold text-white">{t('AIEducator_LearningGuide')}</h2>
                     </div>
@@ -338,7 +338,7 @@ const AIEducator: React.FC = () => {
                         .no-scrollbar::-webkit-scrollbar { display: none; }
                         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
                     `}</style>
-                    <div className="h-[600px] bg-[#25252d] rounded-lg p-4 overflow-auto no-scrollbar [scrollbar-width:none] [-ms-overflow-style:none]">
+                    <div className="h-[600px] bg-[#15120c] rounded-lg p-4 overflow-auto no-scrollbar [scrollbar-width:none] [-ms-overflow-style:none]">
                         <div className="text-white">
                             <h3 className="text-base font-medium mb-3">{t('AIEducator_WhatWeWillLearn')}</h3>
                             

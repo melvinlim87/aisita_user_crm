@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { format } from 'date-fns';
 import { ArrowLeft, ArrowRight, ImageOff, Search, Filter } from 'lucide-react';
@@ -147,7 +147,7 @@ const History: React.FC = () => {
   return (
     <div className="container mx-auto p-6">
       {/* Header Section */}
-      <div className="bg-[#1a1a20] rounded-lg border border-[#3a3a45] p-6 mb-6">
+      <div className="bg-[#0b0b0e] rounded-lg border border-[#3a2a15] p-6 mb-6">
         <h1 className={`text-2xl font-bold ${META_TEXT_GRADIENT} mb-2`}>
           {t('AnalysisHistory')}
         </h1>
@@ -168,7 +168,7 @@ const History: React.FC = () => {
               setSearchTerm(e.target.value);
               setCurrentPage(1); // Reset to first page on new search
             }}
-            className="w-full pl-10 pr-4 py-2 bg-[#25252d] border border-[#3a3a45] rounded-lg text-white focus:outline-none focus:border-[#63b3ed] transition-colors"
+            className="w-full pl-10 pr-4 py-2 bg-[#15120c] border border-[#3a2a15] rounded-lg text-white focus:outline-none focus:border-[#63b3ed] transition-colors"
           />
         </div>
         <div className="relative w-full md:w-1/4">
@@ -179,7 +179,7 @@ const History: React.FC = () => {
               setFilterType(e.target.value);
               setCurrentPage(1); // Reset to first page on new filter
             }}
-            className="w-full appearance-none pl-10 pr-8 py-2 bg-[#25252d] border border-[#3a3a45] rounded-lg text-white focus:outline-none focus:border-[#63b3ed] transition-colors"
+            className="w-full appearance-none pl-10 pr-8 py-2 bg-[#15120c] border border-[#3a2a15] rounded-lg text-white focus:outline-none focus:border-[#63b3ed] transition-colors"
           >
             {analysisTypes.map(type => (
               <option key={type} value={type}>
@@ -194,7 +194,7 @@ const History: React.FC = () => {
       </div>
       
       {/* Main Content */}
-      <div className="bg-[#1a1a20] rounded-lg border border-[#3a3a45] p-6 mb-6">
+      <div className="bg-[#0b0b0e] rounded-lg border border-[#3a2a15] p-6 mb-6">
         {loading ? (
           <div className="flex justify-center items-center py-20">
             <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-white"></div>
@@ -219,7 +219,7 @@ const History: React.FC = () => {
                   setFilterType('all');
                   setCurrentPage(1);
                 }}
-                className="mt-4 px-4 py-2 bg-[#25252d] text-white rounded-lg hover:bg-[#3a3a45] transition-colors"
+                className="mt-4 px-4 py-2 bg-[#15120c] text-white rounded-lg hover:bg-[#3a3a45] transition-colors"
               >
                 {t('ClearFilters')}
               </button>
@@ -229,9 +229,9 @@ const History: React.FC = () => {
           <div className="space-y-4 pb-4">
             {getPaginatedAnalyses().map((analysis) => (
               <Link to={analysis.type === 'ea_generation' ? `/ea-generator/${analysis.id}` : `/chart-analysis/${analysis.id}`} key={analysis.id} className="block">
-                <div className="flex items-center justify-between p-4 bg-[#25252d] rounded-lg border border-[#3a3a45] hover:border-[#4a5568] hover:bg-[#2d2d36] transition-all duration-200 cursor-pointer">
+                <div className="flex items-center justify-between p-4 bg-[#15120c] rounded-lg border border-[#3a2a15] hover:border-[#4a5568] hover:bg-[#2d2d36] transition-all duration-200 cursor-pointer">
                   <div className="flex items-center">
-                    <div className="p-2 bg-[#1a1a20] rounded-md mr-4">
+                    <div className="p-2 bg-[#0b0b0e] rounded-md mr-4">
                       {analysis.chart_urls && analysis.chart_urls.length > 0 && typeof analysis.chart_urls[0] === 'string' && 
                       (analysis.chart_urls[0].startsWith('http://') || analysis.chart_urls[0].startsWith('https://')) ? (
                         <img 
@@ -252,7 +252,7 @@ const History: React.FC = () => {
                     </div>
                   </div>
                   <div>
-                    <span className="text-xs px-2 py-1 bg-[#1a1a20] rounded-full text-gray-400">
+                    <span className="text-xs px-2 py-1 bg-[#0b0b0e] rounded-full text-gray-400">
                       {analysis.type}
                     </span>
                   </div>
@@ -269,7 +269,7 @@ const History: React.FC = () => {
           <button
             onClick={() => handlePageChange(Math.max(1, currentPage - 1))}
             disabled={currentPage === 1}
-            className={`p-2 rounded-lg ${currentPage === 1 ? 'opacity-50 cursor-not-allowed' : 'hover:bg-[#25252d]'}`}
+            className={`p-2 rounded-lg ${currentPage === 1 ? 'opacity-50 cursor-not-allowed' : 'hover:bg-[#15120c]'}`}
           >
             <ArrowLeft className="w-5 h-5 text-white" />
           </button>
@@ -298,7 +298,7 @@ const History: React.FC = () => {
                 onClick={() => handlePageChange(pageNum)}
                 className={`w-10 h-10 rounded-lg ${currentPage === pageNum 
                   ? 'bg-[#63b3ed] text-white' 
-                  : 'bg-[#25252d] text-white hover:bg-[#3a3a45]'}`}
+                  : 'bg-[#15120c] text-white hover:bg-[#3a3a45]'}`}
               >
                 {pageNum}
               </button>
@@ -308,7 +308,7 @@ const History: React.FC = () => {
           <button
             onClick={() => handlePageChange(Math.min(totalPages, currentPage + 1))}
             disabled={currentPage === totalPages}
-            className={`p-2 rounded-lg ${currentPage === totalPages ? 'opacity-50 cursor-not-allowed' : 'hover:bg-[#25252d]'}`}
+            className={`p-2 rounded-lg ${currentPage === totalPages ? 'opacity-50 cursor-not-allowed' : 'hover:bg-[#15120c]'}`}
           >
             <ArrowRight className="w-5 h-5 text-white" />
           </button>

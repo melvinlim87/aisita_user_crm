@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { getRequest, postRequest } from '@/services/apiRequest';
 import { Loader2, AlertCircle, CreditCard, FileText } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
@@ -105,7 +105,7 @@ const Billing: React.FC = () => {
       ) : userSubscription ? (
         <>
           {/* Current Plan Section */}
-          <div className="bg-[#1a1a20] rounded-lg shadow-lg p-8 mb-8 border border-[#2d3748]">
+          <div className="bg-[#0b0b0e] rounded-lg shadow-lg p-8 mb-8 border border-[#2d3748]">
             <h2 className="text-xl font-bold text-white mb-4">{t('CurrentPlan')}</h2>
             <p className="text-gray-400 mb-2">
               {t('CurrentlyOnPlan')} <span className="px-2 py-0.5 bg-[#2d3748] text-blue-400 text-xs font-medium rounded-full">
@@ -123,7 +123,7 @@ const Billing: React.FC = () => {
           </div>
 
           {/* Payment Management Section */}
-          {/* <div className="bg-[#1a1a20] rounded-lg shadow-lg p-8 mb-8 border border-[#2d3748]">
+          {/* <div className="bg-[#0b0b0e] rounded-lg shadow-lg p-8 mb-8 border border-[#2d3748]">
             <div className="flex items-center justify-between mb-4">
               <div>
                 <h2 className="text-xl font-bold text-white">{t('PaymentDetails')}</h2>
@@ -144,7 +144,7 @@ const Billing: React.FC = () => {
           </div> */}
 
           {/* Invoices Section */}
-          <div className="bg-[#1a1a20] rounded-lg shadow-lg p-8 mb-8 border border-[#2d3748]">
+          <div className="bg-[#0b0b0e] rounded-lg shadow-lg p-8 mb-8 border border-[#2d3748]">
             <div className="flex items-center justify-between mb-4">
               <div>
                 <h2 className="text-xl font-bold text-white">{t('Invoices')}</h2>
@@ -165,7 +165,7 @@ const Billing: React.FC = () => {
           </div>
         </>
       ) : (
-        <div className="bg-[#1a1a20] rounded-lg shadow-lg p-8 mb-8 border border-[#2d3748]">
+        <div className="bg-[#0b0b0e] rounded-lg shadow-lg p-8 mb-8 border border-[#2d3748]">
           <div className="flex items-center mb-4">
             <AlertCircle className="w-6 h-6 text-yellow-500 mr-3" />
             <h2 className="text-xl font-bold text-white">{t('NoActiveSubscription')}</h2>

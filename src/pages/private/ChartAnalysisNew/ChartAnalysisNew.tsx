@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+﻿import React, { useState, useEffect, useRef } from 'react';
 import { Trash, BarChart2, TrendingUp, AlertCircle, DollarSign, Shield, PieChart, Clock, ScatterChart, Percent, HelpCircle, Lightbulb } from 'lucide-react';
 import { META_TEXT_GRADIENT } from '@/constants';
 import ChartUpload from '@/components/chart/ChartUpload';
@@ -583,7 +583,7 @@ const ChartAnalysisNew: React.FC = () => {
   return (
     <div className="container mx-auto p-6">
       {/* Header */}
-      <div className="bg-[#1a1a20] rounded-lg border border-[#3a3a45] p-6 mb-6">
+      <div className="bg-[#0b0b0e] rounded-lg border border-[#3a2a15] p-6 mb-6">
         <div className="flex justify-between items-center">
           <div>
             <h1 className={`text-2xl font-bold ${META_TEXT_GRADIENT} mb-2`}>
@@ -616,12 +616,12 @@ const ChartAnalysisNew: React.FC = () => {
       </div>
       
       {/* Full Width Chart Upload Area */}
-      <div className="w-full bg-[#1a1a20] p-6 rounded-lg border border-[#3a3a45]">
+      <div className="w-full bg-[#0b0b0e] p-6 rounded-lg border border-[#3a2a15]">
         
         {/* Show Modal according to image */}
         {showPreviewModal && selectedPreview && (
            <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
-           <div className="bg-[#1a1a20] border border-[#3a3a45] rounded-xl p-6 w-full">
+           <div className="bg-[#0b0b0e] border border-[#3a2a15] rounded-xl p-6 w-full">
               <div className="flex flex-col items-center">
                   <div className="p-3 rounded-full mb-4">
                       <img src={selectedPreview} alt={t('ChartPreview')} className="w-full h-auto" />
@@ -649,7 +649,7 @@ const ChartAnalysisNew: React.FC = () => {
         ) : chartPreviews ? (
           <div className="flex flex-col">
             {/* Chart Preview */}
-            <div className="bg-[#25252d] p-4 rounded-lg border border-[#3a3a45] mb-4 relative">
+            <div className="bg-[#15120c] p-4 rounded-lg border border-[#3a2a15] mb-4 relative">
               {/* Clear button positioned at the top right of the container */}
               <button 
                 onClick={clearChartPreview}
@@ -800,7 +800,7 @@ const ChartAnalysisNew: React.FC = () => {
             </div>
           </div>
           {isAnalyzing && (
-            <div className="flex items-center justify-center py-12 bg-[#1a1a20] rounded-lg border border-[#3a3a45]">
+            <div className="flex items-center justify-center py-12 bg-[#0b0b0e] rounded-lg border border-[#3a2a15]">
               <div className="flex flex-col items-center">
                 <div className="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-white mb-3"></div>
                 <p className="text-gray-400">{t('Analyzing')}</p>
@@ -824,7 +824,7 @@ const ChartAnalysisNew: React.FC = () => {
           {analysisData && !isAnalyzing && (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               {/* Basic Info Card */}
-              <div className="bg-[#1a1a20] rounded-lg border border-[#3a3a45] p-5">
+              <div className="bg-[#0b0b0e] rounded-lg border border-[#3a2a15] p-5">
                 <div className="flex items-center mb-3">
                   <BarChart2 className="mr-2 text-blue-400" />
                   <h3 className="text-lg font-semibold">{t('MarketOverview')}</h3>
@@ -847,7 +847,7 @@ const ChartAnalysisNew: React.FC = () => {
 
               {/* Entry Analysis Card */}
               {(analysisData.Entry_Price || analysisData.Stop_Loss || analysisData.Take_Profit || analysisData.Risk_Ratio) && (
-                <div className="bg-[#1a1a20] rounded-lg border border-[#3a3a45] p-5 col-span-1 md:col-span-1">
+                <div className="bg-[#0b0b0e] rounded-lg border border-[#3a2a15] p-5 col-span-1 md:col-span-1">
                   <div className="flex items-center mb-3">
                     <DollarSign className="mr-2 text-yellow-400" />
                     <h3 className="text-lg font-semibold">{t('TradeSetup')}</h3>
@@ -906,7 +906,7 @@ const ChartAnalysisNew: React.FC = () => {
               
               {/* Market Structure Card */}
               {analysisData.Market_Structure && (
-                <div className="bg-[#1a1a20] rounded-lg border border-[#3a3a45] p-5 col-span-1 md:col-span-2">
+                <div className="bg-[#0b0b0e] rounded-lg border border-[#3a2a15] p-5 col-span-1 md:col-span-2">
                   <div className="flex items-center mb-3">
                     <TrendingUp className="mr-2 text-purple-400" />
                     <h3 className="text-lg font-semibold">{t('MarketStructure')}</h3>
@@ -917,7 +917,7 @@ const ChartAnalysisNew: React.FC = () => {
               
               {/* Indicators Card */}
               {(analysisData.INDICATORS?.RSI_Indicator || analysisData.INDICATORS?.MACD_Indicator) && (
-                <div className="bg-[#1a1a20] rounded-lg border border-[#3a3a45] p-5 col-span-1 md:col-span-2">
+                <div className="bg-[#0b0b0e] rounded-lg border border-[#3a2a15] p-5 col-span-1 md:col-span-2">
                   <div className="flex items-center mb-3">
                     <ScatterChart className="mr-2 text-orange-400" />
                     <h3 className="text-lg font-semibold">{t('Indicators')}</h3>
@@ -941,7 +941,7 @@ const ChartAnalysisNew: React.FC = () => {
 
               {/* Price Levels Card */}
               {/* {analysisData.Key_Price_Levels && (
-                <div className="bg-[#1a1a20] rounded-lg border border-[#3a3a45] p-5 col-span-1 md:col-span-1">
+                <div className="bg-[#0b0b0e] rounded-lg border border-[#3a2a15] p-5 col-span-1 md:col-span-1">
                   <div className="flex items-center mb-3">
                     <ArrowDown className="mr-2 text-green-400" />
                     <h3 className="text-lg font-semibold">{t('KeyPriceLevels')}</h3>
@@ -978,7 +978,7 @@ const ChartAnalysisNew: React.FC = () => {
             
               {/* Risk Assessment Card */}
               {analysisData.Risk_Assessment && analysisData.Key_Price_Levels && (
-                <div className="bg-[#1a1a20] rounded-lg border border-[#3a3a45] p-5 col-span-1 md:col-span-2">
+                <div className="bg-[#0b0b0e] rounded-lg border border-[#3a2a15] p-5 col-span-1 md:col-span-2">
                   <div className="flex items-center mb-3">
                     <Shield className="mr-2 text-green-400" />
                     <h3 className="text-lg font-semibold">{t('RiskAssessment')}</h3>
@@ -1031,7 +1031,7 @@ const ChartAnalysisNew: React.FC = () => {
               
               {/* Technical Justification Card */}
               {analysisData.Technical_Justification && (
-                <div className="bg-[#1a1a20] rounded-lg border border-[#3a3a45] p-5 col-span-1 md:col-span-2">
+                <div className="bg-[#0b0b0e] rounded-lg border border-[#3a2a15] p-5 col-span-1 md:col-span-2">
                   <div className="flex items-center mb-3">
                     <Clock className="mr-2 text-blue-400" />
                     <h3 className="text-lg font-semibold">{t('DetailedAnalysis')}</h3>
@@ -1042,7 +1042,7 @@ const ChartAnalysisNew: React.FC = () => {
               
               {/* Analysis Confidence Card */}
               {analysisData.Analysis_Confidence?.Confidence_Level_Percent && (
-                <div className="bg-[#1a1a20] rounded-lg border border-[#3a3a45] p-5 col-span-1 md:col-span-2">
+                <div className="bg-[#0b0b0e] rounded-lg border border-[#3a2a15] p-5 col-span-1 md:col-span-2">
                   <div className="flex items-center mb-3 justify-between">
                     <div className="flex">
                       <PieChart className="mr-2 text-purple-400" />
@@ -1160,7 +1160,7 @@ const ChartAnalysisNew: React.FC = () => {
 
           {/* News Section */}
           {analysisData?.news && analysisData.news.length > 0 && (
-            <div className="bg-[#1a1a20] rounded-lg border border-[#3a3a45] p-5 my-4">
+            <div className="bg-[#0b0b0e] rounded-lg border border-[#3a2a15] p-5 my-4">
               <div className="flex items-center mb-2">
                 <BarChart2 className="mr-2 text-blue-400" />
                 <h3 className="text-lg font-semibold">{t('News')}</h3>
@@ -1169,7 +1169,7 @@ const ChartAnalysisNew: React.FC = () => {
                 {analysisData.news
                   .filter((n: any) => n.impact?.toLowerCase() === 'high')
                   .map((n: any) => (
-                  <div key={n.id} className="bg-[#0f0f14] rounded-lg border border-[#3a3a45] p-4">
+                  <div key={n.id} className="bg-[#0f0f14] rounded-lg border border-[#3a2a15] p-4">
                     <p className="text-gray-100 font-medium mb-3">{n.title}</p>
                     <div className="text-sm text-gray-300 space-y-2">
                       <div className="flex justify-between">
@@ -1228,7 +1228,7 @@ const ChartAnalysisNew: React.FC = () => {
            {(isAnalyzing || analysisData || error) && (
              <div className="mt-6">
                <p className="text-gray-100 text-md">
-                 {t("PoweredByDecyphersAI")}
+                 {t("PoweredByAISITAAI")}
                </p>
                <p className="text-gray-400 text-sm">
                  {t('Disclaimer')}

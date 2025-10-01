@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Target, Users, Award, Rocket, BarChart2, Brain, Code, Globe, ArrowRight } from 'lucide-react';
 import Button from '@components/common/Button';
@@ -9,7 +9,7 @@ const About: React.FC = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-[#1a1a20] text-[#e2e8f0]">
+    <div className="min-h-screen bg-[#0b0b0e] text-[#e2e8f0]">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="container mx-auto px-4">
@@ -45,7 +45,7 @@ const About: React.FC = () => {
                 description: "Committed to delivering the highest quality analysis tools and maintaining the highest standards."
               }
             ].map((value, index) => (
-              <div key={index} className="bg-[#25252d] rounded-lg p-8 glow-border text-center">
+              <div key={index} className="bg-[#15120c] rounded-lg p-8 glow-border text-center">
                 <div className={`w-16 h-16 rounded-xl ${META_GRADIENT} flex items-center justify-center mx-auto mb-6`}>
                   {value.icon}
                 </div>
@@ -103,7 +103,7 @@ const About: React.FC = () => {
                   </div>
                   <div>
                     <div className="flex items-center gap-3 mb-2">
-                      <span className="text-sm font-medium text-[#94a3b8] bg-[#25252d] px-2 py-1 rounded">
+                      <span className="text-sm font-medium text-[#94a3b8] bg-[#15120c] px-2 py-1 rounded">
                         {milestone.year}
                       </span>
                       <h3 className="text-xl font-semibold">{milestone.title}</h3>
@@ -125,7 +125,7 @@ const About: React.FC = () => {
               Our Team
             </h2>
             <p className="text-lg text-gray-300">
-              Meet the experts behind Decyphers
+              Meet the experts behind AISITA
             </p>
           </div>
 
@@ -150,7 +150,7 @@ const About: React.FC = () => {
                 description: "Product veteran with experience at leading fintech companies."
               }
             ].map((member, index) => (
-              <div key={index} className="bg-[#25252d] rounded-lg overflow-hidden glow-border">
+              <div key={index} className="bg-[#15120c] rounded-lg overflow-hidden glow-border">
                 <div className="aspect-w-4 aspect-h-3">
                   <img 
                     src={member.image} 
@@ -172,11 +172,11 @@ const About: React.FC = () => {
       {/* CTA Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto rounded-2xl bg-[#25252d] overflow-hidden">
+          <div className="max-w-4xl mx-auto rounded-2xl bg-[#15120c] overflow-hidden">
             <div className="relative p-8 md:p-12">
               <div className="absolute inset-0 z-0">
                 <div className="absolute inset-0 opacity-10 bg-[url('https://images.pexels.com/photos/7567427/pexels-photo-7567427.jpeg')] bg-cover bg-center"></div>
-                <div className="absolute inset-0 bg-gradient-to-br from-transparent via-[#25252d]/80 to-[#25252d]"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-transparent via-[#15120c]/80 to-[#15120c]"></div>
               </div>
               
               <div className="relative z-10 text-center">

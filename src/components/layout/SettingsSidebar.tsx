@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { User, Users, Shield, HelpCircle, Settings, MessageCircle, ArrowRight, FileText, Clock, DollarSign, BarChart2, ChevronLeft, ChevronRight, Package } from 'lucide-react';
 import { useSidebar } from '@/contexts/SidebarContext';
@@ -20,9 +20,9 @@ const SettingsSidebar: React.FC = () => {
       <button 
         onClick={toggleSidebar}
         className={`
-          fixed z-40 bg-[#1a1a20] rounded-full
-          border border-[#3a3a45]
-          hover:bg-[#25252d] transition-all duration-300
+          fixed z-40 bg-[#0b0b0e] rounded-full
+          border border-[#3a2a15]
+          hover:bg-[#15120c] transition-all duration-300
           flex items-center justify-center w-9 h-9
           shadow-md
           ${isOpen ? 'left-[calc(15.5rem-3.5px)]' : 'left-[-3.5px]'}
@@ -38,7 +38,7 @@ const SettingsSidebar: React.FC = () => {
       
       <aside 
         className={`
-          fixed left-0 top-[57px] h-[calc(100vh-57px)] bg-[#1a1a20] border-r border-[#3a3a45]
+          fixed left-0 top-[57px] h-[calc(100vh-57px)] bg-[#0b0b0e] border-r border-[#3a2a15]
           transition-all duration-300 z-30
           ${isOpen ? 'w-64' : 'w-0 -translate-x-full opacity-0 pointer-events-none'} flex flex-col
           overflow-hidden
@@ -49,9 +49,9 @@ const SettingsSidebar: React.FC = () => {
         <div className="mb-6 mt-4">
           <Link 
             to="/dashboard" 
-            className="flex items-center px-3 py-2 text-sm font-medium rounded-md transition-colors text-[#e2e8f0] hover:bg-[#25252d] group"
+            className="flex items-center px-3 py-2 text-sm font-medium rounded-md transition-colors text-[#e2e8f0] hover:bg-[#15120c] group"
           >
-            <ChevronLeft className="w-5 h-5 mr-2 text-blue-400 group-hover:translate-x-[-2px] transition-transform" />
+            <ChevronLeft className="w-5 h-5 mr-2 text-yellow-400 group-hover:translate-x-[-2px] transition-transform" />
             {t('Dashboard')}
           </Link>
         </div>
@@ -68,10 +68,10 @@ const SettingsSidebar: React.FC = () => {
               className={`flex items-center px-3 py-2 text-sm font-medium rounded-md transition-colors ${
                 isActive('/profile') 
                   ? 'bg-[#2d3748] text-white' 
-                  : 'text-[#e2e8f0] hover:bg-[#25252d]'
+                  : 'text-[#e2e8f0] hover:bg-[#15120c]'
               }`}
             >
-              <User className={`w-5 h-5 mr-4 ${isActive('/profile') ? 'text-blue-400' : 'text-[#94a3b8]'}`} />
+              <User className={`w-5 h-5 mr-4 ${isActive('/profile') ? 'text-yellow-400' : 'text-[#94a3b8]'}`} />
               {t('Profile')}
             </Link>
             
@@ -80,10 +80,10 @@ const SettingsSidebar: React.FC = () => {
               className={`flex items-center px-3 py-2 text-sm font-medium rounded-md transition-colors ${
                 isActive('/referral') 
                   ? 'bg-[#2d3748] text-white' 
-                  : 'text-[#e2e8f0] hover:bg-[#25252d]'
+                  : 'text-[#e2e8f0] hover:bg-[#15120c]'
               }`}
             >
-              <Users className={`w-5 h-5 mr-4 ${isActive('/referral') ? 'text-blue-400' : 'text-[#94a3b8]'}`} />
+              <Users className={`w-5 h-5 mr-4 ${isActive('/referral') ? 'text-yellow-400' : 'text-[#94a3b8]'}`} />
               {t('Referral')}
             </Link>
 
@@ -92,10 +92,10 @@ const SettingsSidebar: React.FC = () => {
               className={`flex items-center px-3 py-2 text-sm font-medium rounded-md transition-colors ${
                 isActive('/settings') 
                   ? 'bg-[#2d3748] text-white' 
-                  : 'text-[#e2e8f0] hover:bg-[#25252d]'
+                  : 'text-[#e2e8f0] hover:bg-[#15120c]'
               }`}
             >
-              <Settings className={`w-5 h-5 mr-4 ${isActive('/settings') ? 'text-blue-400' : 'text-[#94a3b8]'}`} />
+              <Settings className={`w-5 h-5 mr-4 ${isActive('/settings') ? 'text-yellow-400' : 'text-[#94a3b8]'}`} />
               {t('GeneralSettings')}
             </Link>
             
@@ -104,10 +104,10 @@ const SettingsSidebar: React.FC = () => {
               className={`flex items-center px-3 py-2 text-sm font-medium rounded-md transition-colors ${
                 isActive('/settings/notifications') 
                   ? 'bg-[#2d3748] text-white' 
-                  : 'text-[#e2e8f0] hover:bg-[#25252d]'
+                  : 'text-[#e2e8f0] hover:bg-[#15120c]'
               }`}
             >
-              <Bell className={`w-5 h-5 mr-4 ${isActive('/settings/notifications') ? 'text-blue-400' : 'text-[#94a3b8]'}`} />
+              <Bell className={`w-5 h-5 mr-4 ${isActive('/settings/notifications') ? 'text-yellow-400' : 'text-[#94a3b8]'}`} />
               {t('Notifications')}
             </Link> */}
           </nav>
@@ -123,10 +123,10 @@ const SettingsSidebar: React.FC = () => {
               className={`flex items-center px-3 py-2 text-sm font-medium rounded-md transition-colors ${
                 isActive('/usage') 
                   ? 'bg-[#2d3748] text-white' 
-                  : 'text-[#e2e8f0] hover:bg-[#25252d]'
+                  : 'text-[#e2e8f0] hover:bg-[#15120c]'
               }`}
             >
-              <BarChart2 className={`w-5 h-5 mr-4 ${isActive('/usage') ? 'text-blue-400' : 'text-[#94a3b8]'}`} />
+              <BarChart2 className={`w-5 h-5 mr-4 ${isActive('/usage') ? 'text-yellow-400' : 'text-[#94a3b8]'}`} />
               {t('Usage')}
             </Link>
             
@@ -135,10 +135,10 @@ const SettingsSidebar: React.FC = () => {
               className={`flex items-center px-3 py-2 text-sm font-medium rounded-md transition-colors ${
                 isActive('/plan-management') 
                   ? 'bg-[#2d3748] text-white' 
-                  : 'text-[#e2e8f0] hover:bg-[#25252d]'
+                  : 'text-[#e2e8f0] hover:bg-[#15120c]'
               }`}
             >
-              <Package className={`w-5 h-5 mr-4 ${isActive('/plan-management') ? 'text-blue-400' : 'text-[#94a3b8]'}`} />
+              <Package className={`w-5 h-5 mr-4 ${isActive('/plan-management') ? 'text-yellow-400' : 'text-[#94a3b8]'}`} />
               {t('PlanManagement')}
             </Link>
             
@@ -147,10 +147,10 @@ const SettingsSidebar: React.FC = () => {
               className={`flex items-center px-3 py-2 text-sm font-medium rounded-md transition-colors ${
                 isActive('/billing') 
                   ? 'bg-[#2d3748] text-white' 
-                  : 'text-[#e2e8f0] hover:bg-[#25252d]'
+                  : 'text-[#e2e8f0] hover:bg-[#15120c]'
               }`}
             >
-              <DollarSign className={`w-5 h-5 mr-4 ${isActive('/billing') ? 'text-blue-400' : 'text-[#94a3b8]'}`} />
+              <DollarSign className={`w-5 h-5 mr-4 ${isActive('/billing') ? 'text-yellow-400' : 'text-[#94a3b8]'}`} />
               {t('Billing')}
             </Link>
             
@@ -159,10 +159,10 @@ const SettingsSidebar: React.FC = () => {
               className={`flex items-center px-3 py-2 text-sm font-medium rounded-md transition-colors ${
                 isActive('/credit-history') 
                   ? 'bg-[#2d3748] text-white' 
-                  : 'text-[#e2e8f0] hover:bg-[#25252d]'
+                  : 'text-[#e2e8f0] hover:bg-[#15120c]'
               }`}
             >
-              <Clock className={`w-5 h-5 mr-4 ${isActive('/credit-history') ? 'text-blue-400' : 'text-[#94a3b8]'}`} />
+              <Clock className={`w-5 h-5 mr-4 ${isActive('/credit-history') ? 'text-yellow-400' : 'text-[#94a3b8]'}`} />
               {t('CreditHistory')}
             </Link>
           </nav>
@@ -174,7 +174,7 @@ const SettingsSidebar: React.FC = () => {
           <nav className="space-y-1">
             <Link 
               to="/submit-ticket" 
-              className="flex items-center px-3 py-2 text-sm font-medium text-[#e2e8f0] rounded-md hover:bg-[#25252d] transition-colors"
+              className="flex items-center px-3 py-2 text-sm font-medium text-[#e2e8f0] rounded-md hover:bg-[#15120c] transition-colors"
             >
               <HelpCircle className="w-5 h-5 mr-4 text-[#94a3b8]" />
               {t('GetSupport')}
@@ -187,7 +187,7 @@ const SettingsSidebar: React.FC = () => {
       </div>
       
       {/* Bottom Section with links */}
-      <div className="px-5 py-4 border-t border-[#3a3a45] bg-[#1a1a20]">
+      <div className="px-5 py-4 border-t border-[#3a2a15] bg-[#0b0b0e]">
         {/* Support Ticket Button */}
         <Link
           to="/submit-ticket"
@@ -220,7 +220,7 @@ const SettingsSidebar: React.FC = () => {
         
         {/* Copyright */}
         <div className="text-center text-[10px] text-gray-500 mt-2">
-          {t('Copyright')} {new Date().getFullYear()} Decypher AI. {t('AllRightsReserved')}
+          {t('Copyright')} {new Date().getFullYear()} AISITA AI. {t('AllRightsReserved')}
         </div>
       </div>
     </aside>

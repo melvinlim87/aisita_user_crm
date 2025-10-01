@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Building2, Users, Zap, Globe, BarChart2, Shield, ArrowRight, CheckCircle2 } from 'lucide-react';
 //import Footer from '@components/common/Footer';
@@ -10,13 +10,13 @@ const Partner: React.FC = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-[#1a1a20] text-[#e2e8f0]">
+    <div className="min-h-screen bg-[#0b0b0e] text-[#e2e8f0]">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className={`text-4xl md:text-5xl font-bold mb-6 ${META_TEXT_GRADIENT}`}>
-              Partner with Decyphers
+              Partner with AISITA
             </h1>
             <p className="text-lg md:text-xl text-gray-300 mb-8">
               Join our partner ecosystem and help shape the future of AI-powered financial analysis
@@ -61,7 +61,7 @@ const Partner: React.FC = () => {
               {
                 icon: <Users className="w-8 h-8" />,
                 title: "Reseller Partners",
-                description: "Offer Decyphers to your clients and earn competitive commissions.",
+                description: "Offer AISITA to your clients and earn competitive commissions.",
                 features: [
                   "Competitive margins",
                   "Marketing support",
@@ -81,7 +81,7 @@ const Partner: React.FC = () => {
                 ]
               }
             ].map((program, index) => (
-              <div key={index} className="bg-[#25252d] rounded-lg p-8 glow-border">
+              <div key={index} className="bg-[#15120c] rounded-lg p-8 glow-border">
                 <div className={`w-16 h-16 rounded-xl ${META_GRADIENT} flex items-center justify-center mb-6`}>
                   {program.icon}
                 </div>
@@ -145,7 +145,7 @@ const Partner: React.FC = () => {
             ].map((benefit, index) => (
               <div 
                 key={index} 
-                className="bg-[#25252d] rounded-lg p-6 glow-border flex items-start space-x-4"
+                className="bg-[#15120c] rounded-lg p-6 glow-border flex items-start space-x-4"
               >
                 <div className={`w-12 h-12 rounded-full ${META_GRADIENT} flex-shrink-0 flex items-center justify-center`}>
                   {benefit.icon}
@@ -215,8 +215,8 @@ const Partner: React.FC = () => {
               <div 
                 key={index} 
                 className={`
-                  relative bg-[#25252d] rounded-lg p-8
-                  ${tier.popular ? 'glow-border transform hover:scale-105' : 'border border-[#3a3a45] hover:border-[#94a3b8]'}
+                  relative bg-[#15120c] rounded-lg p-8
+                  ${tier.popular ? 'glow-border transform hover:scale-105' : 'border border-[#3a2a15] hover:border-[#94a3b8]'}
                   transition-all duration-300
                 `}
               >
@@ -264,11 +264,11 @@ const Partner: React.FC = () => {
       <section className="py-20 relative">
         <VerticalCircuitLines theme="light" />
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto rounded-2xl bg-[#25252d] overflow-hidden">
+          <div className="max-w-4xl mx-auto rounded-2xl bg-[#15120c] overflow-hidden">
             <div className="relative p-8 md:p-12">
               <div className="absolute inset-0 z-0">
                 <div className="absolute inset-0 opacity-10 bg-[url('https://images.pexels.com/photos/7567427/pexels-photo-7567427.jpeg')] bg-cover bg-center"></div>
-                <div className="absolute inset-0 bg-gradient-to-br from-transparent via-[#25252d]/80 to-[#25252d]"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-transparent via-[#15120c]/80 to-[#15120c]"></div>
               </div>
               
               <div className="relative z-10 text-center">

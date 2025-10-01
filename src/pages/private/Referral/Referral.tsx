@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import './style.css';
 import { Loader2, ArrowUpDown } from 'lucide-react';
 import { getRequest } from '@/services/apiRequest';
@@ -132,7 +132,7 @@ const Referral: React.FC = () => {
               </div>
             )}
 
-            <div className="bg-[#1a1a20] rounded-lg shadow-lg p-8 mb-8 border border-[#2d3748]">
+            <div className="bg-[#0b0b0e] rounded-lg shadow-lg p-8 mb-8 border border-[#2d3748]">
                 {loading ? (
                     <div className="flex justify-center items-center py-8">
                         <Loader2 className="w-8 h-8 text-blue-500 animate-spin" />
@@ -179,7 +179,7 @@ const Referral: React.FC = () => {
             </div>
             
             {/* User Referral List */}
-            <div className="bg-[#1a1a20] rounded-lg shadow-lg p-8 mb-8 border border-[#2d3748]">
+            <div className="bg-[#0b0b0e] rounded-lg shadow-lg p-8 mb-8 border border-[#2d3748]">
                 <div>
                     <div className="flex justify-between items-center mb-4">
                         <h2 className="text-xl font-bold text-white">{t('MyReferrals')}</h2>
@@ -187,11 +187,11 @@ const Referral: React.FC = () => {
                     {/* Referral List Table */}
                     {referralList.length > 0 ? (
 
-                        <div className="bg-[#1a1a20] border border-[#3a3a45] rounded-lg overflow-hidden">
+                        <div className="bg-[#0b0b0e] border border-[#3a2a15] rounded-lg overflow-hidden">
                             <div className="overflow-x-auto">
                                 <table className="w-full">
                                     <thead>
-                                        <tr className="bg-[#25252d]">
+                                        <tr className="bg-[#15120c]">
                                             <th className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">
                                                 <button className="flex items-center focus:outline-none">
                                                     {t('User')}
@@ -226,7 +226,7 @@ const Referral: React.FC = () => {
                                     </thead>
                                     <tbody className="divide-y divide-[#3a3a45]">
                                         {referralList.map((ref) => (
-                                            <tr key={ref.id} className="hover:bg-[#25252d]">
+                                            <tr key={ref.id} className="hover:bg-[#15120c]">
                                                 <td className="px-6 py-4 whitespace-nowrap">
                                                     <div className="text-sm text-white">{ref.referred?.name || '-'}</div>
                                                 </td>

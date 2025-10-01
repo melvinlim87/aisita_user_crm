@@ -131,7 +131,7 @@ const EmailVerification: React.FC = () => {
               <BarChart2 className="w-8 h-8 text-[#94a3b8]" />
             </div>
             <h1 className={`text-2xl font-bold mb-2 ${META_TEXT_GRADIENT}`}>
-              Decypher AI
+              AISITA AI
             </h1>
             <p className="text-gray-400">
               Advanced AI-powered trading analysis
@@ -159,7 +159,7 @@ const EmailVerification: React.FC = () => {
                   )}
                 </div>
                 <p className="text-gray-400 text-sm mb-6">
-                  Your account has been successfully verified. You can now log in and start using Decypher AI.
+                  Your account has been successfully verified. You can now log in and start using AISITA AI.
                 </p>
                 <Button
                   onClick={() => navigate('/login')}

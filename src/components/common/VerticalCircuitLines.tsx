@@ -14,7 +14,7 @@ interface CircuitLine {
 }
 
 interface VerticalCircuitLinesProps {
-  theme?: 'dark' | 'light';
+  theme?: 'dark' | 'light' | 'gold';
 }
 
 export const VerticalCircuitLines: React.FC<VerticalCircuitLinesProps> = ({ theme = 'dark' }) => {
@@ -65,7 +65,7 @@ export const VerticalCircuitLines: React.FC<VerticalCircuitLinesProps> = ({ them
       const width = Math.random() * 1.5 + 0.5;
       
       // Color based on theme
-      const color = theme === 'light' ? '#00E5FF' : '#00A9E0';
+      const color = theme === 'gold' ? '#D4AF37' : (theme === 'light' ? '#00E5FF' : '#00A9E0');
       
       // Create random node positions along the line
       const nodeCount = Math.floor(Math.random() * 4) + 1;
@@ -86,7 +86,7 @@ export const VerticalCircuitLines: React.FC<VerticalCircuitLinesProps> = ({ them
         speed,
         width,
         color,
-        opacity: 0.3 + Math.random() * 0.7,
+        opacity: 0.5 + Math.random() * 0.5,
         completed: false,
         nodePositions,
         nodeGlowing
@@ -141,9 +141,10 @@ export const VerticalCircuitLines: React.FC<VerticalCircuitLinesProps> = ({ them
         
         // Create gradient for line
         const gradient = ctx.createLinearGradient(line.x, line.y, line.x, line.y + line.length);
-        gradient.addColorStop(0, `rgba(${theme === 'light' ? '0, 229, 255' : '0, 169, 224'}, ${line.opacity * 0.3})`);
-        gradient.addColorStop(0.5, `rgba(${theme === 'light' ? '0, 229, 255' : '0, 169, 224'}, ${line.opacity})`);
-        gradient.addColorStop(1, `rgba(${theme === 'light' ? '0, 229, 255' : '0, 169, 224'}, ${line.opacity * 0.3})`);
+        const rgb = theme === 'gold' ? '212, 175, 55' : (theme === 'light' ? '0, 229, 255' : '0, 169, 224');
+        gradient.addColorStop(0, `rgba(${rgb}, ${line.opacity * 0.35})`);
+        gradient.addColorStop(0.5, `rgba(${rgb}, ${line.opacity})`);
+        gradient.addColorStop(1, `rgba(${rgb}, ${line.opacity * 0.35})`);
         
         ctx.strokeStyle = gradient;
         ctx.lineWidth = line.width;
@@ -180,7 +181,8 @@ export const VerticalCircuitLines: React.FC<VerticalCircuitLinesProps> = ({ them
               ctx.shadowColor = line.color;
               ctx.shadowBlur = 10;
             } else {
-              ctx.fillStyle = `rgba(${theme === 'light' ? '0, 229, 255' : '0, 169, 224'}, ${line.opacity * 0.8})`;
+              const nodeRgb = theme === 'gold' ? '212, 175, 55' : (theme === 'light' ? '0, 229, 255' : '0, 169, 224');
+              ctx.fillStyle = `rgba(${nodeRgb}, ${line.opacity * 0.8})`;
               ctx.shadowBlur = 0;
             }
             
@@ -203,7 +205,8 @@ export const VerticalCircuitLines: React.FC<VerticalCircuitLinesProps> = ({ them
             ctx.moveTo(line.x, branchY);
             ctx.lineTo(line.x + branchLength * direction, branchY);
             
-            ctx.strokeStyle = `rgba(${theme === 'light' ? '0, 229, 255' : '0, 169, 224'}, ${line.opacity * 0.8})`;
+            const branchRgb = theme === 'gold' ? '212, 175, 55' : (theme === 'light' ? '0, 229, 255' : '0, 169, 224');
+            ctx.strokeStyle = `rgba(${branchRgb}, ${line.opacity * 0.8})`;
             ctx.lineWidth = line.width * 0.8;
             
             // Add glow effect
@@ -239,7 +242,7 @@ export const VerticalCircuitLines: React.FC<VerticalCircuitLinesProps> = ({ them
       ref={canvasRef} 
       className="absolute top-0 left-0 w-full h-full pointer-events-none"
       style={{
-        opacity: 0.2
+        opacity: 0.3
       }}
     />
   );

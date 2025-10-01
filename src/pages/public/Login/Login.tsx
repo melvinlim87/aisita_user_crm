@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { BarChart2, Mail, Lock } from 'lucide-react';
 import type { LoginResponse } from '@/types/common/useAuth';
@@ -96,20 +96,19 @@ const Login: React.FC = () => {
         setErrors({
           email: t('InvalidEmailOrPassword')
         });
-      } finally {
         setIsLoading(false);
       }
     }
   };
 
   return (
-    <div className="min-h-screen bg-[#1a1a20] flex items-center justify-center p-4">
+    <div className="min-h-screen bg-[#0b0b0e] flex items-center justify-center p-4">
       <div className="w-full max-w-md">
         <div className="text-center mb-6">
           <Link to="/" className="inline-flex items-center justify-center">
             <BarChart2 className={`w-10 h-10 ${META_TEXT_GRADIENT}`} />
           </Link>
-          <Link to="https://decyphers.com" className="inline-flex items-center justify-center">
+          <Link to="https://aisita.ai" className="inline-flex items-center justify-center">
             <img src="/assets/images/logo/decyphers-logo.png" alt="Decyphers" className="w-full bg-transparent" />
           </Link>
           {/* <h1 className={`text-2xl font-bold mt-2 ${META_TEXT_GRADIENT}`}>
@@ -157,7 +156,7 @@ const Login: React.FC = () => {
                   type="checkbox"
                   checked={rememberMe}
                   onChange={(e) => setRememberMe(e.target.checked)}
-                  className="h-4 w-4 rounded bg-[#25252d] border-[#3a3a45] text-[#94a3b8] focus:ring-[#94a3b8] focus:ring-offset-[#1a1a20]"
+                  className="h-4 w-4 rounded bg-[#15120c] border-[#3a2a15] text-[#94a3b8] focus:ring-[#94a3b8] focus:ring-offset-[#0b0b0e]"
                 />
                 <label htmlFor="remember" className="ml-2 text-sm text-gray-400">
                   {t('RememberMe')}
