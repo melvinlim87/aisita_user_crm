@@ -78,14 +78,19 @@ const Signup: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#1a1a20] flex items-center justify-center p-4">
+    <div className="min-h-screen relative bg-gradient-to-b from-[#000000] to-[#111111] flex items-center justify-center p-4">
+      {/* subtle gold glow overlay */}
+      <div className="pointer-events-none absolute inset-0 opacity-90">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(255,215,0,0.10),_transparent_60%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_rgba(184,115,51,0.08),_transparent_60%)]"></div>
+      </div>
       <div className="w-full max-w-md">
         <div className="text-center mb-6">
           <Link to="/" className="inline-flex items-center justify-center">
             <BarChart2 className={`w-10 h-10 ${META_TEXT_GRADIENT}`} />
           </Link>
           <h1 className={`text-2xl font-bold mt-2 ${META_TEXT_GRADIENT}`}>
-            Decyphers
+            AISITA
           </h1>
           <p className="text-gray-400 mt-1">
             AI-Powered Financial Chart Analyser

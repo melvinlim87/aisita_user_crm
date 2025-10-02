@@ -13,8 +13,8 @@ const Faq = () => {
     // General
     {
       category: 'General',
-      question: "What is Decyphers?",
-      answer: "Decyphers is an AI-powered financial chart analysis platform that helps traders identify patterns, trends, and trading opportunities using advanced machine learning algorithms."
+      question: "What is AISITA?",
+      answer: "AISITA is an AI-powered financial chart analysis platform that helps traders identify patterns, trends, and trading opportunities using advanced machine learning algorithms."
     },
     {
       category: 'General',
@@ -93,14 +93,18 @@ const Faq = () => {
   ];
 
   const filteredFaqs = allFaqs.filter(faq => 
-    (faq.category === selectedCategory || selectedCategory === 'All') &&
     (searchQuery === '' || 
      faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
      faq.answer.toLowerCase().includes(searchQuery.toLowerCase()))
   );
 
   return (
-    <div className="min-h-screen bg-[#1a1a20] text-[#e2e8f0]">
+    <div className="min-h-screen relative bg-gradient-to-b from-[#000000] to-[#111111] text-[#e2e8f0]">
+      {/* subtle gold glow overlay */}
+      <div className="pointer-events-none absolute inset-0 opacity-90">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(255,215,0,0.10),_transparent_60%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_rgba(184,115,51,0.08),_transparent_60%)]"></div>
+      </div>
       <div className="container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto text-center mb-12">
           <div className="flex items-center justify-center mb-6">
@@ -110,7 +114,7 @@ const Faq = () => {
             Frequently Asked Questions
           </h1>
           <p className="text-lg text-gray-300">
-            Find answers to common questions about Decyphers
+            Find answers to common questions about AISITA
           </p>
         </div>
 

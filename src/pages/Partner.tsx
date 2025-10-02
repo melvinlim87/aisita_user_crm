@@ -10,13 +10,19 @@ const Partner: React.FC = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-[#1a1a20] text-[#e2e8f0]">
+    <div className="min-h-screen relative bg-gradient-to-b from-[#000000] to-[#111111] text-[#e2e8f0]">
+      {/* subtle gold glow overlay */}
+      <div className="pointer-events-none absolute inset-0 opacity-90">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(255,215,0,0.10),_transparent_60%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_rgba(184,115,51,0.08),_transparent_60%)]"></div>
+      </div>
+
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className={`text-4xl md:text-5xl font-bold mb-6 ${META_TEXT_GRADIENT}`}>
-              Partner with Decyphers
+              Partner with AISITA
             </h1>
             <p className="text-lg md:text-xl text-gray-300 mb-8">
               Join our partner ecosystem and help shape the future of AI-powered financial analysis
@@ -61,7 +67,7 @@ const Partner: React.FC = () => {
               {
                 icon: <Users className="w-8 h-8" />,
                 title: "Reseller Partners",
-                description: "Offer Decyphers to your clients and earn competitive commissions.",
+                description: "Offer AISITA to your clients and earn competitive commissions.",
                 features: [
                   "Competitive margins",
                   "Marketing support",
@@ -168,7 +174,7 @@ const Partner: React.FC = () => {
               Affiliate Program
             </h2>
             <p className="text-lg text-gray-300">
-              Earn competitive commissions by referring new customers to Decyphers
+              Earn competitive commissions by referring new customers to AISITA
             </p>
           </div>
 

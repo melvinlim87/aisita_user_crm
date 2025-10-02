@@ -26,24 +26,22 @@ const Button: React.FC<ButtonProps> = ({
   className = '',
 }) => {
   const baseStyles = 'inline-flex items-center justify-center rounded-md transition-all duration-200 font-medium';
-  
   const variantStyles = {
-    primary: 'metallic-gradient text-gray-900 hover:brightness-110 shadow-md',
-    secondary: 'metallic-dark-gradient text-[#e2e8f0] border border-[#3a3a45] hover:border-[#94a3b8] hover:brightness-110',
-    outline: 'border border-[#94a3b8] bg-transparent text-[#e2e8f0] hover:bg-[#25252d] glow-border',
-    text: 'bg-transparent text-[#e2e8f0] hover:bg-[#25252d]',
-  };
+    primary: 'metallic-gradient text-[#0b0b0e] hover:brightness-110 shadow-md',
+    secondary: 'metallic-dark-gradient text-[#DAA520] border border-[#C0C0C0] hover:border-[#FFD700] hover:brightness-110',
+    outline: 'border border-[#C0C0C0] bg-transparent text-[#DAA520] hover:bg-[#111111] glow-border',
+    text: 'bg-transparent text-[#DAA520] hover:bg-[#111111]',
+  } as const;
   
   const sizeStyles = {
     sm: 'text-xs py-1.5 px-3',
     md: 'text-sm py-2 px-4',
     lg: 'text-base py-2.5 px-5',
-  };
+  } as const;
   
   const disabledStyles = disabled || isLoading
     ? 'opacity-60 cursor-not-allowed'
     : 'cursor-pointer';
-  
   const widthStyles = fullWidth ? 'w-full' : '';
   
   const allStyles = `${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${disabledStyles} ${widthStyles} ${className}`;

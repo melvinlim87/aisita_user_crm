@@ -9,7 +9,13 @@ const About: React.FC = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-[#1a1a20] text-[#e2e8f0]">
+    <div className="min-h-screen relative bg-gradient-to-b from-[#000000] to-[#111111] text-[#e2e8f0]">
+      {/* subtle gold glow overlay */}
+      <div className="pointer-events-none absolute inset-0 opacity-90">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(255,215,0,0.10),_transparent_60%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_rgba(184,115,51,0.08),_transparent_60%)]"></div>
+      </div>
+
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="container mx-auto px-4">
@@ -125,7 +131,7 @@ const About: React.FC = () => {
               Our Team
             </h2>
             <p className="text-lg text-gray-300">
-              Meet the experts behind Decyphers
+              Meet the experts behind AISITA
             </p>
           </div>
 

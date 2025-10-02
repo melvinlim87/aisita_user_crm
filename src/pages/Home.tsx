@@ -16,8 +16,8 @@ const Home: React.FC = () => {
     // General
     {
       category: 'General',
-      question: "What is Decyphers?",
-      answer: "Decyphers is an AI-powered financial chart analysis platform that helps traders identify patterns, trends, and trading opportunities using advanced machine learning algorithms."
+      question: "What is AISITA?",
+      answer: "AISITA is an AI-powered financial chart analysis platform that helps traders identify patterns, trends, and trading opportunities using advanced machine learning algorithms."
     },
     {
       category: 'General',
@@ -93,7 +93,13 @@ const Home: React.FC = () => {
   );
 
   return (
-    <div className="min-h-screen bg-[#1a1a20] text-[#e2e8f0]">
+    <div className="min-h-screen relative bg-gradient-to-b from-[#000000] to-[#111111] text-[#e2e8f0]">
+      {/* subtle gold glow overlay */}
+      <div className="pointer-events-none absolute inset-0 opacity-90">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(255,215,0,0.10),_transparent_60%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_rgba(184,115,51,0.08),_transparent_60%)]"></div>
+      </div>
+
       {/* Hero Section */}
       <section className="relative pt-20 pb-32 overflow-hidden">
         <div className="absolute inset-0 z-0">
@@ -518,8 +524,8 @@ const Home: React.FC = () => {
                   <Mail className="w-5 h-5 text-[#94a3b8]" />
                   <div>
                     <p className="text-sm text-gray-400">Email</p>
-                    <a href="mailto:contact@decyphers.ai" className="text-[#e2e8f0] hover:text-white">
-                      contact@decyphers.ai
+                    <a href="mailto:support@aisita.ai" className="text-[#e2e8f0] hover:text-white">
+                      support@aisita.ai
                     </a>
                   </div>
                 </div>

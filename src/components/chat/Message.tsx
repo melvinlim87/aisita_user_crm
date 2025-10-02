@@ -72,7 +72,7 @@ const Message: React.FC<MessageProps> = ({ message }) => {
       <div className="flex-1 min-w-0">
         <div className="flex items-center mb-1">
           <h4 className={`text-sm font-medium ${isAi ? 'text-[#cbd5e1]' : 'text-[#e2e8f0]'}`}>
-            {isAi ? 'Decyphers AI' : 'You'}
+            {isAi ? 'AISITA AI' : 'You'}
           </h4>
           <span className="text-xs text-gray-500 ml-2">
             {messageTime}
