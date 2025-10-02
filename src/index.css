@@ -14,7 +14,6 @@
 }
 
 html, body {
-  @apply text-[#e2e8f0];
   background: #2b3048;
   background-attachment: fixed;
 }
@@ -30,26 +29,26 @@ html, body {
     rgba(148, 163, 184, 0.98) 100%
   );
   box-shadow:
-    0 0 30px rgba(148, 163, 184, 0.5),
-    0 0 60px rgba(148, 163, 184, 0.4),
-    inset 0 0 20px rgba(226, 232, 240, 0.7);
+    0 0 30px rgba(218, 165, 32, 0.45),
+    0 0 60px rgba(255, 215, 0, 0.30),
+    inset 0 0 20px rgba(255, 223, 128, 0.55);
 }
 
 .metallic-text {
   background: linear-gradient(
     135deg,
-    #2795c7 0%,
-    #2795c7 25%,
+    #FFD700 0%,
+    #DAA520 25%,
     #e2e8f0 50%,
-    #94a3b8 75%,
-    #64748b 100%
+    #C4A451 75%,
+    #8B6F2F 100%
   );
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   text-shadow: 
-    2px 2px 4px rgba(39, 149, 199, 0.3),
-    0 0 15px rgba(39, 149, 199, 0.5);
+    2px 2px 4px rgba(218, 165, 32, 0.28),
+    0 0 15px rgba(255, 215, 0, 0.45);
 }
 
 .metallic-dark-gradient {
@@ -60,18 +59,18 @@ html, body {
   );
   backdrop-filter: blur(25px) contrast(1.3) brightness(1.05);
   box-shadow:
-    0 0 35px rgba(148, 163, 184, 0.3),
-    inset 0 0 25px rgba(226, 232, 240, 0.2);
+    0 0 35px rgba(218, 165, 32, 0.25),
+    inset 0 0 25px rgba(255, 215, 0, 0.15);
 }
 
 /* Glowing Border Effect */
 .glow-border {
   position: relative;
-  border: 1px solid rgba(39, 149, 199, 0.4);
+  border: 1px solid rgba(218, 165, 32, 0.45);
   box-shadow: 
-    0 0 20px rgba(39, 149, 199, 0.25),
-    0 0 40px rgba(39, 149, 199, 0.15),
-    inset 0 0 15px rgba(226, 232, 240, 0.1);
+    0 0 20px rgba(255, 215, 0, 0.22),
+    0 0 40px rgba(218, 165, 32, 0.18),
+    inset 0 0 15px rgba(255, 223, 128, 0.10);
 }
 
 .glow-border::before {
@@ -79,9 +78,9 @@ html, body {
   position: absolute;
   inset: -1px;
   background: linear-gradient(135deg,
-    rgba(39, 149, 199, 0.4),
-    rgba(39, 149, 199, 0.3),
-    rgba(226, 232, 240, 0.3));
+    rgba(255, 215, 0, 0.38),
+    rgba(218, 165, 32, 0.30),
+    rgba(255, 223, 128, 0.28));
   border-radius: inherit;
   z-index: -1;
   animation: borderGlow 4s linear infinite;
@@ -92,9 +91,9 @@ html, body {
   position: absolute;
   inset: -2px;
   background: linear-gradient(45deg,
-    rgba(39, 149, 199, 0.3),
-    rgba(226, 232, 240, 0.2),
-    rgba(39, 149, 199, 0.2));
+    rgba(255, 215, 0, 0.26),
+    rgba(255, 223, 128, 0.18),
+    rgba(218, 165, 32, 0.20));
   border-radius: inherit;
   z-index: -2;
   filter: blur(10px);
