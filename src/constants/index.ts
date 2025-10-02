@@ -164,5 +164,5 @@ What specific aspect of this chart would you like me to explain in more detail?`
   ]
 };
 
-export const META_GRADIENT = 'bg-gradient-to-r from-[#d4af37] to-[#b8860b]';
+export const META_GRADIENT = 'bg-gradient-to-r from-[#cbd5e1] to-[#94a3b8]';
 export const META_TEXT_GRADIENT = 'metallic-text';

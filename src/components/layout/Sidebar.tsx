@@ -246,7 +246,7 @@ const Sidebar: React.FC = () => {
         
         {/* Footer Links */}
         <div className="flex flex-col items-center space-y-2 mb-3">
-          <a href={`${FRONTEND_URL}/assets/documents/terms-conditions-refund-policy.pdf`} className="flex items-center justify-center text-xs text-gray-400 hover:text-gray-300 w-full">
+          <a href={`/assets/documents/terms-conditions-refund-policy.pdf`} className="flex items-center justify-center text-xs text-gray-400 hover:text-gray-300 w-full">
             <FileText className="w-3 h-3 mr-1" />
             {t('TermsRefundPolicy')}
           </a>

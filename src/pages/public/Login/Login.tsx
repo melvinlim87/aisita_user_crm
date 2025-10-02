@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { BarChart2, Mail, Lock } from 'lucide-react';
 import type { LoginResponse } from '@/types/common/useAuth';
@@ -102,7 +102,7 @@ const Login: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#0b0b0e] flex items-center justify-center p-4">
+    <div className="min-h-screen flex items-center justify-center p-4">
       <div className="w-full max-w-md">
         <div className="text-center mb-6">
           <Link to="/" className="inline-flex items-center justify-center">
@@ -114,7 +114,7 @@ const Login: React.FC = () => {
           {/* <h1 className={`text-2xl font-bold mt-2 ${META_TEXT_GRADIENT}`}>
             Decyphers
           </h1> */}
-          <p className="text-gray-400 mt-1">
+          <p className="text-[#DAA520] mt-1">
             {t('LoginTagline')}
           </p>
         </div>
@@ -156,14 +156,14 @@ const Login: React.FC = () => {
                   type="checkbox"
                   checked={rememberMe}
                   onChange={(e) => setRememberMe(e.target.checked)}
-                  className="h-4 w-4 rounded bg-[#15120c] border-[#3a2a15] text-[#94a3b8] focus:ring-[#94a3b8] focus:ring-offset-[#0b0b0e]"
+                  className="h-4 w-4 rounded bg-[#0b0b0e] border-[#C0C0C0] text-[#DAA520] focus:ring-[#FFD700] focus:ring-offset-[#000000]"
                 />
-                <label htmlFor="remember" className="ml-2 text-sm text-gray-400">
+                <label htmlFor="remember" className="ml-2 text-sm text-[#DAA520]">
                   {t('RememberMe')}
                 </label>
               </div>
               
-              <Link to="/forgot-password" className="text-sm text-[#94a3b8] hover:text-[#cbd5e1]">
+              <Link to="/forgot-password" className="text-sm text-[#DAA520] hover:text-[#FFD700]">
                 {t('ForgotPassword')}
               </Link>
             </div>
@@ -179,9 +179,9 @@ const Login: React.FC = () => {
           </form>
           
           <div className="mt-6 text-center">
-            <p className="text-sm text-gray-400">
+            <p className="text-sm text-[#DAA520]">
               {t("DontHaveAccount")} {' '}
-              <Link to="/signup" className="text-[#94a3b8] hover:text-[#cbd5e1]">
+              <Link to="/signup" className="text-[#DAA520] hover:text-[#FFD700]">
                 {t('SignUpLink')}
               </Link>
             </p>

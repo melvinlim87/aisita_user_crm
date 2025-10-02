@@ -27,14 +27,14 @@ const Button: React.FC<ButtonProps> = ({
 }) => {
   const baseStyles = 'inline-flex items-center justify-center rounded-md transition-all duration-200 font-medium';
   
-  const variantStyles: { [key in NonNullable<ButtonProps['variant']>]: string } = {
-    primary: 'metallic-gradient text-[#0b0b0e] hover:brightness-110 shadow-md',
-    secondary: 'metallic-dark-gradient text-[#f5f5f5] border border-[#3a2a15] hover:border-[#d4af37] hover:brightness-110',
-    outline: 'border border-[#d4af37] bg-transparent text-[#f5f5f5] hover:bg-[#15120c] glow-border',
-    text: 'bg-transparent text-[#f5f5f5] hover:bg-[#15120c]',
+  const variantStyles = {
+    primary: 'metallic-gradient text-gray-900 hover:brightness-110 shadow-md',
+    secondary: 'metallic-dark-gradient text-[#e2e8f0] border border-[#3a3a45] hover:border-[#94a3b8] hover:brightness-110',
+    outline: 'border border-[#94a3b8] bg-transparent text-[#e2e8f0] hover:bg-[#25252d] glow-border',
+    text: 'bg-transparent text-[#e2e8f0] hover:bg-[#25252d]',
   };
-
-  const sizeStyles: { [key in NonNullable<ButtonProps['size']>]: string } = {
+  
+  const sizeStyles = {
     sm: 'text-xs py-1.5 px-3',
     md: 'text-sm py-2 px-4',
     lg: 'text-base py-2.5 px-5',
@@ -43,7 +43,7 @@ const Button: React.FC<ButtonProps> = ({
   const disabledStyles = disabled || isLoading
     ? 'opacity-60 cursor-not-allowed'
     : 'cursor-pointer';
-
+  
   const widthStyles = fullWidth ? 'w-full' : '';
   
   const allStyles = `${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${disabledStyles} ${widthStyles} ${className}`;
