@@ -1,4 +1,4 @@
-const IS_PRODUCTION = false;
+const IS_PRODUCTION = true;
 
 // Base API URL
 export const API_BASE_URL = IS_PRODUCTION 
